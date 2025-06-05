@@ -33,7 +33,7 @@ namespace Inventory_Database_FrontEnd
             frmRedTag.TopLevel = false;
             pnlRedTag.Controls.Clear();
             pnlRedTag.Controls.Add(frmRedTag);
-            
+
             frmRedTag.Show();
         }
 
@@ -41,7 +41,19 @@ namespace Inventory_Database_FrontEnd
         {
             pnlRedTag.Controls.Clear();
             pnlRedTag.Visible = false;
-          
+
+        }
+
+        private void btnStockMenu_Click(object sender, EventArgs e)
+        {
+            pnlStock.Visible = true;
+            frmStock frmStock = new frmStock();
+            frmStock.Dock = DockStyle.Fill;
+            frmStock.TopLevel = false;
+            pnlStock.Controls.Clear();
+            pnlStock.Controls.Add(frmStock);
+
+            frmStock.Show();
         }
     }
 }
