@@ -31,10 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory_Database));
             panel1 = new Panel();
             pictureBox5 = new PictureBox();
+            panel3 = new Panel();
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
-            button4 = new Button();
+            btnRedTag = new Button();
             button3 = new Button();
             button2 = new Button();
             button1 = new Button();
@@ -70,8 +71,9 @@
             searchToolStripMenuItem1 = new ToolStripMenuItem();
             toolStripSeparator11 = new ToolStripSeparator();
             aboutToolStripMenuItem1 = new ToolStripMenuItem();
-            panel2 = new Panel();
+            pnlWelcome = new Panel();
             richTextBox1 = new RichTextBox();
+            pnlRedTag = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -79,17 +81,18 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             menuStrip1.SuspendLayout();
-            panel2.SuspendLayout();
+            pnlWelcome.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(47, 47, 47);
             panel1.Controls.Add(pictureBox5);
+            panel1.Controls.Add(panel3);
             panel1.Controls.Add(pictureBox4);
             panel1.Controls.Add(pictureBox3);
             panel1.Controls.Add(pictureBox2);
-            panel1.Controls.Add(button4);
+            panel1.Controls.Add(btnRedTag);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
@@ -108,6 +111,13 @@
             pictureBox5.Size = new Size(74, 67);
             pictureBox5.TabIndex = 8;
             pictureBox5.TabStop = false;
+            // 
+            // panel3
+            // 
+            panel3.Location = new Point(268, 25);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(685, 569);
+            panel3.TabIndex = 1;
             // 
             // pictureBox4
             // 
@@ -140,19 +150,20 @@
             pictureBox2.TabIndex = 5;
             pictureBox2.TabStop = false;
             // 
-            // button4
+            // btnRedTag
             // 
-            button4.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Dubai", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.ForeColor = Color.DarkCyan;
-            button4.Location = new Point(-58, 329);
-            button4.Name = "button4";
-            button4.Size = new Size(388, 73);
-            button4.TabIndex = 4;
-            button4.Text = "Red Tag";
-            button4.UseVisualStyleBackColor = true;
+            btnRedTag.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
+            btnRedTag.FlatAppearance.BorderSize = 0;
+            btnRedTag.FlatStyle = FlatStyle.Flat;
+            btnRedTag.Font = new Font("Dubai", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRedTag.ForeColor = Color.DarkCyan;
+            btnRedTag.Location = new Point(-58, 329);
+            btnRedTag.Name = "btnRedTag";
+            btnRedTag.Size = new Size(388, 73);
+            btnRedTag.TabIndex = 4;
+            btnRedTag.Text = "Red Tag";
+            btnRedTag.UseVisualStyleBackColor = true;
+            btnRedTag.Click += btnRedTag_Click;
             // 
             // button3
             // 
@@ -205,6 +216,7 @@
             pictureBox1.Size = new Size(252, 68);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            pictureBox1.DoubleClick += pictureBox1_DoubleClick;
             // 
             // menuStrip1
             // 
@@ -413,14 +425,15 @@
             aboutToolStripMenuItem1.Size = new Size(122, 22);
             aboutToolStripMenuItem1.Text = "&About...";
             // 
-            // panel2
+            // pnlWelcome
             // 
-            panel2.BackColor = SystemColors.ControlLight;
-            panel2.Controls.Add(richTextBox1);
-            panel2.Location = new Point(269, 25);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(815, 569);
-            panel2.TabIndex = 2;
+            pnlWelcome.BackColor = SystemColors.ControlLight;
+            pnlWelcome.Controls.Add(pnlRedTag);
+            pnlWelcome.Controls.Add(richTextBox1);
+            pnlWelcome.Location = new Point(270, 27);
+            pnlWelcome.Name = "pnlWelcome";
+            pnlWelcome.Size = new Size(679, 569);
+            pnlWelcome.TabIndex = 2;
             // 
             // richTextBox1
             // 
@@ -429,18 +442,25 @@
             richTextBox1.Cursor = Cursors.IBeam;
             richTextBox1.Font = new Font("Arial Rounded MT Bold", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             richTextBox1.ForeColor = Color.DarkCyan;
-            richTextBox1.Location = new Point(18, 79);
+            richTextBox1.Location = new Point(-41, 55);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(635, 305);
+            richTextBox1.Size = new Size(634, 305);
             richTextBox1.TabIndex = 0;
             richTextBox1.Text = "                                      Welcome \n                                         to the\n                         Superlum Database Portal";
+            // 
+            // pnlRedTag
+            // 
+            pnlRedTag.Location = new Point(-3, -2);
+            pnlRedTag.Name = "pnlRedTag";
+            pnlRedTag.Size = new Size(685, 582);
+            pnlRedTag.TabIndex = 1;
             // 
             // Inventory_Database
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1077, 633);
-            Controls.Add(panel2);
+            ClientSize = new Size(951, 591);
+            Controls.Add(pnlWelcome);
             Controls.Add(panel1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
@@ -454,7 +474,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            panel2.ResumeLayout(false);
+            pnlWelcome.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -493,7 +513,7 @@
         private ToolStripMenuItem searchToolStripMenuItem1;
         private ToolStripSeparator toolStripSeparator11;
         private ToolStripMenuItem aboutToolStripMenuItem1;
-        private Button button4;
+        private Button btnRedTag;
         private Button button3;
         private Button button2;
         private Button button1;
@@ -501,7 +521,9 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
-        private Panel panel2;
+        private Panel pnlWelcome;
         private RichTextBox richTextBox1;
+        private Panel panel3;
+        private Panel pnlRedTag;
     }
 }

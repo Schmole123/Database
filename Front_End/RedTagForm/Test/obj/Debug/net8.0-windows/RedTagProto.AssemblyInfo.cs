@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RedTagProto")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0af53af22b67003c997e5d2c6e54416e7677352d")]
 [assembly: System.Reflection.AssemblyProductAttribute("RedTagProto")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RedTagProto")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
