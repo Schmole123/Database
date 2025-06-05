@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory_Database_FrontEnd", "Inventory_Database_FrontEnd\Inventory_Database_FrontEnd.csproj", "{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}.Debug|x86.ActiveCfg = Debug|x86
+		{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}.Debug|x86.Build.0 = Debug|x86
+		{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}.Release|x86.ActiveCfg = Release|x86
+		{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2BFF2C00-7318-4E20-B6E1-7A9553FCBFBC}
+	EndGlobalSection
+EndGlobal
