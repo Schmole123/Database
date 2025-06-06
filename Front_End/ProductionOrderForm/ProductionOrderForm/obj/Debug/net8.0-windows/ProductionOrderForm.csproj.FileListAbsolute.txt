@@ -13,7 +13,6 @@ C:\Users\TEST\source\repos\ProductionOrderForm\ProductionOrderForm\bin\Debug\net
 C:\Users\TEST\source\repos\ProductionOrderForm\ProductionOrderForm\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
 C:\Users\TEST\source\repos\ProductionOrderForm\ProductionOrderForm\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.PerformanceCounter.dll
 C:\Users\TEST\source\repos\ProductionOrderForm\ProductionOrderForm\obj\Debug\net8.0-windows\ProductionOrderForm.csproj.AssemblyReference.cache
-C:\Users\TEST\source\repos\ProductionOrderForm\ProductionOrderForm\obj\Debug\net8.0-windows\ProductionOrderForm.Form1.resources
 C:\Users\TEST\source\repos\ProductionOrderForm\ProductionOrderForm\obj\Debug\net8.0-windows\ProductionOrderForm.csproj.GenerateResource.cache
 C:\Users\TEST\source\repos\ProductionOrderForm\ProductionOrderForm\obj\Debug\net8.0-windows\ProductionOrderForm.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\TEST\source\repos\ProductionOrderForm\ProductionOrderForm\obj\Debug\net8.0-windows\ProductionOrderForm.AssemblyInfoInputs.cache
@@ -25,3 +24,4 @@ C:\Users\TEST\source\repos\ProductionOrderForm\ProductionOrderForm\obj\Debug\net
 C:\Users\TEST\source\repos\ProductionOrderForm\ProductionOrderForm\obj\Debug\net8.0-windows\ProductionOrderForm.pdb
 C:\Users\TEST\source\repos\ProductionOrderForm\ProductionOrderForm\obj\Debug\net8.0-windows\ProductionOrderForm.genruntimeconfig.cache
 C:\Users\TEST\source\repos\ProductionOrderForm\ProductionOrderForm\obj\Debug\net8.0-windows\ref\ProductionOrderForm.dll
+C:\Users\TEST\source\repos\ProductionOrderForm\ProductionOrderForm\obj\Debug\net8.0-windows\ProductionOrderForm.productionOrderForm.resources

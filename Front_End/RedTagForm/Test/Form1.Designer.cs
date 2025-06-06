@@ -51,6 +51,7 @@
             userPanel = new Panel();
             label1 = new Label();
             repairCheck = new CheckBox();
+            recieveBtn = new Button();
             pcbPanel.SuspendLayout();
             sldPanel.SuspendLayout();
             userPanel.SuspendLayout();
@@ -59,11 +60,11 @@
             // updateBtn
             // 
             updateBtn.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            updateBtn.Location = new Point(575, 151);
+            updateBtn.Location = new Point(577, 120);
             updateBtn.Name = "updateBtn";
             updateBtn.Size = new Size(140, 42);
             updateBtn.TabIndex = 0;
-            updateBtn.Text = "Submit Data";
+            updateBtn.Text = "Submit";
             updateBtn.UseVisualStyleBackColor = true;
             updateBtn.Click += updateBtn_click;
             // 
@@ -288,11 +289,23 @@
             repairCheck.Text = "Repaired";
             repairCheck.UseVisualStyleBackColor = true;
             // 
+            // recieveBtn
+            // 
+            recieveBtn.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            recieveBtn.Location = new Point(577, 192);
+            recieveBtn.Name = "recieveBtn";
+            recieveBtn.Size = new Size(140, 42);
+            recieveBtn.TabIndex = 12;
+            recieveBtn.Text = "Recieve";
+            recieveBtn.UseVisualStyleBackColor = true;
+            recieveBtn.Click += recieveBtn_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(776, 654);
+            Controls.Add(recieveBtn);
             Controls.Add(sldPanel);
             Controls.Add(updateBtn);
             Controls.Add(pcbPanel);
@@ -336,5 +349,6 @@
         private Label pcbAInfoLabel;
         private Label label1;
         private CheckBox repairCheck;
+        private Button recieveBtn;
     }
 }
