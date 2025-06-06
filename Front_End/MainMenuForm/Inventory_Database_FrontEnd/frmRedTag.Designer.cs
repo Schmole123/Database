@@ -43,6 +43,7 @@
             sldFailLabel = new Label();
             sldNumLabel = new Label();
             sldNum = new TextBox();
+            recieveBtn = new Button();
             userPanel = new Panel();
             label1 = new Label();
             repairCheck = new CheckBox();
@@ -58,13 +59,14 @@
             // 
             // updateBtn
             // 
+            updateBtn.BackColor = Color.PaleGreen;
             updateBtn.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            updateBtn.Location = new Point(301, 317);
+            updateBtn.Location = new Point(10, 338);
             updateBtn.Name = "updateBtn";
             updateBtn.Size = new Size(140, 42);
             updateBtn.TabIndex = 12;
             updateBtn.Text = "Submit Data";
-            updateBtn.UseVisualStyleBackColor = true;
+            updateBtn.UseVisualStyleBackColor = false;
             updateBtn.Click += updateBtn_Click;
             // 
             // pcbPanel
@@ -93,10 +95,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(3, 163);
+            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            label2.Location = new Point(0, 163);
             label2.Name = "label2";
-            label2.Size = new Size(150, 30);
+            label2.Size = new Size(137, 25);
             label2.TabIndex = 7;
             label2.Text = "Additional info";
             // 
@@ -112,29 +114,29 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(3, 52);
+            label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            label3.Location = new Point(-1, 52);
             label3.Name = "label3";
-            label3.Size = new Size(178, 30);
+            label3.Size = new Size(162, 25);
             label3.TabIndex = 5;
             label3.Text = "Reason for Failure";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(3, 12);
+            label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(-1, 12);
             label4.Name = "label4";
-            label4.Size = new Size(188, 30);
+            label4.Size = new Size(176, 25);
             label4.TabIndex = 3;
-            label4.Text = "PCB Serial Number";
+            label4.Text = "PCB Serial Number:";
             // 
             // PCBnum
             // 
             PCBnum.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            PCBnum.Location = new Point(197, 16);
+            PCBnum.Location = new Point(176, 11);
             PCBnum.Name = "PCBnum";
-            PCBnum.Size = new Size(114, 29);
+            PCBnum.Size = new Size(149, 29);
             PCBnum.TabIndex = 1;
             // 
             // sldPanel
@@ -145,7 +147,7 @@
             sldPanel.Controls.Add(sldFailLabel);
             sldPanel.Controls.Add(sldNumLabel);
             sldPanel.Controls.Add(sldNum);
-            sldPanel.Location = new Point(298, 350);
+            sldPanel.Location = new Point(362, 392);
             sldPanel.Name = "sldPanel";
             sldPanel.Size = new Size(330, 320);
             sldPanel.TabIndex = 27;
@@ -163,10 +165,10 @@
             // sldAInfoLabel
             // 
             sldAInfoLabel.AutoSize = true;
-            sldAInfoLabel.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            sldAInfoLabel.Location = new Point(3, 163);
+            sldAInfoLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            sldAInfoLabel.Location = new Point(-1, 163);
             sldAInfoLabel.Name = "sldAInfoLabel";
-            sldAInfoLabel.Size = new Size(150, 30);
+            sldAInfoLabel.Size = new Size(137, 25);
             sldAInfoLabel.TabIndex = 7;
             sldAInfoLabel.Text = "Additional info";
             // 
@@ -182,30 +184,42 @@
             // sldFailLabel
             // 
             sldFailLabel.AutoSize = true;
-            sldFailLabel.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            sldFailLabel.Location = new Point(3, 52);
+            sldFailLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            sldFailLabel.Location = new Point(-3, 52);
             sldFailLabel.Name = "sldFailLabel";
-            sldFailLabel.Size = new Size(178, 30);
+            sldFailLabel.Size = new Size(162, 25);
             sldFailLabel.TabIndex = 5;
             sldFailLabel.Text = "Reason for Failure";
             // 
             // sldNumLabel
             // 
             sldNumLabel.AutoSize = true;
-            sldNumLabel.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            sldNumLabel.Location = new Point(3, 12);
+            sldNumLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            sldNumLabel.Location = new Point(-1, 12);
             sldNumLabel.Name = "sldNumLabel";
-            sldNumLabel.Size = new Size(187, 30);
+            sldNumLabel.Size = new Size(174, 25);
             sldNumLabel.TabIndex = 3;
-            sldNumLabel.Text = "SLD Serial Number";
+            sldNumLabel.Text = "SLD Serial Number:";
             // 
             // sldNum
             // 
             sldNum.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            sldNum.Location = new Point(196, 16);
+            sldNum.Location = new Point(171, 10);
             sldNum.Name = "sldNum";
-            sldNum.Size = new Size(115, 29);
+            sldNum.Size = new Size(157, 29);
             sldNum.TabIndex = 1;
+            // 
+            // recieveBtn
+            // 
+            recieveBtn.BackColor = Color.LightSalmon;
+            recieveBtn.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            recieveBtn.Location = new Point(156, 338);
+            recieveBtn.Name = "recieveBtn";
+            recieveBtn.Size = new Size(155, 42);
+            recieveBtn.TabIndex = 12;
+            recieveBtn.Text = "Receive Data";
+            recieveBtn.UseVisualStyleBackColor = false;
+            recieveBtn.Click += recieveBtn_Click;
             // 
             // userPanel
             // 
@@ -218,14 +232,14 @@
             userPanel.Controls.Add(unitSelect);
             userPanel.Location = new Point(12, 12);
             userPanel.Name = "userPanel";
-            userPanel.Size = new Size(216, 493);
+            userPanel.Size = new Size(193, 275);
             userPanel.TabIndex = 28;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(69, 161);
+            label1.Location = new Point(5, 161);
             label1.Name = "label1";
             label1.Size = new Size(57, 30);
             label1.TabIndex = 11;
@@ -235,7 +249,7 @@
             // 
             repairCheck.AutoSize = true;
             repairCheck.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            repairCheck.Location = new Point(46, 254);
+            repairCheck.Location = new Point(9, 232);
             repairCheck.Name = "repairCheck";
             repairCheck.Size = new Size(113, 34);
             repairCheck.TabIndex = 10;
@@ -244,36 +258,36 @@
             // 
             // dateSelect
             // 
-            dateSelect.Location = new Point(32, 194);
+            dateSelect.Location = new Point(9, 194);
             dateSelect.Name = "dateSelect";
-            dateSelect.Size = new Size(141, 23);
+            dateSelect.Size = new Size(181, 23);
             dateSelect.TabIndex = 8;
             // 
             // unitLabel
             // 
             unitLabel.AutoSize = true;
-            unitLabel.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            unitLabel.Location = new Point(49, 7);
+            unitLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            unitLabel.Location = new Point(4, 12);
             unitLabel.Name = "unitLabel";
-            unitLabel.Size = new Size(110, 30);
+            unitLabel.Size = new Size(100, 25);
             unitLabel.TabIndex = 9;
             unitLabel.Text = "Unit select";
             // 
             // reporteeName
             // 
             reporteeName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            reporteeName.Location = new Point(21, 109);
+            reporteeName.Location = new Point(9, 106);
             reporteeName.Name = "reporteeName";
-            reporteeName.Size = new Size(169, 29);
+            reporteeName.Size = new Size(181, 29);
             reporteeName.TabIndex = 5;
             // 
             // nameLabel
             // 
             nameLabel.AutoSize = true;
-            nameLabel.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            nameLabel.Location = new Point(21, 76);
+            nameLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            nameLabel.Location = new Point(4, 78);
             nameLabel.Name = "nameLabel";
-            nameLabel.Size = new Size(183, 30);
+            nameLabel.Size = new Size(164, 25);
             nameLabel.TabIndex = 7;
             nameLabel.Text = "Name of Reportee";
             // 
@@ -282,9 +296,9 @@
             unitSelect.DropDownStyle = ComboBoxStyle.DropDownList;
             unitSelect.FormattingEnabled = true;
             unitSelect.Items.AddRange(new object[] { "PCB", "SLD" });
-            unitSelect.Location = new Point(32, 40);
+            unitSelect.Location = new Point(9, 40);
             unitSelect.Name = "unitSelect";
-            unitSelect.Size = new Size(141, 23);
+            unitSelect.Size = new Size(181, 23);
             unitSelect.TabIndex = 8;
             unitSelect.SelectedValueChanged += unitSelect_SelectedValueChanged;
             // 
@@ -294,6 +308,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
             ClientSize = new Size(885, 682);
+            Controls.Add(recieveBtn);
             Controls.Add(userPanel);
             Controls.Add(sldPanel);
             Controls.Add(pcbPanel);
@@ -335,5 +350,6 @@
         private TextBox reporteeName;
         private Label nameLabel;
         private ComboBox unitSelect;
+        private Button recieveBtn;
     }
 }

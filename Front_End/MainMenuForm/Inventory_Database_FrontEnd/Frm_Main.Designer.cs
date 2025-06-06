@@ -36,7 +36,7 @@
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             btnRedTag = new Button();
-            button3 = new Button();
+            btnProductionOrder = new Button();
             btnStockMenu = new Button();
             button1 = new Button();
             pictureBox1 = new PictureBox();
@@ -72,9 +72,10 @@
             toolStripSeparator11 = new ToolStripSeparator();
             aboutToolStripMenuItem1 = new ToolStripMenuItem();
             pnlWelcome = new Panel();
-            pnlRedTag = new Panel();
             richTextBox1 = new RichTextBox();
             pnlStock = new Panel();
+            pnlRedTag = new Panel();
+            pnlProductionOrder = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -83,7 +84,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             menuStrip1.SuspendLayout();
             pnlWelcome.SuspendLayout();
-            pnlRedTag.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -95,7 +95,7 @@
             panel1.Controls.Add(pictureBox3);
             panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(btnRedTag);
-            panel1.Controls.Add(button3);
+            panel1.Controls.Add(btnProductionOrder);
             panel1.Controls.Add(btnStockMenu);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(pictureBox1);
@@ -167,19 +167,20 @@
             btnRedTag.UseVisualStyleBackColor = true;
             btnRedTag.Click += btnRedTag_Click;
             // 
-            // button3
+            // btnProductionOrder
             // 
-            button3.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Dubai", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.DarkCyan;
-            button3.Location = new Point(-19, 251);
-            button3.Name = "button3";
-            button3.Size = new Size(388, 73);
-            button3.TabIndex = 3;
-            button3.Text = "Production Order";
-            button3.UseVisualStyleBackColor = true;
+            btnProductionOrder.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
+            btnProductionOrder.FlatAppearance.BorderSize = 0;
+            btnProductionOrder.FlatStyle = FlatStyle.Flat;
+            btnProductionOrder.Font = new Font("Dubai", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnProductionOrder.ForeColor = Color.DarkCyan;
+            btnProductionOrder.Location = new Point(-19, 251);
+            btnProductionOrder.Name = "btnProductionOrder";
+            btnProductionOrder.Size = new Size(388, 73);
+            btnProductionOrder.TabIndex = 3;
+            btnProductionOrder.Text = "Production Order";
+            btnProductionOrder.UseVisualStyleBackColor = true;
+            btnProductionOrder.Click += btnProductionOrder_Click;
             // 
             // btnStockMenu
             // 
@@ -431,20 +432,11 @@
             // pnlWelcome
             // 
             pnlWelcome.BackColor = SystemColors.ControlLight;
-            pnlWelcome.Controls.Add(pnlRedTag);
             pnlWelcome.Controls.Add(richTextBox1);
             pnlWelcome.Location = new Point(270, 27);
             pnlWelcome.Name = "pnlWelcome";
             pnlWelcome.Size = new Size(679, 569);
             pnlWelcome.TabIndex = 2;
-            // 
-            // pnlRedTag
-            // 
-            pnlRedTag.Controls.Add(pnlStock);
-            pnlRedTag.Location = new Point(-3, -2);
-            pnlRedTag.Name = "pnlRedTag";
-            pnlRedTag.Size = new Size(685, 582);
-            pnlRedTag.TabIndex = 1;
             // 
             // richTextBox1
             // 
@@ -461,17 +453,34 @@
             // 
             // pnlStock
             // 
-            pnlStock.Location = new Point(0, 0);
+            pnlStock.Location = new Point(273, 25);
             pnlStock.Name = "pnlStock";
-            pnlStock.Size = new Size(685, 566);
+            pnlStock.Size = new Size(685, 582);
             pnlStock.TabIndex = 0;
+            // 
+            // pnlRedTag
+            // 
+            pnlRedTag.Location = new Point(273, 27);
+            pnlRedTag.Name = "pnlRedTag";
+            pnlRedTag.Size = new Size(685, 582);
+            pnlRedTag.TabIndex = 1;
+            // 
+            // pnlProductionOrder
+            // 
+            pnlProductionOrder.Location = new Point(270, 27);
+            pnlProductionOrder.Name = "pnlProductionOrder";
+            pnlProductionOrder.Size = new Size(685, 569);
+            pnlProductionOrder.TabIndex = 0;
             // 
             // Inventory_Database
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(951, 591);
+            Controls.Add(pnlProductionOrder);
+            Controls.Add(pnlStock);
             Controls.Add(pnlWelcome);
+            Controls.Add(pnlRedTag);
             Controls.Add(panel1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
@@ -486,7 +495,6 @@
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             pnlWelcome.ResumeLayout(false);
-            pnlRedTag.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -526,7 +534,7 @@
         private ToolStripSeparator toolStripSeparator11;
         private ToolStripMenuItem aboutToolStripMenuItem1;
         private Button btnRedTag;
-        private Button button3;
+        private Button btnProductionOrder;
         private Button btnStockMenu;
         private Button button1;
         private PictureBox pictureBox5;
@@ -538,5 +546,6 @@
         private Panel panel3;
         private Panel pnlRedTag;
         private Panel pnlStock;
+        private Panel pnlProductionOrder;
     }
 }

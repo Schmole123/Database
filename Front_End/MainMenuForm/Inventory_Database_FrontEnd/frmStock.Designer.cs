@@ -30,7 +30,6 @@
         {
             label1 = new Label();
             label2 = new Label();
-            label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             btnAddtoStock = new Button();
@@ -39,14 +38,17 @@
             cmbLocation = new ComboBox();
             txtAmount = new TextBox();
             cmbSupplier = new ComboBox();
-            txtSearchforComp = new TextBox();
+            txtLastUpdate = new TextBox();
+            lblProductCode = new Label();
+            txtProductCode = new TextBox();
+            lblAddNewComp = new Label();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(34, 134);
+            label1.Location = new Point(15, 29);
             label1.Name = "label1";
             label1.Size = new Size(111, 25);
             label1.TabIndex = 0;
@@ -56,27 +58,17 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(329, 134);
+            label2.Location = new Point(257, 29);
             label2.Name = "label2";
             label2.Size = new Size(149, 25);
             label2.TabIndex = 1;
             label2.Text = "Amount in Stock";
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(262, 30);
-            label3.Name = "label3";
-            label3.Size = new Size(202, 25);
-            label3.TabIndex = 2;
-            label3.Text = "Search for Component";
-            // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(34, 273);
+            label4.Location = new Point(12, 118);
             label4.Name = "label4";
             label4.Size = new Size(84, 25);
             label4.TabIndex = 3;
@@ -86,7 +78,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(364, 273);
+            label5.Location = new Point(292, 118);
             label5.Name = "label5";
             label5.Size = new Size(82, 25);
             label5.TabIndex = 4;
@@ -94,41 +86,45 @@
             // 
             // btnAddtoStock
             // 
-            btnAddtoStock.Location = new Point(34, 417);
+            btnAddtoStock.BackColor = Color.MediumSeaGreen;
+            btnAddtoStock.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAddtoStock.Location = new Point(12, 472);
             btnAddtoStock.Name = "btnAddtoStock";
-            btnAddtoStock.Size = new Size(132, 51);
+            btnAddtoStock.Size = new Size(162, 62);
             btnAddtoStock.TabIndex = 5;
             btnAddtoStock.Text = "Add to Stock";
-            btnAddtoStock.UseVisualStyleBackColor = true;
+            btnAddtoStock.UseVisualStyleBackColor = false;
+            btnAddtoStock.Click += btnAddtoStock_Click;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(229, 370);
+            label6.Location = new Point(194, 493);
             label6.Name = "label6";
-            label6.Size = new Size(79, 15);
+            label6.Size = new Size(72, 15);
             label6.TabIndex = 6;
-            label6.Text = "Latest Update";
+            label6.Text = "Last Update:";
             // 
             // cmbComponent
             // 
             cmbComponent.FormattingEnabled = true;
-            cmbComponent.Location = new Point(34, 162);
+            cmbComponent.Location = new Point(15, 57);
             cmbComponent.Name = "cmbComponent";
             cmbComponent.Size = new Size(215, 23);
             cmbComponent.TabIndex = 7;
+            cmbComponent.SelectedIndexChanged += cmbComponent_SelectedIndexChanged;
             // 
             // cmbLocation
             // 
             cmbLocation.FormattingEnabled = true;
-            cmbLocation.Location = new Point(34, 301);
+            cmbLocation.Location = new Point(12, 146);
             cmbLocation.Name = "cmbLocation";
             cmbLocation.Size = new Size(215, 23);
             cmbLocation.TabIndex = 8;
             // 
             // txtAmount
             // 
-            txtAmount.Location = new Point(379, 162);
+            txtAmount.Location = new Point(307, 57);
             txtAmount.Name = "txtAmount";
             txtAmount.Size = new Size(46, 23);
             txtAmount.TabIndex = 9;
@@ -136,25 +132,58 @@
             // cmbSupplier
             // 
             cmbSupplier.FormattingEnabled = true;
-            cmbSupplier.Location = new Point(329, 301);
+            cmbSupplier.Location = new Point(257, 146);
             cmbSupplier.Name = "cmbSupplier";
             cmbSupplier.Size = new Size(149, 23);
             cmbSupplier.TabIndex = 10;
             // 
-            // txtSearchforComp
+            // txtLastUpdate
             // 
-            txtSearchforComp.Location = new Point(481, 33);
-            txtSearchforComp.Name = "txtSearchforComp";
-            txtSearchforComp.Size = new Size(291, 23);
-            txtSearchforComp.TabIndex = 11;
+            txtLastUpdate.Location = new Point(194, 511);
+            txtLastUpdate.Name = "txtLastUpdate";
+            txtLastUpdate.Size = new Size(355, 23);
+            txtLastUpdate.TabIndex = 12;
+            // 
+            // lblProductCode
+            // 
+            lblProductCode.AutoSize = true;
+            lblProductCode.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblProductCode.Location = new Point(15, 197);
+            lblProductCode.Name = "lblProductCode";
+            lblProductCode.Size = new Size(127, 25);
+            lblProductCode.TabIndex = 13;
+            lblProductCode.Text = "Product Code";
+            // 
+            // txtProductCode
+            // 
+            txtProductCode.Location = new Point(12, 225);
+            txtProductCode.Name = "txtProductCode";
+            txtProductCode.Size = new Size(215, 23);
+            txtProductCode.TabIndex = 14;
+            // 
+            // lblAddNewComp
+            // 
+            lblAddNewComp.AutoSize = true;
+            lblAddNewComp.Font = new Font("Segoe UI", 8.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblAddNewComp.ForeColor = Color.Teal;
+            lblAddNewComp.Location = new Point(69, 87);
+            lblAddNewComp.Name = "lblAddNewComp";
+            lblAddNewComp.Size = new Size(91, 13);
+            lblAddNewComp.TabIndex = 15;
+            lblAddNewComp.Text = "New Component?";
+            lblAddNewComp.Click += lblAddNewComp_Click;
             // 
             // frmStock
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
-            ClientSize = new Size(866, 498);
-            Controls.Add(txtSearchforComp);
+            BackgroundImageLayout = ImageLayout.None;
+            ClientSize = new Size(866, 581);
+            Controls.Add(lblAddNewComp);
+            Controls.Add(txtProductCode);
+            Controls.Add(lblProductCode);
+            Controls.Add(txtLastUpdate);
             Controls.Add(cmbSupplier);
             Controls.Add(txtAmount);
             Controls.Add(cmbLocation);
@@ -163,9 +192,9 @@
             Controls.Add(btnAddtoStock);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "frmStock";
             Text = "frmStock";
             ResumeLayout(false);
@@ -176,7 +205,6 @@
 
         private Label label1;
         private Label label2;
-        private Label label3;
         private Label label4;
         private Label label5;
         private Button btnAddtoStock;
@@ -185,6 +213,9 @@
         private ComboBox cmbLocation;
         private TextBox txtAmount;
         private ComboBox cmbSupplier;
-        private TextBox txtSearchforComp;
+        private TextBox txtLastUpdate;
+        private Label lblProductCode;
+        private TextBox txtProductCode;
+        private Label lblAddNewComp;
     }
 }

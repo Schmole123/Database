@@ -29,3 +29,5 @@
 \\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.genruntimeconfig.cache
 \\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\ref\Inventory_Database_FrontEnd.dll
 \\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.frmStock.resources
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.Dialogs.NewComponent.resources
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.frmProductionOrder.resources

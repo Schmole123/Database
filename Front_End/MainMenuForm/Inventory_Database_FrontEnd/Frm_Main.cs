@@ -21,20 +21,28 @@ namespace Inventory_Database_FrontEnd
             InitializeComponent();
             MainPanel = panel3;
             pnlRedTag.Visible = false;
+            pnlStock.Visible = false;
 
         }
 
 
         private void btnRedTag_Click(object sender, EventArgs e)
         {
-            pnlRedTag.Visible = true;
-            frmRedTag frmRedTag = new frmRedTag(connectionString);
-            frmRedTag.Dock = DockStyle.Fill;
-            frmRedTag.TopLevel = false;
-            pnlRedTag.Controls.Clear();
-            pnlRedTag.Controls.Add(frmRedTag);
-
-            frmRedTag.Show();
+            try
+            {
+                ShowPanel(pnlRedTag);
+                pnlRedTag.Controls.Clear();
+                frmRedTag frm = new frmRedTag(connectionString);
+                frm.Dock = DockStyle.Fill;
+                frm.TopLevel = false;
+                frm.FormBorderStyle = FormBorderStyle.None;
+                pnlRedTag.Controls.Add(frm);
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading Red Tag menu: " + ex.Message);
+            }
         }
 
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
@@ -46,14 +54,51 @@ namespace Inventory_Database_FrontEnd
 
         private void btnStockMenu_Click(object sender, EventArgs e)
         {
-            pnlStock.Visible = true;
-            frmStock frmStock = new frmStock();
-            frmStock.Dock = DockStyle.Fill;
-            frmStock.TopLevel = false;
-            pnlStock.Controls.Clear();
-            pnlStock.Controls.Add(frmStock);
+            try
+            {
+                ShowPanel(pnlStock);
+                pnlStock.Controls.Clear();
+                frmStock frm = new frmStock(connectionString);
+                frm.Dock = DockStyle.Fill;
+                frm.TopLevel = false;
+                frm.FormBorderStyle = FormBorderStyle.None;
+                pnlStock.Controls.Add(frm);
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading stock menu: " + ex.Message);
+            }
+        }
+        private void ShowPanel(Panel panelToShow)
+        {
+            // Hide all panels
+            pnlStock.Visible = false;
+            pnlRedTag.Visible = false;
+            // Add more if you have others
 
-            frmStock.Show();
+            // Show the selected one
+            panelToShow.BringToFront();
+            panelToShow.Visible = true;
+        }
+
+        private void btnProductionOrder_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ShowPanel(pnlProductionOrder);
+                pnlProductionOrder.Controls.Clear();
+                frmProductionOrder frm = new frmProductionOrder(connectionString);
+                frm.Dock = DockStyle.Fill;
+                frm.TopLevel = false;
+                frm.FormBorderStyle = FormBorderStyle.None;
+                pnlProductionOrder.Controls.Add(frm);
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading Production Order menu: " + ex.Message);
+            }
         }
     }
 }
