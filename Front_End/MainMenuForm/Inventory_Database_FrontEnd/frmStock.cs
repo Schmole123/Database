@@ -104,62 +104,60 @@ namespace Inventory_Database_FrontEnd
 
         private void btnAddtoStock_Click(object sender, EventArgs e)
         {
-            //Validate a component has been selected
-            if (cmbComponent.SelectedValue == null)
+            if (cmbComponent.SelectedIndex == -1)
             {
-                MessageBox.Show("Please select a component first.", "No Component Selected", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Please select a component.");
                 return;
             }
 
-            //Validate correct Storage Location is selected
-            if (string.IsNullOrWhiteSpace(cmbLocation.Text))
+            int componentId = Convert.ToInt32(cmbComponent.SelectedValue);
+            List<string> setClauses = new List<string>();
+            List<object> parameterValues = new List<object>();  // raw values in order
+
+
+            if (!string.IsNullOrWhiteSpace(cmbLocation.Text))
             {
-                MessageBox.Show("Please select a storage location.", "No Location Selected", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                setClauses.Add("Location = ?");
+                parameterValues.Add(cmbLocation.Text.Trim());
+            }
+
+ 
+       
+
+            if (setClauses.Count == 0)
+            {
+                MessageBox.Show("No fields to update.");
                 return;
             }
 
-            int componentID = Convert.ToInt32(cmbComponent.SelectedValue);
-            string selectedLocation = cmbLocation.Text.Replace("'", "''");
-            string selectedSupplier = cmbSupplier.Text.Replace("'", "''");
-            string currentDateTime = DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss tt");
+            string setClause = string.Join(", ", setClauses);
+            string sql = $"UPDATE Components SET {setClause} WHERE ComponentID = ?";
 
-            string query = $@"UPDATE Components SET StockAmount = StockAmount + ?,
-            [Location] = ?,
-            [Supplier] = ?,
-            [LastUpdate] = ?
-            WHERE ComponentID = ?";
+            parameterValues.Add(componentId); // Final param for WHERE
 
-            try
+
+            using (OleDbConnection conn = new OleDbConnection(_connectionString))
             {
-                using (OleDbConnection con = new OleDbConnection(_connectionString))
-                using (OleDbCommand cmd = new OleDbCommand(query, con))
+                conn.Open();
+
+                using (OleDbCommand cmd = new OleDbCommand(sql, conn))
                 {
+                    foreach (object value in parameterValues)
+                    {
+                        cmd.Parameters.AddWithValue("?", value);
+                    }
 
-                    cmd.Parameters.AddWithValue("?", selectedSupplier);
-                    
-                    
-
-                    con.Open();
                     cmd.ExecuteNonQuery();
                 }
-
-                MessageBox.Show("Stock updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                // Clear fields
-                txtAmount.Clear();
-                cmbLocation.SelectedIndex = -1;
-                cmbSupplier.SelectedIndex = -1;
-
-                // Reload details for selected component
-                cmbComponent_SelectedIndexChanged(null, null);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error updating stock: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Stock Updated Successfully");
+                conn.Close();
             }
         }
 
-    
+
+
+
+
 
         private void lblAddNewComp_Click(object sender, EventArgs e)
         {

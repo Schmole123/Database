@@ -31,3 +31,36 @@
 \\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.frmStock.resources
 \\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.Dialogs.NewComponent.resources
 \\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.frmProductionOrder.resources
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.exe
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.deps.json
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.runtimeconfig.json
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.dll
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.pdb
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x64\Debug\net8.0-windows\System.Configuration.ConfigurationManager.dll
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x64\Debug\net8.0-windows\System.Data.OleDb.dll
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x64\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x64\Debug\net8.0-windows\System.Diagnostics.PerformanceCounter.dll
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x64\Debug\net8.0-windows\System.Security.Cryptography.ProtectedData.dll
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x64\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.OleDb.dll
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x64\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x64\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x64\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.PerformanceCounter.dll
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.csproj.AssemblyReference.cache
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.Dialogs.NewComponent.resources
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.frmProductionOrder.resources
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.frmRedTag.resources
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.frmStock.resources
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.Inventory_Database.resources
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.Properties.Resources.resources
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.csproj.GenerateResource.cache
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.GeneratedMSBuildEditorConfig.editorconfig
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.AssemblyInfoInputs.cache
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.AssemblyInfo.cs
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.csproj.CoreCompileInputs.cache
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.sourcelink.json
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventor.43BB623F.Up2Date
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.dll
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\refint\Inventory_Database_FrontEnd.dll
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.pdb
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.genruntimeconfig.cache
+W:\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\ref\Inventory_Database_FrontEnd.dll
