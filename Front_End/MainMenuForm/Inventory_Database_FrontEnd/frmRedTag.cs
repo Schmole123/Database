@@ -9,6 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using QRCoder;
+using System.Drawing.Printing;
+using System.Reflection;
+using static System.Resources.ResXFileRef;
+using System.Reflection.Emit;
 
 namespace Inventory_Database_FrontEnd
 {
@@ -16,6 +21,8 @@ namespace Inventory_Database_FrontEnd
     {
 
         static string _connectionString;
+         static string _defaultPrinter;
+
 
         public bool numExists = false;
         public bool repaired = false;
@@ -28,10 +35,13 @@ namespace Inventory_Database_FrontEnd
 
         DataSet DS;
 
-        public frmRedTag(string connectionString)
+        public frmRedTag(string connectionString, string Printer)
         {
             InitializeComponent();
             _connectionString = connectionString;
+            _defaultPrinter = Printer;
+            
+
         }
 
 
@@ -124,8 +134,8 @@ namespace Inventory_Database_FrontEnd
 
         private void frmRedTag_Load(object sender, EventArgs e)
         {
-            pcbPanel.Location = new Point(280, 8);
-            sldPanel.Location = new Point(280, 8);
+            pcbPanel.Location = new Point(280, 15);
+            sldPanel.Location = new Point(280, 15);
             this.Size = new Size(780, 365);
             unitSelect.SelectedItem = "PCB";
         }
@@ -152,49 +162,85 @@ namespace Inventory_Database_FrontEnd
             }
         }
 
-        private void updateBtn_Click(object sender, EventArgs e)
+        private async void updateBtn_Click(object sender, EventArgs e)
         {
             try
             {
-
+                string serialToPrint = null;
                 if (pcbPanel.Visible == true) //pcb unit selected
                 {
+
                     if (PCBnum.Text != "" && reporteeName.Text != "" && pcbfail.Text != "") //requires minimum of serial number, reportee name and reason for failure to submit - "" is blank
                     {
                         UpdateTable(PCBnum.Text, pcbfail.Text, pcbAInfo.Text, "PCB Serial Number", "Reason for PCB Fail"); //table update function call for pcb, passing data from form
-                        MessageBox.Show("Data submission successful");
+                        serialToPrint = PCBnum.Text;
+                        ImageToZplConverter converter = new ImageToZplConverter();
+                        Bitmap qrCodeImage = converter.GenerateQrCodeBitmap(serialToPrint);
+                        string zpl = await converter.ConvertImageToZplAsync(qrCodeImage);
+
+                        if (zpl != null)
+                        {
+                            zpl = System.Text.RegularExpressions.Regex.Replace(zpl, @"\^FO\d+,\d+", "^FO440,0");
+                            string extraZpl = $@"^CFJ0,26\n^FO310,32^FD#^FS\n^CFJ0,17\n^FO310,10^FD^FS\n";
+                            zpl = zpl.StartsWith("^XA") ? "^XA\n" + extraZpl + zpl.Substring(3) : "^XA\n" + extraZpl + zpl;
+
+                            PrinterHelper.SendStringToPrinter(_defaultPrinter, zpl);
+                            MessageBox.Show("Data submission successful");
+                            qrCodeImage.Dispose();
+                        }
+
+                        else
+                        {
+                            MessageBox.Show("Please fill in all data fields");
+                        }
+                    }
+
+                    else if (sldPanel.Visible == true) //sld unit selected
+                    {
+
+                        if (sldNum.Text != "" && reporteeName.Text != "" && sldFailText.Text != "") //requires minimum of serial number, reportee name and reason for failure to submit - "" is blank
+                        {
+
+                            UpdateTable(sldNum.Text, sldFailText.Text, sldAInfoText.Text, "SLD Serial Number", "Reason for SLD Fail"); //table update function call for sld, passing data from form
+                            serialToPrint = sldNum.Text;
+                            MessageBox.Show("Data submission successful");
+                        }
+
+                        else
+                        {
+                            MessageBox.Show("Please fill in all data fields");
+                        }
                     }
 
                     else
                     {
-                        MessageBox.Show("Please fill in all data fields");
-                    }
-                }
-
-                else if (sldPanel.Visible == true) //sld unit selected
-                {
-                    if (sldNum.Text != "" && reporteeName.Text != "" && sldFailText.Text != "") //requires minimum of serial number, reportee name and reason for failure to submit - "" is blank
-                    {
-                        UpdateTable(sldNum.Text, sldFailText.Text, sldAInfoText.Text, "SLD Serial Number", "Reason for SLD Fail"); //table update function call for sld, passing data from form
-                        MessageBox.Show("Data submission successful");
+                        MessageBox.Show("Please select unit type"); // no unit selected from combobox
                     }
 
-                    else
-                    {
-                        MessageBox.Show("Please fill in all data fields");
-                    }
-                }
-
-                else
-                {
-                    MessageBox.Show("Please select unit type"); // no unit selected from combobox
                 }
             }
+
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
+
+        public Bitmap GenerateQrCodeBitmap(string serial)
+        {
+         
+            QRCodeGenerator qrGenerator = new QRCodeGenerator();
+            QRCodeData qRCodeData = qrGenerator.CreateQrCode(serial, QRCodeGenerator.ECCLevel.Q);
+            QRCode qRCode = new QRCode(qRCodeData);
+            Bitmap qrCodeImage = qRCode.GetGraphic(20); // Converts to BITMAP
+            return qrCodeImage;
+        }
+
+    
+  
+     
+
+
 
         private void recieveBtn_Click(object sender, EventArgs e)
         {

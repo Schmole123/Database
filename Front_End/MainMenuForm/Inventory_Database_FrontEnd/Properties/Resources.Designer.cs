@@ -73,6 +73,16 @@ namespace Inventory_Database_FrontEnd.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap home_button__1___1_ {
+            get {
+                object obj = ResourceManager.GetObject("home-button (1) (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_white_e1505726434402 {
             get {
                 object obj = ResourceManager.GetObject("logo_white-e1505726434402", resourceCulture);

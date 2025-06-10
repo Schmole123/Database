@@ -3,13 +3,16 @@
   "WorkspaceRootPath": "\\\\SERVER-CORK\\Shared\\Staff Personal folders\\Caolan\\Database\\Front_End\\MainMenuForm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|\\\\server-cork\\shared\\staff personal folders\\caolan\\database\\front_end\\mainmenuform\\inventory_database_frontend\\frmstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|\\\\server-cork\\shared\\staff personal folders\\caolan\\database\\front_end\\mainmenuform\\inventory_database_frontend\\frmredtag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Caolan\\AppData\\Local\\Temp\\.vsdbgsrc\\b7518fa7e22d6cc3af5ae4f7320f921cbc75c2e95e738ab897e22effcbec8aa4\\OleDbCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|\\\\server-cork\\shared\\staff personal folders\\caolan\\database\\front_end\\mainmenuform\\inventory_database_frontend\\frmredtag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|\\\\server-cork\\shared\\staff personal folders\\caolan\\database\\front_end\\mainmenuform\\inventory_database_frontend\\frmstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|\\\\server-cork\\shared\\staff personal folders\\caolan\\database\\front_end\\mainmenuform\\inventory_database_frontend\\imagetozplconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|\\\\server-cork\\shared\\staff personal folders\\caolan\\database\\front_end\\mainmenuform\\inventory_database_frontend\\printerhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|\\\\server-cork\\shared\\staff personal folders\\caolan\\database\\front_end\\mainmenuform\\inventory_database_frontend\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -18,10 +21,7 @@
       "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|\\\\server-cork\\shared\\staff personal folders\\caolan\\database\\front_end\\mainmenuform\\inventory_database_frontend\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|\\\\server-cork\\shared\\staff personal folders\\caolan\\database\\front_end\\mainmenuform\\inventory_database_frontend\\frmredtag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|\\\\server-cork\\shared\\staff personal folders\\caolan\\database\\front_end\\mainmenuform\\inventory_database_frontend\\dialogs\\newcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|\\\\server-cork\\shared\\staff personal folders\\caolan\\database\\front_end\\mainmenuform\\inventory_database_frontend\\frmstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,22 +31,37 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "OleDbCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Caolan\\AppData\\Local\\Temp\\.vsdbgsrc\\b7518fa7e22d6cc3af5ae4f7320f921cbc75c2e95e738ab897e22effcbec8aa4\\OleDbCommand.cs",
-              "ToolTip": "C:\\Users\\Caolan\\AppData\\Local\\Temp\\.vsdbgsrc\\b7518fa7e22d6cc3af5ae4f7320f921cbc75c2e95e738ab897e22effcbec8aa4\\OleDbCommand.cs [Read Only]",
-              "ViewState": "AgIAAPsCAAAAAAAAAADgvwkDAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ImageToZplConverter.cs",
+              "DocumentMoniker": "\\\\SERVER-CORK\\Shared\\Staff Personal folders\\Caolan\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\ImageToZplConverter.cs",
+              "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\ImageToZplConverter.cs",
+              "ToolTip": "\\\\SERVER-CORK\\Shared\\Staff Personal folders\\Caolan\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\ImageToZplConverter.cs",
+              "RelativeToolTip": "Inventory_Database_FrontEnd\\ImageToZplConverter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-09T08:20:17.363Z",
-              "EditorCaption": " [Read Only]"
+              "WhenOpened": "2025-06-10T09:23:36.684Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
+              "Title": "PrinterHelper.cs",
+              "DocumentMoniker": "\\\\SERVER-CORK\\Shared\\Staff Personal folders\\Caolan\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\PrinterHelper.cs",
+              "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\PrinterHelper.cs",
+              "ToolTip": "\\\\SERVER-CORK\\Shared\\Staff Personal folders\\Caolan\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\PrinterHelper.cs",
+              "RelativeToolTip": "Inventory_Database_FrontEnd\\PrinterHelper.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAIwDAAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T08:51:58.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "frmRedTag.cs [Design]",
               "DocumentMoniker": "\\\\SERVER-CORK\\Shared\\Staff Personal folders\\Caolan\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\frmRedTag.cs",
               "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\frmRedTag.cs",
@@ -59,56 +74,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "NewComponent.cs [Design]",
-              "DocumentMoniker": "\\\\SERVER-CORK\\Shared\\Staff Personal folders\\Caolan\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\Dialogs\\NewComponent.cs",
-              "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\Dialogs\\NewComponent.cs",
-              "ToolTip": "\\\\SERVER-CORK\\Shared\\Staff Personal folders\\Caolan\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\Dialogs\\NewComponent.cs [Design]",
-              "RelativeToolTip": "Inventory_Database_FrontEnd\\Dialogs\\NewComponent.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T10:53:26.928Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "frmStock.cs",
               "DocumentMoniker": "\\\\SERVER-CORK\\Shared\\Staff Personal folders\\Caolan\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\frmStock.cs",
               "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\frmStock.cs",
-              "ToolTip": "\\\\SERVER-CORK\\Shared\\Staff Personal folders\\Caolan\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\frmStock.cs*",
-              "RelativeToolTip": "Inventory_Database_FrontEnd\\frmStock.cs*",
-              "ViewState": "AgIAAHQAAAAAAAAAAADgv6EAAAAUAAAAAAAAAA==",
+              "ToolTip": "\\\\SERVER-CORK\\Shared\\Staff Personal folders\\Caolan\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\frmStock.cs",
+              "RelativeToolTip": "Inventory_Database_FrontEnd\\frmStock.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAjwC0AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-05T11:29:11.531Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmStock.cs [Design]",
-              "DocumentMoniker": "\\\\SERVER-CORK\\Shared\\Staff Personal folders\\Caolan\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\frmStock.cs",
-              "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\frmStock.cs",
-              "ToolTip": "\\\\SERVER-CORK\\Shared\\Staff Personal folders\\Caolan\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\frmStock.cs [Design]*",
-              "RelativeToolTip": "Inventory_Database_FrontEnd\\frmStock.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T11:16:56.993Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Frm_Main.cs",
               "DocumentMoniker": "\\\\SERVER-CORK\\Shared\\Staff Personal folders\\Caolan\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\Frm_Main.cs",
               "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\Frm_Main.cs",
               "ToolTip": "\\\\SERVER-CORK\\Shared\\Staff Personal folders\\Caolan\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\Frm_Main.cs",
               "RelativeToolTip": "Inventory_Database_FrontEnd\\Frm_Main.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAIwFQAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwCcAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-04T14:00:16.708Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Frm_Main.cs [Design]",
               "DocumentMoniker": "\\\\SERVER-CORK\\Shared\\Staff Personal folders\\Caolan\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\Frm_Main.cs",
               "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\Frm_Main.cs",
@@ -117,6 +108,19 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-04T08:36:18.759Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmRedTag.cs",
+              "DocumentMoniker": "\\\\SERVER-CORK\\Shared\\Staff Personal folders\\Caolan\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\frmRedTag.cs",
+              "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\frmRedTag.cs",
+              "ToolTip": "\\\\SERVER-CORK\\Shared\\Staff Personal folders\\Caolan\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\frmRedTag.cs",
+              "RelativeToolTip": "Inventory_Database_FrontEnd\\frmRedTag.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAEwC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T10:28:44.617Z",
+              "EditorCaption": ""
             }
           ]
         }

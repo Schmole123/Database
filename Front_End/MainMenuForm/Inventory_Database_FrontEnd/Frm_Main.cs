@@ -2,6 +2,8 @@ using System.Data;
 using System.Data.OleDb;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using Inventory_Database_FrontEnd;
+using System.Drawing.Printing;
+using System.Windows.Forms;
 
 
 namespace Inventory_Database_FrontEnd
@@ -22,6 +24,8 @@ namespace Inventory_Database_FrontEnd
             MainPanel = panel3;
             pnlRedTag.Visible = false;
             pnlStock.Visible = false;
+            ListPrinters();
+            string defaultPrinter = cmbPrinterSel.SelectedItem?.ToString() ?? "TE200_test";
 
         }
 
@@ -32,7 +36,7 @@ namespace Inventory_Database_FrontEnd
             {
                 ShowPanel(pnlRedTag);
                 pnlRedTag.Controls.Clear();
-                frmRedTag frm = new frmRedTag(connectionString);
+                frmRedTag frm = new frmRedTag(connectionString, "TE200_test");
                 frm.Dock = DockStyle.Fill;
                 frm.TopLevel = false;
                 frm.FormBorderStyle = FormBorderStyle.None;
@@ -98,6 +102,30 @@ namespace Inventory_Database_FrontEnd
             catch (Exception ex)
             {
                 MessageBox.Show("Error loading Production Order menu: " + ex.Message);
+            }
+        }
+
+        private void Inventory_Database_Load(object sender, EventArgs e)
+        {
+            hh.Text = DateTime.Now.Hour.ToString("00");
+            mm.Text = DateTime.Now.Minute.ToString("00");
+            ss.Text = DateTime.Now.Second.ToString("00");
+            timerSecond.Start();
+        }
+
+        private void timerSecond_Tick(object sender, EventArgs e)
+        {
+            hh.Text = DateTime.Now.Hour.ToString("00");
+            mm.Text = DateTime.Now.Minute.ToString("00");
+            ss.Text = DateTime.Now.Second.ToString("00");
+        }
+
+        private void ListPrinters()
+        {
+            cmbPrinterSel.Items.AddRange(PrinterSettings.InstalledPrinters.Cast<string>().ToArray());
+            if (cmbPrinterSel.Items.Count > 0)
+            {
+                cmbPrinterSel.SelectedIndex = 1;
             }
         }
     }

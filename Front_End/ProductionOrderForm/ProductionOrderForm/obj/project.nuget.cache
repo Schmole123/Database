@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "eJFfXbEgRSc=",
+  "dgSpecHash": "1RqpxwUHC20=",
   "success": true,
-  "projectFilePath": "C:\\Users\\TEST\\source\\repos\\ProductionOrderForm\\ProductionOrderForm\\ProductionOrderForm.csproj",
+  "projectFilePath": "\\\\SERVER-CORK\\Shared\\Staff Personal folders\\Caolan\\Database\\Front_End\\ProductionOrderForm\\ProductionOrderForm\\ProductionOrderForm.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\TEST\\.nuget\\packages\\system.configuration.configurationmanager\\10.0.0-preview.4.25258.110\\system.configuration.configurationmanager.10.0.0-preview.4.25258.110.nupkg.sha512",
-    "C:\\Users\\TEST\\.nuget\\packages\\system.data.oledb\\10.0.0-preview.4.25258.110\\system.data.oledb.10.0.0-preview.4.25258.110.nupkg.sha512",
-    "C:\\Users\\TEST\\.nuget\\packages\\system.diagnostics.eventlog\\10.0.0-preview.4.25258.110\\system.diagnostics.eventlog.10.0.0-preview.4.25258.110.nupkg.sha512",
-    "C:\\Users\\TEST\\.nuget\\packages\\system.diagnostics.performancecounter\\10.0.0-preview.4.25258.110\\system.diagnostics.performancecounter.10.0.0-preview.4.25258.110.nupkg.sha512",
-    "C:\\Users\\TEST\\.nuget\\packages\\system.security.cryptography.protecteddata\\10.0.0-preview.4.25258.110\\system.security.cryptography.protecteddata.10.0.0-preview.4.25258.110.nupkg.sha512"
+    "C:\\Users\\Caolan\\.nuget\\packages\\system.configuration.configurationmanager\\10.0.0-preview.4.25258.110\\system.configuration.configurationmanager.10.0.0-preview.4.25258.110.nupkg.sha512",
+    "C:\\Users\\Caolan\\.nuget\\packages\\system.data.oledb\\10.0.0-preview.4.25258.110\\system.data.oledb.10.0.0-preview.4.25258.110.nupkg.sha512",
+    "C:\\Users\\Caolan\\.nuget\\packages\\system.diagnostics.eventlog\\10.0.0-preview.4.25258.110\\system.diagnostics.eventlog.10.0.0-preview.4.25258.110.nupkg.sha512",
+    "C:\\Users\\Caolan\\.nuget\\packages\\system.diagnostics.performancecounter\\10.0.0-preview.4.25258.110\\system.diagnostics.performancecounter.10.0.0-preview.4.25258.110.nupkg.sha512",
+    "C:\\Users\\Caolan\\.nuget\\packages\\system.security.cryptography.protecteddata\\10.0.0-preview.4.25258.110\\system.security.cryptography.protecteddata.10.0.0-preview.4.25258.110.nupkg.sha512"
   ],
   "logs": []
 }

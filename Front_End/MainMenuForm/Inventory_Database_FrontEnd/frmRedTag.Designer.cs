@@ -249,7 +249,7 @@
             // 
             repairCheck.AutoSize = true;
             repairCheck.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            repairCheck.Location = new Point(9, 232);
+            repairCheck.Location = new Point(9, 238);
             repairCheck.Name = "repairCheck";
             repairCheck.Size = new Size(113, 34);
             repairCheck.TabIndex = 10;

@@ -28,169 +28,247 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            label2 = new Label();
-            textBox3 = new TextBox();
-            label3 = new Label();
-            textBox4 = new TextBox();
-            label4 = new Label();
-            textBox5 = new TextBox();
-            label5 = new Label();
-            label6 = new Label();
-            button1 = new Button();
-            comboBox1 = new ComboBox();
+            customerLabel = new Label();
+            customerTxt = new TextBox();
+            orderCodeLabel = new Label();
+            panel1 = new Panel();
+            retrieveBtn = new Button();
+            submitBtn = new Button();
+            productBox = new ComboBox();
+            statusBox = new ComboBox();
+            productLabel = new Label();
+            statusLabel = new Label();
+            endDate = new DateTimePicker();
+            endLabel = new Label();
+            startDate = new DateTimePicker();
+            startLabel = new Label();
+            orderTxt = new TextBox();
+            pbPO = new PictureBox();
+            panel2 = new Panel();
+            trackBar1 = new TrackBar();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbPO).BeginInit();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // customerLabel
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(9, 33);
-            label1.Name = "label1";
-            label1.Size = new Size(73, 15);
-            label1.TabIndex = 0;
-            label1.Text = "PO Number:";
+            customerLabel.AutoSize = true;
+            customerLabel.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            customerLabel.Location = new Point(11, 8);
+            customerLabel.Name = "customerLabel";
+            customerLabel.Size = new Size(102, 30);
+            customerLabel.TabIndex = 0;
+            customerLabel.Text = "Customer";
             // 
-            // textBox1
+            // customerTxt
             // 
-            textBox1.Location = new Point(12, 51);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(158, 23);
-            textBox1.TabIndex = 1;
+            customerTxt.Location = new Point(219, 12);
+            customerTxt.Name = "customerTxt";
+            customerTxt.Size = new Size(138, 23);
+            customerTxt.TabIndex = 1;
             // 
-            // textBox2
+            // orderCodeLabel
             // 
-            textBox2.Location = new Point(13, 107);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(158, 23);
-            textBox2.TabIndex = 3;
+            orderCodeLabel.AutoSize = true;
+            orderCodeLabel.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            orderCodeLabel.Location = new Point(11, 38);
+            orderCodeLabel.Name = "orderCodeLabel";
+            orderCodeLabel.Size = new Size(120, 30);
+            orderCodeLabel.TabIndex = 2;
+            orderCodeLabel.Text = "Order Code";
             // 
-            // label2
+            // panel1
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(9, 89);
-            label2.Name = "label2";
-            label2.Size = new Size(62, 15);
-            label2.TabIndex = 2;
-            label2.Text = "Customer:";
+            panel1.Controls.Add(retrieveBtn);
+            panel1.Controls.Add(submitBtn);
+            panel1.Controls.Add(productBox);
+            panel1.Controls.Add(statusBox);
+            panel1.Controls.Add(productLabel);
+            panel1.Controls.Add(statusLabel);
+            panel1.Controls.Add(endDate);
+            panel1.Controls.Add(endLabel);
+            panel1.Controls.Add(startDate);
+            panel1.Controls.Add(startLabel);
+            panel1.Controls.Add(orderTxt);
+            panel1.Controls.Add(customerLabel);
+            panel1.Controls.Add(customerTxt);
+            panel1.Controls.Add(orderCodeLabel);
+            panel1.Location = new Point(2, 4);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(383, 256);
+            panel1.TabIndex = 12;
             // 
-            // textBox3
+            // retrieveBtn
             // 
-            textBox3.Location = new Point(12, 212);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(158, 23);
-            textBox3.TabIndex = 5;
+            retrieveBtn.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            retrieveBtn.Location = new Point(186, 197);
+            retrieveBtn.Name = "retrieveBtn";
+            retrieveBtn.Size = new Size(119, 41);
+            retrieveBtn.TabIndex = 13;
+            retrieveBtn.Text = "Retrieve";
+            retrieveBtn.UseVisualStyleBackColor = true;
+            retrieveBtn.Click += retrieveBtn_Click;
             // 
-            // label3
+            // submitBtn
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(12, 194);
-            label3.Name = "label3";
-            label3.Size = new Size(61, 15);
-            label3.TabIndex = 4;
-            label3.Text = "Start Date:";
+            submitBtn.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            submitBtn.Location = new Point(46, 197);
+            submitBtn.Name = "submitBtn";
+            submitBtn.Size = new Size(119, 41);
+            submitBtn.TabIndex = 12;
+            submitBtn.Text = "Submit";
+            submitBtn.UseVisualStyleBackColor = true;
+            submitBtn.Click += submitBtn_Click;
             // 
-            // textBox4
+            // productBox
             // 
-            textBox4.Location = new Point(12, 286);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(158, 23);
-            textBox4.TabIndex = 7;
+            productBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            productBox.FormattingEnabled = true;
+            productBox.Items.AddRange(new object[] { "SLD-mCS", "SLD-mCS Power Supply Unit", "cBLMD", "BLL", "BLL Evaluation Unit", "DBUT Mount" });
+            productBox.Location = new Point(219, 162);
+            productBox.Name = "productBox";
+            productBox.Size = new Size(138, 23);
+            productBox.TabIndex = 11;
             // 
-            // label4
+            // statusBox
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(9, 268);
-            label4.Name = "label4";
-            label4.Size = new Size(92, 15);
-            label4.TabIndex = 6;
-            label4.Text = "Requested Date:";
+            statusBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            statusBox.FormattingEnabled = true;
+            statusBox.Items.AddRange(new object[] { "New", "In progress", "Completed" });
+            statusBox.Location = new Point(219, 132);
+            statusBox.Name = "statusBox";
+            statusBox.Size = new Size(138, 23);
+            statusBox.TabIndex = 10;
             // 
-            // textBox5
+            // productLabel
             // 
-            textBox5.Location = new Point(12, 346);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(70, 23);
-            textBox5.TabIndex = 9;
+            productLabel.AutoSize = true;
+            productLabel.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            productLabel.Location = new Point(11, 158);
+            productLabel.Name = "productLabel";
+            productLabel.Size = new Size(85, 30);
+            productLabel.TabIndex = 9;
+            productLabel.Text = "Product";
             // 
-            // label5
+            // statusLabel
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(12, 328);
-            label5.Name = "label5";
-            label5.Size = new Size(54, 15);
-            label5.TabIndex = 8;
-            label5.Text = "Amount:";
+            statusLabel.AutoSize = true;
+            statusLabel.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            statusLabel.Location = new Point(11, 128);
+            statusLabel.Name = "statusLabel";
+            statusLabel.Size = new Size(69, 30);
+            statusLabel.TabIndex = 8;
+            statusLabel.Text = "Status";
             // 
-            // label6
+            // endDate
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(12, 143);
-            label6.Name = "label6";
-            label6.Size = new Size(52, 15);
-            label6.TabIndex = 10;
-            label6.Text = "Product:";
+            endDate.Location = new Point(219, 101);
+            endDate.Name = "endDate";
+            endDate.Size = new Size(138, 23);
+            endDate.TabIndex = 7;
             // 
-            // button1
+            // endLabel
             // 
-            button1.BackColor = Color.LightGreen;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(298, 391);
-            button1.Name = "button1";
-            button1.Size = new Size(156, 47);
-            button1.TabIndex = 11;
-            button1.Text = "Start Production";
-            button1.UseVisualStyleBackColor = false;
+            endLabel.AutoSize = true;
+            endLabel.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            endLabel.Location = new Point(11, 98);
+            endLabel.Name = "endLabel";
+            endLabel.Size = new Size(195, 30);
+            endLabel.TabIndex = 6;
+            endLabel.Text = "Estimated End Date";
             // 
-            // comboBox1
+            // startDate
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(12, 161);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(158, 23);
-            comboBox1.TabIndex = 12;
+            startDate.Location = new Point(219, 70);
+            startDate.Name = "startDate";
+            startDate.Size = new Size(138, 23);
+            startDate.TabIndex = 5;
+            // 
+            // startLabel
+            // 
+            startLabel.AutoSize = true;
+            startLabel.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            startLabel.Location = new Point(11, 68);
+            startLabel.Name = "startLabel";
+            startLabel.Size = new Size(202, 30);
+            startLabel.TabIndex = 4;
+            startLabel.Text = "Estimated Start Date";
+            // 
+            // orderTxt
+            // 
+            orderTxt.Location = new Point(219, 41);
+            orderTxt.Name = "orderTxt";
+            orderTxt.Size = new Size(138, 23);
+            orderTxt.TabIndex = 3;
+            // 
+            // pbPO
+            // 
+            pbPO.Location = new Point(19, 14);
+            pbPO.Name = "pbPO";
+            pbPO.Size = new Size(291, 448);
+            pbPO.TabIndex = 13;
+            pbPO.TabStop = false;
+            // 
+            // panel2
+            // 
+            panel2.AutoScroll = true;
+            panel2.Controls.Add(pbPO);
+            panel2.Location = new Point(391, 2);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(362, 499);
+            panel2.TabIndex = 14;
+            // 
+            // trackBar1
+            // 
+            trackBar1.Location = new Point(523, 507);
+            trackBar1.Name = "trackBar1";
+            trackBar1.Size = new Size(104, 45);
+            trackBar1.TabIndex = 15;
+            trackBar1.Scroll += trackBar1_Scroll;
             // 
             // frmProductionOrder
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
-            ClientSize = new Size(743, 450);
-            Controls.Add(comboBox1);
-            Controls.Add(button1);
-            Controls.Add(label6);
-            Controls.Add(textBox5);
-            Controls.Add(label5);
-            Controls.Add(textBox4);
-            Controls.Add(label4);
-            Controls.Add(textBox3);
-            Controls.Add(label3);
-            Controls.Add(textBox2);
-            Controls.Add(label2);
-            Controls.Add(textBox1);
-            Controls.Add(label1);
+            ClientSize = new Size(765, 548);
+            Controls.Add(trackBar1);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmProductionOrder";
             Text = "frmProductionOrder";
+            Load += frmProductionOrder_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pbPO).EndInit();
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)trackBar1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Label label2;
-        private TextBox textBox3;
-        private Label label3;
-        private TextBox textBox4;
-        private Label label4;
-        private TextBox textBox5;
-        private Label label5;
-        private Label label6;
-        private Button button1;
-        private ComboBox comboBox1;
+        private Label customerLabel;
+        private TextBox customerTxt;
+        private Label orderCodeLabel;
+        private Panel panel1;
+        private Button retrieveBtn;
+        private Button submitBtn;
+        private ComboBox productBox;
+        private ComboBox statusBox;
+        private Label productLabel;
+        private Label statusLabel;
+        private DateTimePicker endDate;
+        private Label endLabel;
+        private DateTimePicker startDate;
+        private Label startLabel;
+        private TextBox orderTxt;
+        private PictureBox pbPO;
+        private Panel panel2;
+        private TrackBar trackBar1;
     }
 }

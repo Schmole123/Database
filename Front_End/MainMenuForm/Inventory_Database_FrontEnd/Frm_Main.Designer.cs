@@ -28,17 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory_Database));
             panel1 = new Panel();
-            pictureBox5 = new PictureBox();
+            btnAssemblyData = new Button();
+            label3 = new Label();
+            ss = new Label();
+            label1 = new Label();
+            mm = new Label();
+            hh = new Label();
+            button1 = new Button();
             panel3 = new Panel();
-            pictureBox4 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            pictureBox2 = new PictureBox();
             btnRedTag = new Button();
             btnProductionOrder = new Button();
             btnStockMenu = new Button();
-            button1 = new Button();
             pictureBox1 = new PictureBox();
             menuStrip1 = new MenuStrip();
             Ttl_File = new ToolStripMenuItem();
@@ -76,11 +79,9 @@
             pnlStock = new Panel();
             pnlRedTag = new Panel();
             pnlProductionOrder = new Panel();
+            timerSecond = new System.Windows.Forms.Timer(components);
+            cmbPrinterSel = new ToolStripComboBox();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             menuStrip1.SuspendLayout();
             pnlWelcome.SuspendLayout();
@@ -89,68 +90,118 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(47, 47, 47);
-            panel1.Controls.Add(pictureBox5);
+            panel1.Controls.Add(btnAssemblyData);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(ss);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(mm);
+            panel1.Controls.Add(hh);
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(panel3);
-            panel1.Controls.Add(pictureBox4);
-            panel1.Controls.Add(pictureBox3);
-            panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(btnRedTag);
             panel1.Controls.Add(btnProductionOrder);
             panel1.Controls.Add(btnStockMenu);
-            panel1.Controls.Add(button1);
             panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(-1, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(270, 634);
             panel1.TabIndex = 0;
             // 
-            // pictureBox5
+            // btnAssemblyData
             // 
-            pictureBox5.BackColor = Color.Transparent;
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(14, 335);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(74, 67);
-            pictureBox5.TabIndex = 8;
-            pictureBox5.TabStop = false;
+            btnAssemblyData.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
+            btnAssemblyData.FlatAppearance.BorderSize = 0;
+            btnAssemblyData.FlatStyle = FlatStyle.Flat;
+            btnAssemblyData.Font = new Font("Dubai", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAssemblyData.ForeColor = Color.DarkCyan;
+            btnAssemblyData.Image = (Image)resources.GetObject("btnAssemblyData.Image");
+            btnAssemblyData.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAssemblyData.Location = new Point(3, 412);
+            btnAssemblyData.Name = "btnAssemblyData";
+            btnAssemblyData.Size = new Size(401, 73);
+            btnAssemblyData.TabIndex = 10;
+            btnAssemblyData.Text = "               Assembly Data";
+            btnAssemblyData.TextAlign = ContentAlignment.MiddleLeft;
+            btnAssemblyData.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Digital-7", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = SystemColors.Control;
+            label3.Location = new Point(146, 59);
+            label3.Name = "label3";
+            label3.Size = new Size(12, 20);
+            label3.TabIndex = 9;
+            label3.Text = ":";
+            // 
+            // ss
+            // 
+            ss.AutoSize = true;
+            ss.Font = new Font("Digital-7", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ss.ForeColor = SystemColors.Control;
+            ss.Location = new Point(157, 62);
+            ss.Name = "ss";
+            ss.Size = new Size(24, 17);
+            ss.TabIndex = 8;
+            ss.Text = "00";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Digital-7", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.Control;
+            label1.Location = new Point(112, 59);
+            label1.Name = "label1";
+            label1.Size = new Size(12, 20);
+            label1.TabIndex = 7;
+            label1.Text = ":";
+            // 
+            // mm
+            // 
+            mm.AutoSize = true;
+            mm.Font = new Font("Digital-7", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mm.ForeColor = SystemColors.Control;
+            mm.Location = new Point(120, 59);
+            mm.Name = "mm";
+            mm.Size = new Size(27, 20);
+            mm.TabIndex = 6;
+            mm.Text = "00";
+            // 
+            // hh
+            // 
+            hh.AutoSize = true;
+            hh.Font = new Font("Digital-7", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            hh.ForeColor = SystemColors.Control;
+            hh.Location = new Point(88, 59);
+            hh.Name = "hh";
+            hh.Size = new Size(27, 20);
+            hh.TabIndex = 5;
+            hh.Text = "00";
+            // 
+            // button1
+            // 
+            button1.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Dubai", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = Color.DarkCyan;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(0, 96);
+            button1.Name = "button1";
+            button1.Size = new Size(270, 73);
+            button1.TabIndex = 1;
+            button1.Text = "                Home";
+            button1.TextAlign = ContentAlignment.MiddleLeft;
+            button1.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
             panel3.Location = new Point(268, 25);
             panel3.Name = "panel3";
-            panel3.Size = new Size(685, 569);
+            panel3.Size = new Size(766, 569);
             panel3.TabIndex = 1;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.BackColor = Color.Transparent;
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(14, 255);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(74, 67);
-            pictureBox4.TabIndex = 7;
-            pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(13, 177);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(75, 67);
-            pictureBox3.TabIndex = 6;
-            pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.BackgroundImageLayout = ImageLayout.None;
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(10, 96);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(65, 69);
-            pictureBox2.TabIndex = 5;
-            pictureBox2.TabStop = false;
             // 
             // btnRedTag
             // 
@@ -159,11 +210,14 @@
             btnRedTag.FlatStyle = FlatStyle.Flat;
             btnRedTag.Font = new Font("Dubai", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnRedTag.ForeColor = Color.DarkCyan;
-            btnRedTag.Location = new Point(-58, 329);
+            btnRedTag.Image = (Image)resources.GetObject("btnRedTag.Image");
+            btnRedTag.ImageAlign = ContentAlignment.MiddleLeft;
+            btnRedTag.Location = new Point(0, 333);
             btnRedTag.Name = "btnRedTag";
-            btnRedTag.Size = new Size(388, 73);
+            btnRedTag.Size = new Size(401, 73);
             btnRedTag.TabIndex = 4;
-            btnRedTag.Text = "Red Tag";
+            btnRedTag.Text = "                Red Tag";
+            btnRedTag.TextAlign = ContentAlignment.MiddleLeft;
             btnRedTag.UseVisualStyleBackColor = true;
             btnRedTag.Click += btnRedTag_Click;
             // 
@@ -174,11 +228,14 @@
             btnProductionOrder.FlatStyle = FlatStyle.Flat;
             btnProductionOrder.Font = new Font("Dubai", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnProductionOrder.ForeColor = Color.DarkCyan;
-            btnProductionOrder.Location = new Point(-19, 251);
+            btnProductionOrder.Image = (Image)resources.GetObject("btnProductionOrder.Image");
+            btnProductionOrder.ImageAlign = ContentAlignment.MiddleLeft;
+            btnProductionOrder.Location = new Point(0, 254);
             btnProductionOrder.Name = "btnProductionOrder";
-            btnProductionOrder.Size = new Size(388, 73);
+            btnProductionOrder.Size = new Size(401, 73);
             btnProductionOrder.TabIndex = 3;
-            btnProductionOrder.Text = "Production Order";
+            btnProductionOrder.Text = "                Production Order";
+            btnProductionOrder.TextAlign = ContentAlignment.MiddleLeft;
             btnProductionOrder.UseVisualStyleBackColor = true;
             btnProductionOrder.Click += btnProductionOrder_Click;
             // 
@@ -189,27 +246,16 @@
             btnStockMenu.FlatStyle = FlatStyle.Flat;
             btnStockMenu.Font = new Font("Dubai", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnStockMenu.ForeColor = Color.DarkCyan;
-            btnStockMenu.Location = new Point(-72, 175);
+            btnStockMenu.Image = (Image)resources.GetObject("btnStockMenu.Image");
+            btnStockMenu.ImageAlign = ContentAlignment.MiddleLeft;
+            btnStockMenu.Location = new Point(0, 175);
             btnStockMenu.Name = "btnStockMenu";
-            btnStockMenu.Size = new Size(388, 73);
+            btnStockMenu.Size = new Size(401, 73);
             btnStockMenu.TabIndex = 2;
-            btnStockMenu.Text = "Stock";
+            btnStockMenu.Text = "                Stock";
+            btnStockMenu.TextAlign = ContentAlignment.MiddleLeft;
             btnStockMenu.UseVisualStyleBackColor = true;
             btnStockMenu.Click += btnStockMenu_Click;
-            // 
-            // button1
-            // 
-            button1.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Dubai", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.DarkCyan;
-            button1.Location = new Point(-72, 92);
-            button1.Name = "button1";
-            button1.Size = new Size(388, 73);
-            button1.TabIndex = 1;
-            button1.Text = "Home";
-            button1.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -253,7 +299,7 @@
             newToolStripMenuItem1.Image = (Image)resources.GetObject("newToolStripMenuItem1.Image");
             newToolStripMenuItem1.ImageTransparentColor = Color.Magenta;
             newToolStripMenuItem1.Name = "newToolStripMenuItem1";
-            newToolStripMenuItem1.Size = new Size(143, 22);
+            newToolStripMenuItem1.Size = new Size(180, 22);
             newToolStripMenuItem1.Text = "&New";
             // 
             // openToolStripMenuItem1
@@ -261,58 +307,59 @@
             openToolStripMenuItem1.Image = (Image)resources.GetObject("openToolStripMenuItem1.Image");
             openToolStripMenuItem1.ImageTransparentColor = Color.Magenta;
             openToolStripMenuItem1.Name = "openToolStripMenuItem1";
-            openToolStripMenuItem1.Size = new Size(143, 22);
+            openToolStripMenuItem1.Size = new Size(180, 22);
             openToolStripMenuItem1.Text = "&Open";
             // 
             // toolStripSeparator6
             // 
             toolStripSeparator6.Name = "toolStripSeparator6";
-            toolStripSeparator6.Size = new Size(140, 6);
+            toolStripSeparator6.Size = new Size(177, 6);
             // 
             // saveToolStripMenuItem1
             // 
             saveToolStripMenuItem1.Image = (Image)resources.GetObject("saveToolStripMenuItem1.Image");
             saveToolStripMenuItem1.ImageTransparentColor = Color.Magenta;
             saveToolStripMenuItem1.Name = "saveToolStripMenuItem1";
-            saveToolStripMenuItem1.Size = new Size(143, 22);
+            saveToolStripMenuItem1.Size = new Size(180, 22);
             saveToolStripMenuItem1.Text = "&Save";
             // 
             // saveAsToolStripMenuItem1
             // 
             saveAsToolStripMenuItem1.Name = "saveAsToolStripMenuItem1";
-            saveAsToolStripMenuItem1.Size = new Size(143, 22);
+            saveAsToolStripMenuItem1.Size = new Size(180, 22);
             saveAsToolStripMenuItem1.Text = "Save &As";
             // 
             // toolStripSeparator7
             // 
             toolStripSeparator7.Name = "toolStripSeparator7";
-            toolStripSeparator7.Size = new Size(140, 6);
+            toolStripSeparator7.Size = new Size(177, 6);
             // 
             // printToolStripMenuItem1
             // 
+            printToolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { cmbPrinterSel });
             printToolStripMenuItem1.Image = (Image)resources.GetObject("printToolStripMenuItem1.Image");
             printToolStripMenuItem1.ImageTransparentColor = Color.Magenta;
             printToolStripMenuItem1.Name = "printToolStripMenuItem1";
-            printToolStripMenuItem1.Size = new Size(143, 22);
-            printToolStripMenuItem1.Text = "&Print";
+            printToolStripMenuItem1.Size = new Size(180, 22);
+            printToolStripMenuItem1.Text = "&Connect To Printer";
             // 
             // printPreviewToolStripMenuItem1
             // 
             printPreviewToolStripMenuItem1.Image = (Image)resources.GetObject("printPreviewToolStripMenuItem1.Image");
             printPreviewToolStripMenuItem1.ImageTransparentColor = Color.Magenta;
             printPreviewToolStripMenuItem1.Name = "printPreviewToolStripMenuItem1";
-            printPreviewToolStripMenuItem1.Size = new Size(143, 22);
+            printPreviewToolStripMenuItem1.Size = new Size(180, 22);
             printPreviewToolStripMenuItem1.Text = "Print Pre&view";
             // 
             // toolStripSeparator8
             // 
             toolStripSeparator8.Name = "toolStripSeparator8";
-            toolStripSeparator8.Size = new Size(140, 6);
+            toolStripSeparator8.Size = new Size(177, 6);
             // 
             // exitToolStripMenuItem1
             // 
             exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            exitToolStripMenuItem1.Size = new Size(143, 22);
+            exitToolStripMenuItem1.Size = new Size(180, 22);
             exitToolStripMenuItem1.Text = "E&xit";
             // 
             // editToolStripMenuItem1
@@ -455,28 +502,38 @@
             // 
             pnlStock.Location = new Point(273, 25);
             pnlStock.Name = "pnlStock";
-            pnlStock.Size = new Size(685, 582);
+            pnlStock.Size = new Size(760, 582);
             pnlStock.TabIndex = 0;
             // 
             // pnlRedTag
             // 
             pnlRedTag.Location = new Point(273, 27);
             pnlRedTag.Name = "pnlRedTag";
-            pnlRedTag.Size = new Size(685, 582);
+            pnlRedTag.Size = new Size(760, 582);
             pnlRedTag.TabIndex = 1;
             // 
             // pnlProductionOrder
             // 
             pnlProductionOrder.Location = new Point(270, 27);
             pnlProductionOrder.Name = "pnlProductionOrder";
-            pnlProductionOrder.Size = new Size(685, 569);
+            pnlProductionOrder.Size = new Size(763, 569);
             pnlProductionOrder.TabIndex = 0;
+            // 
+            // timerSecond
+            // 
+            timerSecond.Interval = 1000;
+            timerSecond.Tick += timerSecond_Tick;
+            // 
+            // cmbPrinterSel
+            // 
+            cmbPrinterSel.Name = "cmbPrinterSel";
+            cmbPrinterSel.Size = new Size(121, 23);
             // 
             // Inventory_Database
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(951, 591);
+            ClientSize = new Size(1034, 591);
             Controls.Add(pnlProductionOrder);
             Controls.Add(pnlStock);
             Controls.Add(pnlWelcome);
@@ -486,11 +543,9 @@
             MainMenuStrip = menuStrip1;
             Name = "Inventory_Database";
             Text = "Inventory_Database";
+            Load += Inventory_Database_Load;
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -537,15 +592,19 @@
         private Button btnProductionOrder;
         private Button btnStockMenu;
         private Button button1;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox2;
         private Panel pnlWelcome;
         private RichTextBox richTextBox1;
         private Panel panel3;
         private Panel pnlRedTag;
         private Panel pnlStock;
         private Panel pnlProductionOrder;
+        private Label hh;
+        private Label label3;
+        private Label ss;
+        private Label label1;
+        private Label mm;
+        private System.Windows.Forms.Timer timerSecond;
+        private Button btnAssemblyData;
+        private ToolStripComboBox cmbPrinterSel;
     }
 }

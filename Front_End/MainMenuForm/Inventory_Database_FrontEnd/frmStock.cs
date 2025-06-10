@@ -111,46 +111,66 @@ namespace Inventory_Database_FrontEnd
             }
 
             int componentId = Convert.ToInt32(cmbComponent.SelectedValue);
-            List<string> setClauses = new List<string>();
-            List<object> parameterValues = new List<object>();  // raw values in order
+            string location = cmbLocation.Text;
+            string supplier = cmbSupplier.Text;
+            var Updated = DateTime.Now;
+        
 
-
-            if (!string.IsNullOrWhiteSpace(cmbLocation.Text))
+            using (OleDbConnection con = new OleDbConnection(_connectionString))
             {
-                setClauses.Add("Location = ?");
-                parameterValues.Add(cmbLocation.Text.Trim());
-            }
+                con.Open();
+                OleDbCommand cmd = con.CreateCommand();
 
- 
-       
+                List<string> setClauses = new List<string>();
+                List<object> parameters = new List<object>();
 
-            if (setClauses.Count == 0)
-            {
-                MessageBox.Show("No fields to update.");
-                return;
-            }
-
-            string setClause = string.Join(", ", setClauses);
-            string sql = $"UPDATE Components SET {setClause} WHERE ComponentID = ?";
-
-            parameterValues.Add(componentId); // Final param for WHERE
-
-
-            using (OleDbConnection conn = new OleDbConnection(_connectionString))
-            {
-                conn.Open();
-
-                using (OleDbCommand cmd = new OleDbCommand(sql, conn))
+                if (!string.IsNullOrEmpty(location))
                 {
-                    foreach (object value in parameterValues)
-                    {
-                        cmd.Parameters.AddWithValue("?", value);
-                    }
-
-                    cmd.ExecuteNonQuery();
+                    setClauses.Add("Location = ?");
+                    parameters.Add(location);
                 }
-                MessageBox.Show("Stock Updated Successfully");
-                conn.Close();
+
+                if (!string.IsNullOrEmpty(supplier))
+                {
+                    setClauses.Add("Supplier = ?");
+                    parameters.Add(supplier);
+                }
+
+
+                
+                    setClauses.Add("LastUpdate = ?");
+                parameters.Add(Updated.ToString("yyyy-MM-dd HH:mm:ss"));
+              
+
+
+
+                if (setClauses.Count == 0)
+                {
+                    MessageBox.Show("Nothing to update.");
+                    return;
+                }
+
+                string setClause = string.Join(", ", setClauses);
+                cmd.CommandText = $"UPDATE Components SET {setClause} WHERE ComponentID = ?";
+                parameters.Add(componentId); // final WHERE clause parameter
+
+                // Add parameters in order
+                foreach (var param in parameters)
+                {
+                    cmd.Parameters.AddWithValue("?", param);
+                }
+
+                int result = cmd.ExecuteNonQuery();
+                System.Threading.Thread.Sleep(1000); // 100 ms delay
+                int previouslySelected = componentId; // Save selected component
+                LoadComponents();
+                cmbComponent.SelectedValue = previouslySelected;
+                if (result > 0)
+
+                    MessageBox.Show("Successfully Submitted");
+
+                else
+                    MessageBox.Show("Component not found or no update made.");
             }
         }
 

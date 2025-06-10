@@ -58,7 +58,7 @@ namespace SupplierForm
 
             while (reader.Read())
             {
-                componentBox.Items.Add(reader.GetString(0));
+                componentBox.Items.Add(reader[0].ToString());
             }
 
             reader.Close();
@@ -139,6 +139,7 @@ namespace SupplierForm
                             {
                                 MessageBox.Show(ex.Message);
                             }
+                            
                         }
 
                         else if (deliveredCheck.Checked == true)    //if the product has not been delivered yet, fill in everything but estimated delivery date
@@ -220,6 +221,8 @@ namespace SupplierForm
                             }
                         }
                     }
+
+                    orderExists = false;
                 }
 
                 else
@@ -299,14 +302,22 @@ namespace SupplierForm
                         orderExists = true;                                         //set flag that the order code exists
 
                         var ordDate = DateTime.Parse(reader[4].ToString());         //convert order date string to DateTime for DateTime picker
-                        var estmDate = DateTime.Parse(reader[5].ToString());        //convert estimated shipping date string to DateTime for DateTime picker
-                        var actDate = DateTime.Parse(reader[6].ToString());         //convert actual arrival date string to DateTIme for DateTime picker
+                        if (reader[5].ToString() != "")
+                        {
+                            var estmDate = DateTime.Parse(reader[5].ToString());        //convert estimated shipping date string to DateTime for DateTime picker
+                            estDate.Value = estmDate;                                   //set estimated date
+                        }
+
+                        if (reader[6].ToString() != "")
+                        {
+                            var actDate = DateTime.Parse(reader[6].ToString());     //convert actual arrival date string to DateTIme for DateTime picker
+                            actualDate.Value = actDate;                             //set actual date
+                        }
 
                         supplierTxt.Text = reader[1].ToString();                    //retrieve supplier name
                         componentBox.SelectedItem = reader[3].ToString();           //set selected component from component list
                         orderDate.Value = ordDate;                                  //set order date
-                        estDate.Value = estmDate;                                   //set estimated date
-                        actualDate.Value = actDate;                                 //set actual date
+                        
                         quantityBox.Value = Decimal.Parse(reader[9].ToString());    //retrieve quantity of ordered components
                         damageCheck.Checked = bool.Parse(reader[8].ToString());     //retrieve damage status
                     }
