@@ -181,7 +181,7 @@ namespace Inventory_Database_FrontEnd
                         if (zpl != null)
                         {
                             zpl = System.Text.RegularExpressions.Regex.Replace(zpl, @"\^FO\d+,\d+", "^FO440,0");
-                            string extraZpl = $@"^CFJ0,26\n^FO310,32^FD#^FS\n^CFJ0,17\n^FO310,10^FD^FS\n";
+                            string extraZpl = $@"^CFJ0,26\n^FO325,20^FDRedTag^FS\n^CFJ0,17\n^FO310,10^FD^FS\n";
                             zpl = zpl.StartsWith("^XA") ? "^XA\n" + extraZpl + zpl.Substring(3) : "^XA\n" + extraZpl + zpl;
 
                             PrinterHelper.SendStringToPrinter(_defaultPrinter, zpl);
@@ -226,19 +226,7 @@ namespace Inventory_Database_FrontEnd
             }
         }
 
-        public Bitmap GenerateQrCodeBitmap(string serial)
-        {
-         
-            QRCodeGenerator qrGenerator = new QRCodeGenerator();
-            QRCodeData qRCodeData = qrGenerator.CreateQrCode(serial, QRCodeGenerator.ECCLevel.Q);
-            QRCode qRCode = new QRCode(qRCodeData);
-            Bitmap qrCodeImage = qRCode.GetGraphic(20); // Converts to BITMAP
-            return qrCodeImage;
-        }
-
-    
-  
-     
+      
 
 
 

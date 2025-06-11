@@ -147,8 +147,7 @@ namespace SupplierForm
                             try
                             {
                                 cmd = new OleDbCommand("INSERT INTO [Supplier Data]([Supplier], [Order Code], [Component], [Order Date], [Actual Delivery], [Damaged],[Quantity])" +
-                                    "VALUES( '" + supplierTxt.Text + "', '" + orderCodeTxt.Text + "', '" + componentBox.Text + "', '" + orderDate.Value.ToShortDateString() + "'," +
-                                    "'" + actualDate.Value.ToShortDateString() + "'," + damaged + ", '" + quantityBox.Value + "'");
+                                    "VALUES('" + supplierTxt.Text + "', '" + orderCodeTxt.Text + "', '" + componentBox.Text + "', '" + orderDate.Value.ToShortDateString() + "','" + actualDate.Value.ToShortDateString() + "'," + damaged + ", '" + quantityBox.Value + "')");
 
                                 cmd.Connection = con;
                                 con.Open();

@@ -53,6 +53,7 @@
             saveAsToolStripMenuItem1 = new ToolStripMenuItem();
             toolStripSeparator7 = new ToolStripSeparator();
             printToolStripMenuItem1 = new ToolStripMenuItem();
+            cmbPrinterSel = new ToolStripComboBox();
             printPreviewToolStripMenuItem1 = new ToolStripMenuItem();
             toolStripSeparator8 = new ToolStripSeparator();
             exitToolStripMenuItem1 = new ToolStripMenuItem();
@@ -80,7 +81,7 @@
             pnlRedTag = new Panel();
             pnlProductionOrder = new Panel();
             timerSecond = new System.Windows.Forms.Timer(components);
-            cmbPrinterSel = new ToolStripComboBox();
+            button2 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             menuStrip1.SuspendLayout();
@@ -90,6 +91,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(47, 47, 47);
+            panel1.Controls.Add(button2);
             panel1.Controls.Add(btnAssemblyData);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(ss);
@@ -299,7 +301,7 @@
             newToolStripMenuItem1.Image = (Image)resources.GetObject("newToolStripMenuItem1.Image");
             newToolStripMenuItem1.ImageTransparentColor = Color.Magenta;
             newToolStripMenuItem1.Name = "newToolStripMenuItem1";
-            newToolStripMenuItem1.Size = new Size(180, 22);
+            newToolStripMenuItem1.Size = new Size(172, 22);
             newToolStripMenuItem1.Text = "&New";
             // 
             // openToolStripMenuItem1
@@ -307,32 +309,32 @@
             openToolStripMenuItem1.Image = (Image)resources.GetObject("openToolStripMenuItem1.Image");
             openToolStripMenuItem1.ImageTransparentColor = Color.Magenta;
             openToolStripMenuItem1.Name = "openToolStripMenuItem1";
-            openToolStripMenuItem1.Size = new Size(180, 22);
+            openToolStripMenuItem1.Size = new Size(172, 22);
             openToolStripMenuItem1.Text = "&Open";
             // 
             // toolStripSeparator6
             // 
             toolStripSeparator6.Name = "toolStripSeparator6";
-            toolStripSeparator6.Size = new Size(177, 6);
+            toolStripSeparator6.Size = new Size(169, 6);
             // 
             // saveToolStripMenuItem1
             // 
             saveToolStripMenuItem1.Image = (Image)resources.GetObject("saveToolStripMenuItem1.Image");
             saveToolStripMenuItem1.ImageTransparentColor = Color.Magenta;
             saveToolStripMenuItem1.Name = "saveToolStripMenuItem1";
-            saveToolStripMenuItem1.Size = new Size(180, 22);
+            saveToolStripMenuItem1.Size = new Size(172, 22);
             saveToolStripMenuItem1.Text = "&Save";
             // 
             // saveAsToolStripMenuItem1
             // 
             saveAsToolStripMenuItem1.Name = "saveAsToolStripMenuItem1";
-            saveAsToolStripMenuItem1.Size = new Size(180, 22);
+            saveAsToolStripMenuItem1.Size = new Size(172, 22);
             saveAsToolStripMenuItem1.Text = "Save &As";
             // 
             // toolStripSeparator7
             // 
             toolStripSeparator7.Name = "toolStripSeparator7";
-            toolStripSeparator7.Size = new Size(177, 6);
+            toolStripSeparator7.Size = new Size(169, 6);
             // 
             // printToolStripMenuItem1
             // 
@@ -340,26 +342,31 @@
             printToolStripMenuItem1.Image = (Image)resources.GetObject("printToolStripMenuItem1.Image");
             printToolStripMenuItem1.ImageTransparentColor = Color.Magenta;
             printToolStripMenuItem1.Name = "printToolStripMenuItem1";
-            printToolStripMenuItem1.Size = new Size(180, 22);
+            printToolStripMenuItem1.Size = new Size(172, 22);
             printToolStripMenuItem1.Text = "&Connect To Printer";
+            // 
+            // cmbPrinterSel
+            // 
+            cmbPrinterSel.Name = "cmbPrinterSel";
+            cmbPrinterSel.Size = new Size(121, 23);
             // 
             // printPreviewToolStripMenuItem1
             // 
             printPreviewToolStripMenuItem1.Image = (Image)resources.GetObject("printPreviewToolStripMenuItem1.Image");
             printPreviewToolStripMenuItem1.ImageTransparentColor = Color.Magenta;
             printPreviewToolStripMenuItem1.Name = "printPreviewToolStripMenuItem1";
-            printPreviewToolStripMenuItem1.Size = new Size(180, 22);
+            printPreviewToolStripMenuItem1.Size = new Size(172, 22);
             printPreviewToolStripMenuItem1.Text = "Print Pre&view";
             // 
             // toolStripSeparator8
             // 
             toolStripSeparator8.Name = "toolStripSeparator8";
-            toolStripSeparator8.Size = new Size(177, 6);
+            toolStripSeparator8.Size = new Size(169, 6);
             // 
             // exitToolStripMenuItem1
             // 
             exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            exitToolStripMenuItem1.Size = new Size(180, 22);
+            exitToolStripMenuItem1.Size = new Size(172, 22);
             exitToolStripMenuItem1.Text = "E&xit";
             // 
             // editToolStripMenuItem1
@@ -524,10 +531,22 @@
             timerSecond.Interval = 1000;
             timerSecond.Tick += timerSecond_Tick;
             // 
-            // cmbPrinterSel
+            // button2
             // 
-            cmbPrinterSel.Name = "cmbPrinterSel";
-            cmbPrinterSel.Size = new Size(121, 23);
+            button2.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Dubai", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.DarkCyan;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(3, 491);
+            button2.Name = "button2";
+            button2.Size = new Size(401, 73);
+            button2.TabIndex = 11;
+            button2.Text = "               Supplier";
+            button2.TextAlign = ContentAlignment.MiddleLeft;
+            button2.UseVisualStyleBackColor = true;
             // 
             // Inventory_Database
             // 
@@ -606,5 +625,6 @@
         private System.Windows.Forms.Timer timerSecond;
         private Button btnAssemblyData;
         private ToolStripComboBox cmbPrinterSel;
+        private Button button2;
     }
 }

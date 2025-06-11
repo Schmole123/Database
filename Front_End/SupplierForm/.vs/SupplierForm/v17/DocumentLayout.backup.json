@@ -34,9 +34,9 @@
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\TEST\\source\\repos\\SupplierForm\\SupplierForm\\Form1.cs",
               "RelativeDocumentMoniker": "SupplierForm\\Form1.cs",
-              "ToolTip": "C:\\Users\\TEST\\source\\repos\\SupplierForm\\SupplierForm\\Form1.cs*",
-              "RelativeToolTip": "SupplierForm\\Form1.cs*",
-              "ViewState": "AgIAACABAAAAAAAAAAAgwDMBAABsAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\TEST\\source\\repos\\SupplierForm\\SupplierForm\\Form1.cs",
+              "RelativeToolTip": "SupplierForm\\Form1.cs",
+              "ViewState": "AgIAAPsAAAAAAAAAAAAQwBEBAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-06T08:09:50.382Z",
               "EditorCaption": ""
@@ -47,11 +47,10 @@
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\TEST\\source\\repos\\SupplierForm\\SupplierForm\\Form1.cs",
               "RelativeDocumentMoniker": "SupplierForm\\Form1.cs",
-              "ToolTip": "C:\\Users\\TEST\\source\\repos\\SupplierForm\\SupplierForm\\Form1.cs [Design]*",
-              "RelativeToolTip": "SupplierForm\\Form1.cs [Design]*",
+              "ToolTip": "C:\\Users\\TEST\\source\\repos\\SupplierForm\\SupplierForm\\Form1.cs [Design]",
+              "RelativeToolTip": "SupplierForm\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T10:16:43.641Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-06T10:16:43.641Z"
             },
             {
               "$type": "Document",
@@ -63,8 +62,7 @@
               "RelativeToolTip": "SupplierForm\\Form1.Designer.cs",
               "ViewState": "AgIAAEIAAAAAAAAAAAAMwFsAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T10:16:09.962Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-06T10:16:09.962Z"
             }
           ]
         }

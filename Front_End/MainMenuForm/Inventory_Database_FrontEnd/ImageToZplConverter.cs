@@ -51,13 +51,13 @@ namespace Inventory_Database_FrontEnd
 
         public Bitmap GenerateQrCodeBitmap(string serial)
         {
-            // Assuming QRCodeGenerator and QRCode are available (e.g., from QRCoder library)
-            // If you don't have it, you'll need to add the QRCoder NuGet package.
+          
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
             QRCodeData qRCodeData = qrGenerator.CreateQrCode(serial, QRCodeGenerator.ECCLevel.Q);
             QRCode qRCode = new QRCode(qRCodeData);
-            Bitmap qrCodeImage = qRCode.GetGraphic(20); // Converts to BITMAP
-            return qrCodeImage;
+            Bitmap qrCodeImage = qRCode.GetGraphic(5); // Converts to BITMAP
+            Bitmap resized = new Bitmap(qrCodeImage, new Size(64, 64));
+            return resized;
         }
     }
 

@@ -29,25 +29,37 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            leadNum = new Label();
-            leadLabel = new Label();
-            deliverNum = new Label();
-            deliveryLabel = new Label();
+            suppLeadNum = new Label();
+            suppLeadLabel = new Label();
+            suppDelivNum = new Label();
+            suppDeliveryLabel = new Label();
             button1 = new Button();
             supplierBox = new ComboBox();
             label2 = new Label();
             label1 = new Label();
             cartesianChart1 = new LiveChartsCore.SkiaSharpView.WinForms.CartesianChart();
+            label3 = new Label();
+            compBox = new ComboBox();
+            compDelivLabel = new Label();
+            compLeadLabel = new Label();
+            compLeadNum = new Label();
+            compDelivNum = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.ActiveCaption;
-            panel1.Controls.Add(leadNum);
-            panel1.Controls.Add(leadLabel);
-            panel1.Controls.Add(deliverNum);
-            panel1.Controls.Add(deliveryLabel);
+            panel1.Controls.Add(compDelivNum);
+            panel1.Controls.Add(compLeadNum);
+            panel1.Controls.Add(compLeadLabel);
+            panel1.Controls.Add(compDelivLabel);
+            panel1.Controls.Add(compBox);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(suppLeadNum);
+            panel1.Controls.Add(suppLeadLabel);
+            panel1.Controls.Add(suppDelivNum);
+            panel1.Controls.Add(suppDeliveryLabel);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(supplierBox);
             panel1.Controls.Add(label2);
@@ -58,47 +70,47 @@
             panel1.Size = new Size(194, 500);
             panel1.TabIndex = 0;
             // 
-            // leadNum
+            // suppLeadNum
             // 
-            leadNum.AutoSize = true;
-            leadNum.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            leadNum.Location = new Point(121, 159);
-            leadNum.Name = "leadNum";
-            leadNum.Size = new Size(45, 21);
-            leadNum.TabIndex = 7;
-            leadNum.Text = "Num";
-            leadNum.Visible = false;
+            suppLeadNum.AutoSize = true;
+            suppLeadNum.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            suppLeadNum.Location = new Point(121, 159);
+            suppLeadNum.Name = "suppLeadNum";
+            suppLeadNum.Size = new Size(45, 21);
+            suppLeadNum.TabIndex = 7;
+            suppLeadNum.Text = "Num";
+            suppLeadNum.Visible = false;
             // 
-            // leadLabel
+            // suppLeadLabel
             // 
-            leadLabel.AutoSize = true;
-            leadLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            leadLabel.Location = new Point(4, 159);
-            leadLabel.Name = "leadLabel";
-            leadLabel.Size = new Size(122, 21);
-            leadLabel.TabIndex = 6;
-            leadLabel.Text = "Avg Lead Time:";
+            suppLeadLabel.AutoSize = true;
+            suppLeadLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            suppLeadLabel.Location = new Point(4, 159);
+            suppLeadLabel.Name = "suppLeadLabel";
+            suppLeadLabel.Size = new Size(122, 21);
+            suppLeadLabel.TabIndex = 6;
+            suppLeadLabel.Text = "Avg Lead Time:";
             // 
-            // deliverNum
+            // suppDelivNum
             // 
-            deliverNum.AutoSize = true;
-            deliverNum.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            deliverNum.Location = new Point(121, 122);
-            deliverNum.Name = "deliverNum";
-            deliverNum.Size = new Size(45, 21);
-            deliverNum.TabIndex = 5;
-            deliverNum.Text = "Num";
-            deliverNum.Visible = false;
+            suppDelivNum.AutoSize = true;
+            suppDelivNum.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            suppDelivNum.Location = new Point(121, 122);
+            suppDelivNum.Name = "suppDelivNum";
+            suppDelivNum.Size = new Size(45, 21);
+            suppDelivNum.TabIndex = 5;
+            suppDelivNum.Text = "Num";
+            suppDelivNum.Visible = false;
             // 
-            // deliveryLabel
+            // suppDeliveryLabel
             // 
-            deliveryLabel.AutoSize = true;
-            deliveryLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            deliveryLabel.Location = new Point(4, 122);
-            deliveryLabel.Name = "deliveryLabel";
-            deliveryLabel.Size = new Size(85, 21);
-            deliveryLabel.TabIndex = 4;
-            deliveryLabel.Text = "Deliveries:";
+            suppDeliveryLabel.AutoSize = true;
+            suppDeliveryLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            suppDeliveryLabel.Location = new Point(4, 122);
+            suppDeliveryLabel.Name = "suppDeliveryLabel";
+            suppDeliveryLabel.Size = new Size(85, 21);
+            suppDeliveryLabel.TabIndex = 4;
+            suppDeliveryLabel.Text = "Deliveries:";
             // 
             // button1
             // 
@@ -148,6 +160,67 @@
             cartesianChart1.Size = new Size(752, 475);
             cartesianChart1.TabIndex = 1;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(22, 199);
+            label3.Name = "label3";
+            label3.Size = new Size(127, 30);
+            label3.TabIndex = 8;
+            label3.Text = "Component";
+            // 
+            // compBox
+            // 
+            compBox.FormattingEnabled = true;
+            compBox.Location = new Point(22, 232);
+            compBox.Name = "compBox";
+            compBox.Size = new Size(121, 23);
+            compBox.TabIndex = 9;
+            compBox.SelectedIndexChanged += compBox_SelectedIndexChanged;
+            // 
+            // compDelivLabel
+            // 
+            compDelivLabel.AutoSize = true;
+            compDelivLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            compDelivLabel.Location = new Point(4, 277);
+            compDelivLabel.Name = "compDelivLabel";
+            compDelivLabel.Size = new Size(85, 21);
+            compDelivLabel.TabIndex = 10;
+            compDelivLabel.Text = "Deliveries:";
+            // 
+            // compLeadLabel
+            // 
+            compLeadLabel.AutoSize = true;
+            compLeadLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            compLeadLabel.Location = new Point(4, 317);
+            compLeadLabel.Name = "compLeadLabel";
+            compLeadLabel.Size = new Size(122, 21);
+            compLeadLabel.TabIndex = 11;
+            compLeadLabel.Text = "Avg Lead Time:";
+            // 
+            // compLeadNum
+            // 
+            compLeadNum.AutoSize = true;
+            compLeadNum.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            compLeadNum.Location = new Point(121, 317);
+            compLeadNum.Name = "compLeadNum";
+            compLeadNum.Size = new Size(45, 21);
+            compLeadNum.TabIndex = 12;
+            compLeadNum.Text = "Num";
+            compLeadNum.Visible = false;
+            // 
+            // compDelivNum
+            // 
+            compDelivNum.AutoSize = true;
+            compDelivNum.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            compDelivNum.Location = new Point(121, 277);
+            compDelivNum.Name = "compDelivNum";
+            compDelivNum.Size = new Size(45, 21);
+            compDelivNum.TabIndex = 13;
+            compDelivNum.Text = "Num";
+            compDelivNum.Visible = false;
+            // 
             // SupplierData
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -170,9 +243,15 @@
         private ComboBox supplierBox;
         private Label label2;
         private LiveChartsCore.SkiaSharpView.WinForms.CartesianChart cartesianChart1;
-        private Label leadNum;
-        private Label leadLabel;
-        private Label deliverNum;
-        private Label deliveryLabel;
+        private Label suppLeadNum;
+        private Label suppLeadLabel;
+        private Label suppDelivNum;
+        private Label suppDeliveryLabel;
+        private Label compDelivNum;
+        private Label compLeadNum;
+        private Label compLeadLabel;
+        private Label compDelivLabel;
+        private ComboBox compBox;
+        private Label label3;
     }
 }
