@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            compDelivNum = new Label();
+            compLeadNum = new Label();
+            compLeadLabel = new Label();
+            compDelivLabel = new Label();
+            compBox = new ComboBox();
+            label3 = new Label();
             suppLeadNum = new Label();
             suppLeadLabel = new Label();
             suppDelivNum = new Label();
@@ -38,12 +44,6 @@
             label2 = new Label();
             label1 = new Label();
             cartesianChart1 = new LiveChartsCore.SkiaSharpView.WinForms.CartesianChart();
-            label3 = new Label();
-            compBox = new ComboBox();
-            compDelivLabel = new Label();
-            compLeadLabel = new Label();
-            compLeadNum = new Label();
-            compDelivNum = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -69,6 +69,67 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(194, 500);
             panel1.TabIndex = 0;
+            // 
+            // compDelivNum
+            // 
+            compDelivNum.AutoSize = true;
+            compDelivNum.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            compDelivNum.Location = new Point(121, 277);
+            compDelivNum.Name = "compDelivNum";
+            compDelivNum.Size = new Size(45, 21);
+            compDelivNum.TabIndex = 13;
+            compDelivNum.Text = "Num";
+            compDelivNum.Visible = false;
+            // 
+            // compLeadNum
+            // 
+            compLeadNum.AutoSize = true;
+            compLeadNum.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            compLeadNum.Location = new Point(121, 317);
+            compLeadNum.Name = "compLeadNum";
+            compLeadNum.Size = new Size(45, 21);
+            compLeadNum.TabIndex = 12;
+            compLeadNum.Text = "Num";
+            compLeadNum.Visible = false;
+            // 
+            // compLeadLabel
+            // 
+            compLeadLabel.AutoSize = true;
+            compLeadLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            compLeadLabel.Location = new Point(4, 317);
+            compLeadLabel.Name = "compLeadLabel";
+            compLeadLabel.Size = new Size(122, 21);
+            compLeadLabel.TabIndex = 11;
+            compLeadLabel.Text = "Avg Lead Time:";
+            // 
+            // compDelivLabel
+            // 
+            compDelivLabel.AutoSize = true;
+            compDelivLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            compDelivLabel.Location = new Point(4, 277);
+            compDelivLabel.Name = "compDelivLabel";
+            compDelivLabel.Size = new Size(85, 21);
+            compDelivLabel.TabIndex = 10;
+            compDelivLabel.Text = "Deliveries:";
+            // 
+            // compBox
+            // 
+            compBox.FormattingEnabled = true;
+            compBox.Location = new Point(22, 232);
+            compBox.Name = "compBox";
+            compBox.Size = new Size(121, 23);
+            compBox.TabIndex = 9;
+            compBox.SelectedIndexChanged += compBox_SelectedIndexChanged;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(22, 199);
+            label3.Name = "label3";
+            label3.Size = new Size(127, 30);
+            label3.TabIndex = 8;
+            label3.Text = "Component";
             // 
             // suppLeadNum
             // 
@@ -159,67 +220,6 @@
             cartesianChart1.Name = "cartesianChart1";
             cartesianChart1.Size = new Size(752, 475);
             cartesianChart1.TabIndex = 1;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(22, 199);
-            label3.Name = "label3";
-            label3.Size = new Size(127, 30);
-            label3.TabIndex = 8;
-            label3.Text = "Component";
-            // 
-            // compBox
-            // 
-            compBox.FormattingEnabled = true;
-            compBox.Location = new Point(22, 232);
-            compBox.Name = "compBox";
-            compBox.Size = new Size(121, 23);
-            compBox.TabIndex = 9;
-            compBox.SelectedIndexChanged += compBox_SelectedIndexChanged;
-            // 
-            // compDelivLabel
-            // 
-            compDelivLabel.AutoSize = true;
-            compDelivLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            compDelivLabel.Location = new Point(4, 277);
-            compDelivLabel.Name = "compDelivLabel";
-            compDelivLabel.Size = new Size(85, 21);
-            compDelivLabel.TabIndex = 10;
-            compDelivLabel.Text = "Deliveries:";
-            // 
-            // compLeadLabel
-            // 
-            compLeadLabel.AutoSize = true;
-            compLeadLabel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            compLeadLabel.Location = new Point(4, 317);
-            compLeadLabel.Name = "compLeadLabel";
-            compLeadLabel.Size = new Size(122, 21);
-            compLeadLabel.TabIndex = 11;
-            compLeadLabel.Text = "Avg Lead Time:";
-            // 
-            // compLeadNum
-            // 
-            compLeadNum.AutoSize = true;
-            compLeadNum.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            compLeadNum.Location = new Point(121, 317);
-            compLeadNum.Name = "compLeadNum";
-            compLeadNum.Size = new Size(45, 21);
-            compLeadNum.TabIndex = 12;
-            compLeadNum.Text = "Num";
-            compLeadNum.Visible = false;
-            // 
-            // compDelivNum
-            // 
-            compDelivNum.AutoSize = true;
-            compDelivNum.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            compDelivNum.Location = new Point(121, 277);
-            compDelivNum.Name = "compDelivNum";
-            compDelivNum.Size = new Size(45, 21);
-            compDelivNum.TabIndex = 13;
-            compDelivNum.Text = "Num";
-            compDelivNum.Visible = false;
             // 
             // SupplierData
             // 

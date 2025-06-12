@@ -1,33 +1,24 @@
 ﻿using LiveChartsCore;
-using LiveChartsCore.Defaults;
+using LiveChartsCore.Measure;
 using LiveChartsCore.SkiaSharpView;
 using LiveChartsCore.SkiaSharpView.Painting;
-using LiveChartsCore.SkiaSharpView.Painting.Effects;
 using SkiaSharp;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.OleDb;
-using System.Drawing;
-using System.Linq;
-using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace StatsForm
 {
     public partial class SupplierData : UserControl
     {
-        public HashSet<string> suppliers = new HashSet<string>();
-        public HashSet<string> _components = new HashSet<string>();
+        public HashSet<string> suppliers = new HashSet<string> { "All" };
+        public HashSet<string> _components = new HashSet<string> ();
         string connectionString = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = \\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Back_End\Inventory Managment_Data.accdb;";
 
         public List<DateTime> orderDates = new List<DateTime>();
         public List<DateTime> actualDates = new List<DateTime>();
         public List<TimeSpan> timeDiffs = new List<TimeSpan>();
         public List<double> leadTimes = new List<double>();
+
+        public List<ISeries> seriesCollection = new List<ISeries>();
 
         public bool dataValid = false;
         public string lastItem;
@@ -50,9 +41,10 @@ namespace StatsForm
                 lastItem = supplierBox.Text;
                 supplierBox.Items.Clear();
                 suppliers.Clear();
+                suppliers.Add("All");
             }
 
-            else if(selectedData == "Component")
+            else if (selectedData == "Component")
             {
                 lastItem = compBox.Text;
                 compBox.Items.Clear();
@@ -87,9 +79,9 @@ namespace StatsForm
                 }
             }
 
-            foreach(var v in _components)
+            foreach (var v in _components)
             {
-                if(compBox.Items.Contains(v) != true)
+                if (compBox.Items.Contains(v) != true)
                 {
                     compBox.Items.Add(v);
                 }
@@ -100,7 +92,7 @@ namespace StatsForm
                 supplierBox.SelectedItem = lastItem;
             }
 
-            else if(selectedData == "Component")
+            else if (selectedData == "Component")
             {
                 compBox.SelectedItem = lastItem;
             }
@@ -168,7 +160,7 @@ namespace StatsForm
 
             reader.Close();
             con.Close();
-         
+
         }
 
         private void UpdateAvg(string dataset, double avg)
@@ -191,38 +183,64 @@ namespace StatsForm
                     compLeadNum.Text = $"{avg.ToString()} Days";
                     compDelivNum.Text = orderDates.Count.ToString();
                     break;
-        }
+            }
         }
 
         private void UpdateChart(List<TimeSpan> times, string dataset)
         {
-            leadTimes.Clear();
-            foreach (var v in times)
+            if (supplierBox.Text != "All")
             {
-                leadTimes.Add(v.TotalDays);
-            }
-
-            var existingSeries = cartesianChart1.Series.FirstOrDefault(s => s.Name == dataset);
-
-            if (existingSeries == null)
-            {
-                cartesianChart1.Series = new ISeries[]
+                leadTimes.Clear();
+                foreach (var v in times)
                 {
+                    leadTimes.Add(v.TotalDays);
+                }
+
+                var existingSeries = cartesianChart1.Series.FirstOrDefault(s => s.Name == dataset);
+
+                if (existingSeries == null)
+                {
+                    cartesianChart1.Series = new ISeries[]
+                    {
                     new LineSeries<double>
                     {
                         Name = dataset,
                         Values = leadTimes,
+
+
                     }
-                };
+                    };
+                }
+
+                else if (existingSeries != null)
+                {
+                    var series = cartesianChart1.Series.FirstOrDefault(s => s.Name == dataset);
+
+                    series.Values = leadTimes;
+
+                }
             }
 
-            else if (existingSeries != null)
+            else
             {
-                var series = cartesianChart1.Series.FirstOrDefault(s => s.Name == dataset);
 
-                series.Values = leadTimes;
+                List<double> leadTimes = new List<double>();
+                foreach (var v in times)
+                {
+                    leadTimes.Add(v.TotalDays);
+                }
+
+                seriesCollection.Add(new LineSeries<double>
+                {
+                    Name = dataset,
+                    Values = leadTimes,
+                    Fill = null
+                });
+
+                cartesianChart1.Series = seriesCollection;
 
             }
+
 
         }
 
@@ -236,7 +254,7 @@ namespace StatsForm
                     NamePaint = new SolidColorPaint(SKColors.Black),
                     LabelsPaint = new SolidColorPaint(SKColors.Black),
                     TextSize = 20,
-                    MinStep = 1,
+                    MinStep = 1
                 }
             };
 
@@ -249,25 +267,53 @@ namespace StatsForm
 
                     LabelsPaint = new SolidColorPaint(SKColors.Black),
                     TextSize = 20,
-                    MinLimit = 0
+                    MinLimit = 0,
                 }
             };
+
+            cartesianChart1.LegendPosition = LegendPosition.Top;
+            cartesianChart1.LegendTextSize = 15;
         }
 
         private void supplierBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
             selectedData = "Supplier";
+            compBox.Text = "";
 
-            try
+            if (supplierBox.Text == "All")
             {
-                AvgCalc(supplierBox.Text);
-                suppLeadNum.Visible = true;
-                suppDelivNum.Visible = true;
+                seriesCollection.Clear();
+
+                foreach (var v in suppliers)
+                {
+                    if (v != "All")
+                    {
+                        AvgCalc(v);
+                    }
+                }
+
+                suppDelivNum.Visible = false;
+                suppLeadNum.Visible = false;
+                compDelivNum.Visible = false;
+                compLeadNum.Visible = false;
             }
-            catch (Exception ex)
+
+            else
             {
-                MessageBox.Show(ex.Message);
+                seriesCollection.Clear();
+                try
+                {
+                    AvgCalc(supplierBox.Text);
+                    suppLeadNum.Visible = true;
+                    suppDelivNum.Visible = true;
+                    compDelivNum.Visible = false;
+                    compLeadNum.Visible = false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
@@ -279,9 +325,36 @@ namespace StatsForm
                 try
                 {
                     Init();
-                    if (supplierBox.SelectedItem != null)
+
+                    if (supplierBox.Text == "All")
                     {
-                        AvgCalc(supplierBox.Text);
+                        seriesCollection.Clear();
+
+                        foreach (var v in suppliers)
+                        {
+                            if (v != "All")
+                            {
+                                AvgCalc(v);
+                            }
+                        }
+
+                        suppDelivNum.Visible = false;
+                        suppLeadNum.Visible = false;
+                    }
+
+                    else if (supplierBox.Text != "")
+                    {
+                        seriesCollection.Clear();
+                        try
+                        {
+                            AvgCalc(supplierBox.Text);
+                            suppLeadNum.Visible = true;
+                            suppDelivNum.Visible = true;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
                     }
                 }
                 catch (Exception ex)
@@ -290,14 +363,41 @@ namespace StatsForm
                 }
             }
 
-            else if(selectedData == "Component")
+            else if (selectedData == "Component")
             {
                 try
                 {
                     Init();
-                    if (compBox.SelectedItem != null)
+
+                    if (compBox.Text == "All")
                     {
-                        AvgCalc(compBox.Text);
+                        seriesCollection.Clear();
+
+                        foreach (var v in _components)
+                        {
+                            if (v != "All")
+                            {
+                                AvgCalc(v);
+                            }
+                        }
+
+                        compDelivNum.Visible = false;
+                        compLeadNum.Visible = false;
+                    }
+
+                    else if (compBox.Text != "")
+                    {
+                        seriesCollection.Clear();
+                        try
+                        {
+                            AvgCalc(compBox.Text);
+                            compLeadNum.Visible = true;
+                            compDelivNum.Visible = true;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
                     }
                 }
                 catch (Exception ex)
@@ -316,18 +416,43 @@ namespace StatsForm
         private void compBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedData = "Component";
+            supplierBox.Text = "";
 
-            try
+            if (compBox.Text == "All")
             {
-                AvgCalc(compBox.Text);
-                compLeadNum.Visible = true;
-                compDelivNum.Visible = true;
+                seriesCollection.Clear();
+
+                foreach (var v in _components)
+                {
+                    if (v != "All")
+                    {
+                        AvgCalc(v);
+                    }
+                }
+
+                compDelivNum.Visible = false;
+                compLeadNum.Visible = false;
+                suppDelivNum.Visible = false;
+                suppLeadNum.Visible = false;
             }
-            catch (Exception ex)
+
+            else
             {
-                MessageBox.Show(ex.Message);
+                seriesCollection.Clear();
+                try
+                {
+                    AvgCalc(compBox.Text);
+                    compLeadNum.Visible = true;
+                    compDelivNum.Visible = true;
+                    suppDelivNum.Visible = false;
+                    suppLeadNum.Visible = false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
     }
-    
+
 }

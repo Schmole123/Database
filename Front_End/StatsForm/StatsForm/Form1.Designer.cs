@@ -87,6 +87,7 @@
             productionStatus1.Name = "productionStatus1";
             productionStatus1.Size = new Size(386, 118);
             productionStatus1.TabIndex = 2;
+            productionStatus1.Visible = false;
             // 
             // supplierData1
             // 
@@ -95,14 +96,13 @@
             supplierData1.Name = "supplierData1";
             supplierData1.Size = new Size(428, 120);
             supplierData1.TabIndex = 4;
-            supplierData1.Visible = false;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveBorder;
-            ClientSize = new Size(664, 461);
+            ClientSize = new Size(1084, 461);
             Controls.Add(supplierData1);
             Controls.Add(productionStatus1);
             Controls.Add(panel1);

@@ -32,6 +32,8 @@
             customerTxt = new TextBox();
             orderCodeLabel = new Label();
             panel1 = new Panel();
+            quantityNum = new NumericUpDown();
+            quantityLabel = new Label();
             retrieveBtn = new Button();
             submitBtn = new Button();
             productBox = new ComboBox();
@@ -44,6 +46,7 @@
             startLabel = new Label();
             orderTxt = new TextBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)quantityNum).BeginInit();
             SuspendLayout();
             // 
             // customerLabel
@@ -75,6 +78,8 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(quantityNum);
+            panel1.Controls.Add(quantityLabel);
             panel1.Controls.Add(retrieveBtn);
             panel1.Controls.Add(submitBtn);
             panel1.Controls.Add(productBox);
@@ -91,13 +96,31 @@
             panel1.Controls.Add(orderCodeLabel);
             panel1.Location = new Point(2, 1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(371, 247);
+            panel1.Size = new Size(371, 280);
             panel1.TabIndex = 3;
+            // 
+            // quantityNum
+            // 
+            quantityNum.Location = new Point(246, 198);
+            quantityNum.Name = "quantityNum";
+            quantityNum.Size = new Size(81, 23);
+            quantityNum.TabIndex = 15;
+            quantityNum.TextAlign = HorizontalAlignment.Center;
+            // 
+            // quantityLabel
+            // 
+            quantityLabel.AutoSize = true;
+            quantityLabel.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            quantityLabel.Location = new Point(11, 188);
+            quantityLabel.Name = "quantityLabel";
+            quantityLabel.Size = new Size(93, 30);
+            quantityLabel.TabIndex = 14;
+            quantityLabel.Text = "Quantity";
             // 
             // retrieveBtn
             // 
             retrieveBtn.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            retrieveBtn.Location = new Point(186, 197);
+            retrieveBtn.Location = new Point(186, 231);
             retrieveBtn.Name = "retrieveBtn";
             retrieveBtn.Size = new Size(119, 41);
             retrieveBtn.TabIndex = 13;
@@ -108,7 +131,7 @@
             // submitBtn
             // 
             submitBtn.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            submitBtn.Location = new Point(46, 197);
+            submitBtn.Location = new Point(46, 231);
             submitBtn.Name = "submitBtn";
             submitBtn.Size = new Size(119, 41);
             submitBtn.TabIndex = 12;
@@ -125,6 +148,7 @@
             productBox.Name = "productBox";
             productBox.Size = new Size(138, 23);
             productBox.TabIndex = 11;
+            productBox.SelectedIndexChanged += productBox_SelectedIndexChanged;
             // 
             // statusBox
             // 
@@ -201,7 +225,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(377, 251);
+            ClientSize = new Size(377, 288);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Name = "productionOrderForm";
@@ -209,6 +233,7 @@
             Text = "Production Order";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)quantityNum).EndInit();
             ResumeLayout(false);
         }
 
@@ -229,5 +254,7 @@
         private DateTimePicker endDate;
         private Button submitBtn;
         private Button retrieveBtn;
+        private NumericUpDown quantityNum;
+        private Label quantityLabel;
     }
 }

@@ -12,6 +12,7 @@ namespace ProductionOrderForm
 
         public bool orderExists = false;
         public int productID;
+        public bool isolator = false;
 
         OleDbConnection con;
         OleDbCommand cmd;
@@ -59,8 +60,8 @@ namespace ProductionOrderForm
 
                             //SQL command generation to INSERT INTO "ProductionOrders" table(All columns of the table) with VALUES(All data for each column) relevant to order code
                             //[] brackets important for column names - values entered must be structured in the same order as columns are entered 
-                            cmd = new OleDbCommand("INSERT INTO [ProductionOrders]([Customer],[OrderCode],[StartDate],[EstimatedEndDate],[Status],[ProductID],[Product])" +
-                                "VALUES('" + customerTxt.Text + "', '" + orderTxt.Text + "', '" + startDate.Value.ToShortDateString() + "', '" + endDate.Value.ToShortDateString() + "', '" + statusBox.Text + "', '" + productID + "', '" + productBox.Text + "')");
+                            cmd = new OleDbCommand("INSERT INTO [ProductionOrders]([Customer],[OrderCode],[StartDate],[EstimatedEndDate],[Status],[ProductID],[Product],[Quantity],[Isolator])" +
+                                "VALUES('" + customerTxt.Text + "', '" + orderTxt.Text + "', '" + startDate.Value.ToShortDateString() + "', '" + endDate.Value.ToShortDateString() + "', '" + statusBox.Text + "', '" + productID + "', '" + productBox.Text + "', '" + quantityNum.Value + "', " + isolator + ")");
 
                             cmd.Connection = con;
                             con.Open(); //open connection
@@ -87,7 +88,7 @@ namespace ProductionOrderForm
                             //SQL command generation to UPDATE "ProductionOrders" table(All columns of the table) with VALUES(All data for each column) relevant to order code
                             //[] brackets important for column names - values entered must be structured in the same order as columns are entered 
                             cmd = new OleDbCommand("UPDATE [ProductionOrders] " +
-                                "SET[Customer] = '" + customerTxt.Text + "', [StartDate] = '" + startDate.Value.ToShortDateString() + "', [EstimatedEndDate] = '" + endDate.Value.ToShortDateString() + "', [Status] = '" + statusBox.Text + "', [ProductID] = '" + productID + "', [Product] = '" + productBox.Text + "'" +
+                                "SET[Customer] = '" + customerTxt.Text + "', [StartDate] = '" + startDate.Value.ToShortDateString() + "', [EstimatedEndDate] = '" + endDate.Value.ToShortDateString() + "', [Status] = '" + statusBox.Text + "', [ProductID] = '" + productID + "', [Product] = '" + productBox.Text + "', [Quantity] = '" + quantityNum.Value + "',[Isolator] = " + isolator + " " +
                                 "WHERE [OrderCode] = '" + orderTxt.Text + "' ");
 
                             cmd.Connection = con;
@@ -193,6 +194,15 @@ namespace ProductionOrderForm
                         endDate.Value = end;                                //set end date
                         statusBox.SelectedItem = reader[4].ToString();      //retrieve status 
                         productBox.SelectedItem = reader[7].ToString();     //retrieve selected product
+                        if (reader[8].ToString() != "")
+                        {
+                            quantityNum.Value = Decimal.Parse(reader[8].ToString());
+                        }
+                        else
+                        {
+                            quantityNum.Value = 0;
+                        }
+                        
                     }
 
                     if (orderExists == false) //if the entered order code is not found, prompt the enter of a valid code and clear all data fields
@@ -202,6 +212,9 @@ namespace ProductionOrderForm
                         orderTxt.Clear();
                         statusBox.SelectedItem = "";
                         productBox.SelectedItem = "";
+                        startDate.Value = DateTime.Now; 
+                        endDate.Value = DateTime.Now;
+                        quantityNum.Value = 0;
                     }
 
                     reader.Close();         //close reader
@@ -214,10 +227,22 @@ namespace ProductionOrderForm
                     MessageBox.Show("Please enter a valid Order Code"); //display if no order code is entered
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-         }
+        }
+
+        private void productBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(productBox.Text == "BLL" || productBox.Text == "cBLMD")
+            {
+                isolator = true;
+            }
+            else
+            {
+                isolator = false;
+            }
+        }
     }
 }
