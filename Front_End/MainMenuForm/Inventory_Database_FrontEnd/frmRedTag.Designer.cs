@@ -60,10 +60,10 @@
             // updateBtn
             // 
             updateBtn.BackColor = Color.PaleGreen;
-            updateBtn.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            updateBtn.Location = new Point(10, 338);
+            updateBtn.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            updateBtn.Location = new Point(650, 64);
             updateBtn.Name = "updateBtn";
-            updateBtn.Size = new Size(140, 42);
+            updateBtn.Size = new Size(167, 42);
             updateBtn.TabIndex = 12;
             updateBtn.Text = "Submit Data";
             updateBtn.UseVisualStyleBackColor = false;
@@ -77,16 +77,16 @@
             pcbPanel.Controls.Add(label3);
             pcbPanel.Controls.Add(label4);
             pcbPanel.Controls.Add(PCBnum);
-            pcbPanel.Location = new Point(381, 12);
+            pcbPanel.Location = new Point(235, 12);
             pcbPanel.Name = "pcbPanel";
-            pcbPanel.Size = new Size(330, 320);
+            pcbPanel.Size = new Size(330, 315);
             pcbPanel.TabIndex = 26;
             pcbPanel.Visible = false;
             // 
             // pcbAInfo
             // 
             pcbAInfo.BorderStyle = BorderStyle.FixedSingle;
-            pcbAInfo.Location = new Point(3, 191);
+            pcbAInfo.Location = new Point(3, 193);
             pcbAInfo.Name = "pcbAInfo";
             pcbAInfo.Size = new Size(324, 75);
             pcbAInfo.TabIndex = 11;
@@ -95,48 +95,48 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            label2.Location = new Point(0, 163);
+            label2.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            label2.Location = new Point(0, 161);
             label2.Name = "label2";
-            label2.Size = new Size(137, 25);
+            label2.Size = new Size(150, 27);
             label2.TabIndex = 7;
             label2.Text = "Additional info";
             // 
             // pcbfail
             // 
             pcbfail.BorderStyle = BorderStyle.FixedSingle;
-            pcbfail.Location = new Point(3, 84);
+            pcbfail.Location = new Point(3, 100);
             pcbfail.Name = "pcbfail";
-            pcbfail.Size = new Size(324, 75);
+            pcbfail.Size = new Size(324, 57);
             pcbfail.TabIndex = 6;
             pcbfail.Text = "";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            label3.Location = new Point(-1, 52);
+            label3.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            label3.Location = new Point(-2, 67);
             label3.Name = "label3";
-            label3.Size = new Size(162, 25);
+            label3.Size = new Size(181, 27);
             label3.TabIndex = 5;
             label3.Text = "Reason for Failure";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(-1, 12);
+            label4.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(-1, 0);
             label4.Name = "label4";
-            label4.Size = new Size(176, 25);
+            label4.Size = new Size(198, 27);
             label4.TabIndex = 3;
             label4.Text = "PCB Serial Number:";
             // 
             // PCBnum
             // 
             PCBnum.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            PCBnum.Location = new Point(176, 11);
+            PCBnum.Location = new Point(3, 30);
             PCBnum.Name = "PCBnum";
-            PCBnum.Size = new Size(149, 29);
+            PCBnum.Size = new Size(196, 29);
             PCBnum.TabIndex = 1;
             // 
             // sldPanel
@@ -147,16 +147,16 @@
             sldPanel.Controls.Add(sldFailLabel);
             sldPanel.Controls.Add(sldNumLabel);
             sldPanel.Controls.Add(sldNum);
-            sldPanel.Location = new Point(362, 392);
+            sldPanel.Location = new Point(33, 355);
             sldPanel.Name = "sldPanel";
-            sldPanel.Size = new Size(330, 320);
+            sldPanel.Size = new Size(330, 315);
             sldPanel.TabIndex = 27;
             sldPanel.Visible = false;
             // 
             // sldAInfoText
             // 
             sldAInfoText.BorderStyle = BorderStyle.FixedSingle;
-            sldAInfoText.Location = new Point(3, 191);
+            sldAInfoText.Location = new Point(5, 193);
             sldAInfoText.Name = "sldAInfoText";
             sldAInfoText.Size = new Size(324, 75);
             sldAInfoText.TabIndex = 11;
@@ -165,57 +165,57 @@
             // sldAInfoLabel
             // 
             sldAInfoLabel.AutoSize = true;
-            sldAInfoLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            sldAInfoLabel.Location = new Point(-1, 163);
+            sldAInfoLabel.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            sldAInfoLabel.Location = new Point(1, 163);
             sldAInfoLabel.Name = "sldAInfoLabel";
-            sldAInfoLabel.Size = new Size(137, 25);
+            sldAInfoLabel.Size = new Size(150, 27);
             sldAInfoLabel.TabIndex = 7;
             sldAInfoLabel.Text = "Additional info";
             // 
             // sldFailText
             // 
             sldFailText.BorderStyle = BorderStyle.FixedSingle;
-            sldFailText.Location = new Point(3, 84);
+            sldFailText.Location = new Point(4, 100);
             sldFailText.Name = "sldFailText";
-            sldFailText.Size = new Size(324, 75);
+            sldFailText.Size = new Size(323, 57);
             sldFailText.TabIndex = 6;
             sldFailText.Text = "";
             // 
             // sldFailLabel
             // 
             sldFailLabel.AutoSize = true;
-            sldFailLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Underline, GraphicsUnit.Point, 0);
-            sldFailLabel.Location = new Point(-3, 52);
+            sldFailLabel.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            sldFailLabel.Location = new Point(-1, 67);
             sldFailLabel.Name = "sldFailLabel";
-            sldFailLabel.Size = new Size(162, 25);
+            sldFailLabel.Size = new Size(181, 27);
             sldFailLabel.TabIndex = 5;
             sldFailLabel.Text = "Reason for Failure";
             // 
             // sldNumLabel
             // 
             sldNumLabel.AutoSize = true;
-            sldNumLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            sldNumLabel.Location = new Point(-1, 12);
+            sldNumLabel.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            sldNumLabel.Location = new Point(-1, 1);
             sldNumLabel.Name = "sldNumLabel";
-            sldNumLabel.Size = new Size(174, 25);
+            sldNumLabel.Size = new Size(196, 27);
             sldNumLabel.TabIndex = 3;
             sldNumLabel.Text = "SLD Serial Number:";
             // 
             // sldNum
             // 
             sldNum.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            sldNum.Location = new Point(171, 10);
+            sldNum.Location = new Point(1, 32);
             sldNum.Name = "sldNum";
-            sldNum.Size = new Size(157, 29);
+            sldNum.Size = new Size(194, 29);
             sldNum.TabIndex = 1;
             // 
             // recieveBtn
             // 
             recieveBtn.BackColor = Color.LightSalmon;
-            recieveBtn.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            recieveBtn.Location = new Point(156, 338);
+            recieveBtn.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            recieveBtn.Location = new Point(650, 165);
             recieveBtn.Name = "recieveBtn";
-            recieveBtn.Size = new Size(155, 42);
+            recieveBtn.Size = new Size(167, 42);
             recieveBtn.TabIndex = 12;
             recieveBtn.Text = "Receive Data";
             recieveBtn.UseVisualStyleBackColor = false;
@@ -238,27 +238,27 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(5, 161);
+            label1.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(1, 150);
             label1.Name = "label1";
-            label1.Size = new Size(57, 30);
+            label1.Size = new Size(62, 27);
             label1.TabIndex = 11;
-            label1.Text = "Date";
+            label1.Text = "Date:";
             // 
             // repairCheck
             // 
             repairCheck.AutoSize = true;
-            repairCheck.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            repairCheck.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             repairCheck.Location = new Point(9, 238);
             repairCheck.Name = "repairCheck";
-            repairCheck.Size = new Size(113, 34);
+            repairCheck.Size = new Size(114, 31);
             repairCheck.TabIndex = 10;
             repairCheck.Text = "Repaired";
             repairCheck.UseVisualStyleBackColor = true;
             // 
             // dateSelect
             // 
-            dateSelect.Location = new Point(9, 194);
+            dateSelect.Location = new Point(4, 180);
             dateSelect.Name = "dateSelect";
             dateSelect.Size = new Size(181, 23);
             dateSelect.TabIndex = 8;
@@ -266,17 +266,17 @@
             // unitLabel
             // 
             unitLabel.AutoSize = true;
-            unitLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            unitLabel.Location = new Point(4, 12);
+            unitLabel.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            unitLabel.Location = new Point(0, 0);
             unitLabel.Name = "unitLabel";
-            unitLabel.Size = new Size(100, 25);
+            unitLabel.Size = new Size(113, 27);
             unitLabel.TabIndex = 9;
             unitLabel.Text = "Unit select";
             // 
             // reporteeName
             // 
             reporteeName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            reporteeName.Location = new Point(9, 106);
+            reporteeName.Location = new Point(3, 106);
             reporteeName.Name = "reporteeName";
             reporteeName.Size = new Size(181, 29);
             reporteeName.TabIndex = 5;
@@ -284,19 +284,19 @@
             // nameLabel
             // 
             nameLabel.AutoSize = true;
-            nameLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            nameLabel.Location = new Point(4, 78);
+            nameLabel.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            nameLabel.Location = new Point(0, 76);
             nameLabel.Name = "nameLabel";
-            nameLabel.Size = new Size(164, 25);
+            nameLabel.Size = new Size(188, 27);
             nameLabel.TabIndex = 7;
-            nameLabel.Text = "Name of Reportee";
+            nameLabel.Text = "Name of Reportee:";
             // 
             // unitSelect
             // 
             unitSelect.DropDownStyle = ComboBoxStyle.DropDownList;
             unitSelect.FormattingEnabled = true;
             unitSelect.Items.AddRange(new object[] { "PCB", "SLD" });
-            unitSelect.Location = new Point(9, 40);
+            unitSelect.Location = new Point(3, 32);
             unitSelect.Name = "unitSelect";
             unitSelect.Size = new Size(181, 23);
             unitSelect.TabIndex = 8;
@@ -306,13 +306,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ControlLight;
+            BackColor = Color.AliceBlue;
             ClientSize = new Size(885, 682);
-            Controls.Add(recieveBtn);
+            Controls.Add(updateBtn);
             Controls.Add(userPanel);
+            Controls.Add(recieveBtn);
             Controls.Add(sldPanel);
             Controls.Add(pcbPanel);
-            Controls.Add(updateBtn);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmRedTag";
             Text = "frmRedTag";

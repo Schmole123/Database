@@ -21,7 +21,8 @@ namespace Inventory_Database_FrontEnd
         public Inventory_Database()
         {
             InitializeComponent();
-            MainPanel = panel3;
+            MainPanel = pnlStats;
+            MainPanel.Visible = true;
             pnlRedTag.Visible = false;
             pnlStock.Visible = false;
             ListPrinters();
@@ -35,12 +36,12 @@ namespace Inventory_Database_FrontEnd
             try
             {
                 ShowPanel(pnlRedTag);
-                pnlRedTag.Controls.Clear();
+                ParentContainer.Controls.Clear();
                 frmRedTag frm = new frmRedTag(connectionString, "TE200_test");
                 frm.Dock = DockStyle.Fill;
                 frm.TopLevel = false;
                 frm.FormBorderStyle = FormBorderStyle.None;
-                pnlRedTag.Controls.Add(frm);
+                ParentContainer.Controls.Add(frm);
                 frm.Show();
             }
             catch (Exception ex)
@@ -61,12 +62,12 @@ namespace Inventory_Database_FrontEnd
             try
             {
                 ShowPanel(pnlStock);
-                pnlStock.Controls.Clear();
+                ParentContainer.Controls.Clear();
                 frmStock frm = new frmStock(connectionString);
                 frm.Dock = DockStyle.Fill;
                 frm.TopLevel = false;
                 frm.FormBorderStyle = FormBorderStyle.None;
-                pnlStock.Controls.Add(frm);
+                ParentContainer.Controls.Add(frm);
                 frm.Show();
             }
             catch (Exception ex)
@@ -79,7 +80,12 @@ namespace Inventory_Database_FrontEnd
             // Hide all panels
             pnlStock.Visible = false;
             pnlRedTag.Visible = false;
-            // Add more if you have others
+            pnlProductionOrder.Visible = false;
+            pnlSupplier.Visible = false;
+            pnlWelcome.Visible = false;
+
+            panelToShow.Refresh();
+
 
             // Show the selected one
             panelToShow.BringToFront();
@@ -91,12 +97,12 @@ namespace Inventory_Database_FrontEnd
             try
             {
                 ShowPanel(pnlProductionOrder);
-                pnlProductionOrder.Controls.Clear();
+                ParentContainer.Controls.Clear();
                 frmProductionOrder frm = new frmProductionOrder(connectionString);
                 frm.Dock = DockStyle.Fill;
                 frm.TopLevel = false;
                 frm.FormBorderStyle = FormBorderStyle.None;
-                pnlProductionOrder.Controls.Add(frm);
+                ParentContainer.Controls.Add(frm);
                 frm.Show();
             }
             catch (Exception ex)
@@ -105,6 +111,43 @@ namespace Inventory_Database_FrontEnd
             }
         }
 
+        private void btnSupplier_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ShowPanel(pnlSupplier);
+                ParentContainer.Controls.Clear();
+                frmSupplier frm = new frmSupplier(connectionString);
+                frm.Dock = DockStyle.Fill;
+                frm.TopLevel = false;
+                frm.FormBorderStyle = FormBorderStyle.None;
+                ParentContainer.Controls.Add(frm);
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading Production Order menu: " + ex.Message);
+            }
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ShowPanel(pnlStats);
+                ParentContainer.Controls.Clear();
+                frmStats frm = new frmStats();
+                frm.Dock = DockStyle.Fill;
+                frm.TopLevel = false;
+                frm.FormBorderStyle = FormBorderStyle.None;
+                ParentContainer.Controls.Add(frm);
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading Production Order menu: " + ex.Message);
+            }
+        }
         private void Inventory_Database_Load(object sender, EventArgs e)
         {
             hh.Text = DateTime.Now.Hour.ToString("00");
@@ -128,5 +171,7 @@ namespace Inventory_Database_FrontEnd
                 cmbPrinterSel.SelectedIndex = 1;
             }
         }
+
+      
     }
 }

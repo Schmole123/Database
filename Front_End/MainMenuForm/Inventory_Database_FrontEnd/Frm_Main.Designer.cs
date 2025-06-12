@@ -31,13 +31,14 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory_Database));
             panel1 = new Panel();
+            btnSupplier = new Button();
             btnAssemblyData = new Button();
             label3 = new Label();
             ss = new Label();
             label1 = new Label();
             mm = new Label();
             hh = new Label();
-            button1 = new Button();
+            btnHome = new Button();
             panel3 = new Panel();
             btnRedTag = new Button();
             btnProductionOrder = new Button();
@@ -76,29 +77,36 @@
             toolStripSeparator11 = new ToolStripSeparator();
             aboutToolStripMenuItem1 = new ToolStripMenuItem();
             pnlWelcome = new Panel();
-            richTextBox1 = new RichTextBox();
-            pnlStock = new Panel();
-            pnlRedTag = new Panel();
             pnlProductionOrder = new Panel();
+            pnlSupplier = new Panel();
+            pnlStock = new Panel();
+            pnlStats = new Panel();
+            richTextBox1 = new RichTextBox();
+            pnlRedTag = new Panel();
             timerSecond = new System.Windows.Forms.Timer(components);
-            button2 = new Button();
+            ParentContainer = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             menuStrip1.SuspendLayout();
             pnlWelcome.SuspendLayout();
+            pnlProductionOrder.SuspendLayout();
+            pnlSupplier.SuspendLayout();
+            pnlStock.SuspendLayout();
+            pnlRedTag.SuspendLayout();
+            ParentContainer.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(47, 47, 47);
-            panel1.Controls.Add(button2);
+            panel1.Controls.Add(btnSupplier);
             panel1.Controls.Add(btnAssemblyData);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(ss);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(mm);
             panel1.Controls.Add(hh);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btnHome);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(btnRedTag);
             panel1.Controls.Add(btnProductionOrder);
@@ -106,15 +114,33 @@
             panel1.Controls.Add(pictureBox1);
             panel1.Location = new Point(-1, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(270, 634);
+            panel1.Size = new Size(270, 783);
             panel1.TabIndex = 0;
+            // 
+            // btnSupplier
+            // 
+            btnSupplier.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
+            btnSupplier.FlatAppearance.BorderSize = 0;
+            btnSupplier.FlatStyle = FlatStyle.Flat;
+            btnSupplier.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSupplier.ForeColor = Color.DarkCyan;
+            btnSupplier.Image = (Image)resources.GetObject("btnSupplier.Image");
+            btnSupplier.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSupplier.Location = new Point(3, 491);
+            btnSupplier.Name = "btnSupplier";
+            btnSupplier.Size = new Size(401, 73);
+            btnSupplier.TabIndex = 11;
+            btnSupplier.Text = "               Supplier";
+            btnSupplier.TextAlign = ContentAlignment.MiddleLeft;
+            btnSupplier.UseVisualStyleBackColor = true;
+            btnSupplier.Click += btnSupplier_Click;
             // 
             // btnAssemblyData
             // 
             btnAssemblyData.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
             btnAssemblyData.FlatAppearance.BorderSize = 0;
             btnAssemblyData.FlatStyle = FlatStyle.Flat;
-            btnAssemblyData.Font = new Font("Dubai", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAssemblyData.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAssemblyData.ForeColor = Color.DarkCyan;
             btnAssemblyData.Image = (Image)resources.GetObject("btnAssemblyData.Image");
             btnAssemblyData.ImageAlign = ContentAlignment.MiddleLeft;
@@ -131,7 +157,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Digital-7", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = SystemColors.Control;
-            label3.Location = new Point(146, 59);
+            label3.Location = new Point(149, 59);
             label3.Name = "label3";
             label3.Size = new Size(12, 20);
             label3.TabIndex = 9;
@@ -142,7 +168,7 @@
             ss.AutoSize = true;
             ss.Font = new Font("Digital-7", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ss.ForeColor = SystemColors.Control;
-            ss.Location = new Point(157, 62);
+            ss.Location = new Point(160, 62);
             ss.Name = "ss";
             ss.Size = new Size(24, 17);
             ss.TabIndex = 8;
@@ -164,7 +190,7 @@
             mm.AutoSize = true;
             mm.Font = new Font("Digital-7", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             mm.ForeColor = SystemColors.Control;
-            mm.Location = new Point(120, 59);
+            mm.Location = new Point(123, 59);
             mm.Name = "mm";
             mm.Size = new Size(27, 20);
             mm.TabIndex = 6;
@@ -175,28 +201,29 @@
             hh.AutoSize = true;
             hh.Font = new Font("Digital-7", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             hh.ForeColor = SystemColors.Control;
-            hh.Location = new Point(88, 59);
+            hh.Location = new Point(91, 59);
             hh.Name = "hh";
             hh.Size = new Size(27, 20);
             hh.TabIndex = 5;
             hh.Text = "00";
             // 
-            // button1
+            // btnHome
             // 
-            button1.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Dubai", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.DarkCyan;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(0, 96);
-            button1.Name = "button1";
-            button1.Size = new Size(270, 73);
-            button1.TabIndex = 1;
-            button1.Text = "                Home";
-            button1.TextAlign = ContentAlignment.MiddleLeft;
-            button1.UseVisualStyleBackColor = true;
+            btnHome.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
+            btnHome.FlatAppearance.BorderSize = 0;
+            btnHome.FlatStyle = FlatStyle.Flat;
+            btnHome.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnHome.ForeColor = Color.DarkCyan;
+            btnHome.Image = (Image)resources.GetObject("btnHome.Image");
+            btnHome.ImageAlign = ContentAlignment.MiddleLeft;
+            btnHome.Location = new Point(0, 96);
+            btnHome.Name = "btnHome";
+            btnHome.Size = new Size(270, 73);
+            btnHome.TabIndex = 1;
+            btnHome.Text = "                Home";
+            btnHome.TextAlign = ContentAlignment.MiddleLeft;
+            btnHome.UseVisualStyleBackColor = true;
+            btnHome.Click += btnHome_Click;
             // 
             // panel3
             // 
@@ -210,7 +237,7 @@
             btnRedTag.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
             btnRedTag.FlatAppearance.BorderSize = 0;
             btnRedTag.FlatStyle = FlatStyle.Flat;
-            btnRedTag.Font = new Font("Dubai", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRedTag.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnRedTag.ForeColor = Color.DarkCyan;
             btnRedTag.Image = (Image)resources.GetObject("btnRedTag.Image");
             btnRedTag.ImageAlign = ContentAlignment.MiddleLeft;
@@ -228,7 +255,7 @@
             btnProductionOrder.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
             btnProductionOrder.FlatAppearance.BorderSize = 0;
             btnProductionOrder.FlatStyle = FlatStyle.Flat;
-            btnProductionOrder.Font = new Font("Dubai", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnProductionOrder.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnProductionOrder.ForeColor = Color.DarkCyan;
             btnProductionOrder.Image = (Image)resources.GetObject("btnProductionOrder.Image");
             btnProductionOrder.ImageAlign = ContentAlignment.MiddleLeft;
@@ -246,7 +273,7 @@
             btnStockMenu.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
             btnStockMenu.FlatAppearance.BorderSize = 0;
             btnStockMenu.FlatStyle = FlatStyle.Flat;
-            btnStockMenu.Font = new Font("Dubai", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnStockMenu.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnStockMenu.ForeColor = Color.DarkCyan;
             btnStockMenu.Image = (Image)resources.GetObject("btnStockMenu.Image");
             btnStockMenu.ImageAlign = ContentAlignment.MiddleLeft;
@@ -279,7 +306,7 @@
             menuStrip1.Location = new Point(267, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.RenderMode = ToolStripRenderMode.Professional;
-            menuStrip1.Size = new Size(815, 24);
+            menuStrip1.Size = new Size(1028, 24);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -486,11 +513,49 @@
             // pnlWelcome
             // 
             pnlWelcome.BackColor = SystemColors.ControlLight;
+            pnlWelcome.Controls.Add(pnlProductionOrder);
             pnlWelcome.Controls.Add(richTextBox1);
-            pnlWelcome.Location = new Point(270, 27);
+            pnlWelcome.Dock = DockStyle.Fill;
+            pnlWelcome.Location = new Point(0, 0);
             pnlWelcome.Name = "pnlWelcome";
-            pnlWelcome.Size = new Size(679, 569);
+            pnlWelcome.Size = new Size(1025, 758);
             pnlWelcome.TabIndex = 2;
+            // 
+            // pnlProductionOrder
+            // 
+            pnlProductionOrder.Controls.Add(pnlSupplier);
+            pnlProductionOrder.Dock = DockStyle.Fill;
+            pnlProductionOrder.Location = new Point(0, 0);
+            pnlProductionOrder.Name = "pnlProductionOrder";
+            pnlProductionOrder.Size = new Size(1025, 758);
+            pnlProductionOrder.TabIndex = 0;
+            // 
+            // pnlSupplier
+            // 
+            pnlSupplier.BackColor = SystemColors.Control;
+            pnlSupplier.Controls.Add(pnlStock);
+            pnlSupplier.Dock = DockStyle.Fill;
+            pnlSupplier.Location = new Point(0, 0);
+            pnlSupplier.Name = "pnlSupplier";
+            pnlSupplier.Size = new Size(1025, 758);
+            pnlSupplier.TabIndex = 0;
+            // 
+            // pnlStock
+            // 
+            pnlStock.Controls.Add(pnlStats);
+            pnlStock.Dock = DockStyle.Fill;
+            pnlStock.Location = new Point(0, 0);
+            pnlStock.Name = "pnlStock";
+            pnlStock.Size = new Size(1025, 758);
+            pnlStock.TabIndex = 0;
+            // 
+            // pnlStats
+            // 
+            pnlStats.Dock = DockStyle.Fill;
+            pnlStats.Location = new Point(0, 0);
+            pnlStats.Name = "pnlStats";
+            pnlStats.Size = new Size(1025, 758);
+            pnlStats.TabIndex = 0;
             // 
             // richTextBox1
             // 
@@ -505,58 +570,34 @@
             richTextBox1.TabIndex = 0;
             richTextBox1.Text = "                                      Welcome \n                                         to the\n                         Superlum Database Portal";
             // 
-            // pnlStock
-            // 
-            pnlStock.Location = new Point(273, 25);
-            pnlStock.Name = "pnlStock";
-            pnlStock.Size = new Size(760, 582);
-            pnlStock.TabIndex = 0;
-            // 
             // pnlRedTag
             // 
-            pnlRedTag.Location = new Point(273, 27);
+            pnlRedTag.Controls.Add(pnlWelcome);
+            pnlRedTag.Dock = DockStyle.Fill;
+            pnlRedTag.Location = new Point(0, 0);
             pnlRedTag.Name = "pnlRedTag";
-            pnlRedTag.Size = new Size(760, 582);
+            pnlRedTag.Size = new Size(1025, 758);
             pnlRedTag.TabIndex = 1;
-            // 
-            // pnlProductionOrder
-            // 
-            pnlProductionOrder.Location = new Point(270, 27);
-            pnlProductionOrder.Name = "pnlProductionOrder";
-            pnlProductionOrder.Size = new Size(763, 569);
-            pnlProductionOrder.TabIndex = 0;
             // 
             // timerSecond
             // 
             timerSecond.Interval = 1000;
             timerSecond.Tick += timerSecond_Tick;
             // 
-            // button2
+            // ParentContainer
             // 
-            button2.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Dubai", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.DarkCyan;
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(3, 491);
-            button2.Name = "button2";
-            button2.Size = new Size(401, 73);
-            button2.TabIndex = 11;
-            button2.Text = "               Supplier";
-            button2.TextAlign = ContentAlignment.MiddleLeft;
-            button2.UseVisualStyleBackColor = true;
+            ParentContainer.Controls.Add(pnlRedTag);
+            ParentContainer.Location = new Point(270, 25);
+            ParentContainer.Name = "ParentContainer";
+            ParentContainer.Size = new Size(1025, 758);
+            ParentContainer.TabIndex = 2;
             // 
             // Inventory_Database
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1034, 591);
-            Controls.Add(pnlProductionOrder);
-            Controls.Add(pnlStock);
-            Controls.Add(pnlWelcome);
-            Controls.Add(pnlRedTag);
+            ClientSize = new Size(1294, 687);
+            Controls.Add(ParentContainer);
             Controls.Add(panel1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
@@ -569,6 +610,11 @@
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             pnlWelcome.ResumeLayout(false);
+            pnlProductionOrder.ResumeLayout(false);
+            pnlSupplier.ResumeLayout(false);
+            pnlStock.ResumeLayout(false);
+            pnlRedTag.ResumeLayout(false);
+            ParentContainer.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -610,7 +656,7 @@
         private Button btnRedTag;
         private Button btnProductionOrder;
         private Button btnStockMenu;
-        private Button button1;
+        private Button btnHome;
         private Panel pnlWelcome;
         private RichTextBox richTextBox1;
         private Panel panel3;
@@ -625,6 +671,9 @@
         private System.Windows.Forms.Timer timerSecond;
         private Button btnAssemblyData;
         private ToolStripComboBox cmbPrinterSel;
-        private Button button2;
+        private Button btnSupplier;
+        private Panel pnlSupplier;
+        private Panel ParentContainer;
+        private Panel pnlStats;
     }
 }

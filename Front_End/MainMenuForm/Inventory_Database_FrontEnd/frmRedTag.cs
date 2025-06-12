@@ -134,8 +134,8 @@ namespace Inventory_Database_FrontEnd
 
         private void frmRedTag_Load(object sender, EventArgs e)
         {
-            pcbPanel.Location = new Point(280, 15);
-            sldPanel.Location = new Point(280, 15);
+            pcbPanel.Location = new Point(235, 12);
+            sldPanel.Location = new Point(235, 12);
             this.Size = new Size(780, 365);
             unitSelect.SelectedItem = "PCB";
         }

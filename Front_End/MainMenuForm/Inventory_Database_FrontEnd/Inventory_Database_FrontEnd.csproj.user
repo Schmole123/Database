@@ -10,7 +10,13 @@
     <Compile Update="frmRedTag.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmStats.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="frmSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Frm_Main.cs">

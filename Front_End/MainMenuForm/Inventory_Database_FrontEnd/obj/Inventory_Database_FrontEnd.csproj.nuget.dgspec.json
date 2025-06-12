@@ -1,23 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "\\\\SERVER-CORK\\Shared\\Staff Personal folders\\Caolan\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj": {}
+    "C:\\Users\\Caolan\\Desktop\\SuperlumProductionDatabase\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj": {}
   },
   "projects": {
-    "\\\\SERVER-CORK\\Shared\\Staff Personal folders\\Caolan\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj": {
+    "C:\\Users\\Caolan\\Desktop\\SuperlumProductionDatabase\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\SERVER-CORK\\Shared\\Staff Personal folders\\Caolan\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj",
+        "projectUniqueName": "C:\\Users\\Caolan\\Desktop\\SuperlumProductionDatabase\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj",
         "projectName": "Inventory_Database_FrontEnd",
-        "projectPath": "\\\\SERVER-CORK\\Shared\\Staff Personal folders\\Caolan\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj",
+        "projectPath": "C:\\Users\\Caolan\\Desktop\\SuperlumProductionDatabase\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj",
         "packagesPath": "C:\\Users\\Caolan\\.nuget\\packages\\",
-        "outputPath": "\\\\SERVER-CORK\\Shared\\Staff Personal folders\\Caolan\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\obj\\",
+        "outputPath": "C:\\Users\\Caolan\\Desktop\\SuperlumProductionDatabase\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 24.2\\Components\\Offline Packages",
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\Caolan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.2.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +28,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 24.2\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -50,6 +53,18 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "LiveChartsCore": {
+              "target": "Package",
+              "version": "[2.0.0-rc5.4, )"
+            },
+            "LiveChartsCore.SkiaSharpView": {
+              "target": "Package",
+              "version": "[2.0.0-rc5.4, )"
+            },
+            "LiveChartsCore.SkiaSharpView.WinForms": {
+              "target": "Package",
+              "version": "[2.0.0-rc5.4, )"
+            },
             "QRCoder": {
               "target": "Package",
               "version": "[1.6.0, )"

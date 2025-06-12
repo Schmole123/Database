@@ -25,8 +25,41 @@ namespace Inventory_Database_FrontEnd
         {
             InitializeComponent();
             _connectionString = ConnectionString;
+            var POnum = 0;
 
+        }
 
+        private void InitializeProgressBar(string currentStep)
+        {
+            progressPanel.Controls.Clear();
+
+            string[] steps = { "New", "In Production", "QC", "Ready to Ship","Complete" };
+            int stepWidth = progressPanel.Width / steps.Length;
+
+            for (int i = 0; i < steps.Length; i++)
+            {
+                Label stepLabel = new Label();
+                stepLabel.Text = steps[i];
+                stepLabel.TextAlign = ContentAlignment.MiddleCenter;
+                stepLabel.BorderStyle = BorderStyle.FixedSingle;
+                stepLabel.Width = stepWidth - 10;
+                stepLabel.Height = 40;
+                stepLabel.Left = i * stepWidth + 5;
+                stepLabel.Top = 5;
+
+                // Highlight current step
+                if (steps[i] == currentStep)
+                {
+                    stepLabel.BackColor = Color.LightGreen;
+                    stepLabel.Font = new Font(stepLabel.Font, FontStyle.Bold);
+                }
+                else
+                {
+                    stepLabel.BackColor = Color.LightGray;
+                }
+
+                progressPanel.Controls.Add(stepLabel);
+            }
         }
 
         private void submitBtn_Click(object sender, EventArgs e)
@@ -37,7 +70,7 @@ namespace Inventory_Database_FrontEnd
                 {
                     con = new OleDbConnection(_connectionString);
 
-                    //SQL command generation to SELECT "OrderCode" FROM "ProductionOrders" table WHERE "OrderCode" = "Order Code"
+                    //SQL command generation to SELECT "OrderCode" FRO "ProductionOrders" table WHERE "OrderCode" = "Order Code"
                     //[] brackets not always required for column names but better to include them to prevent clashing with Access definitions 
                     cmd = new OleDbCommand("SELECT [OrderCode] FROM [ProductionOrders] WHERE [OrderCode] = '" + orderTxt.Text + "' ");
 
@@ -75,6 +108,8 @@ namespace Inventory_Database_FrontEnd
                             cmd.ExecuteNonQuery(); //execute SQL command
 
                             con.Close(); //close connection
+
+                            InitializeProgressBar(statusBox.Text);
 
                             MessageBox.Show("Data submission successful"); //display message if no exception occurs
                         }
@@ -132,6 +167,7 @@ namespace Inventory_Database_FrontEnd
                         startDate.Value = start;                           //set start date
                         endDate.Value = end;                               //set end date
                         statusBox.SelectedItem = reader[4].ToString();     //retrieve status 
+                        InitializeProgressBar(statusBox.SelectedItem.ToString());
                         productBox.SelectedItem = reader[7].ToString();    //retrieve selected product
                     }
 
@@ -148,7 +184,9 @@ namespace Inventory_Database_FrontEnd
                     con.Close();             //close connection
                     orderExists = false;     //reset order flag
 
-                    var imagePath = @"\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Back_End\ProductionOrders\1234.bmp";
+                    var imagePath = $@"C:\Users\Caolan\Desktop\SuperlumProductionDatabase\Database\Back_End\ProductionOrders\{orderTxt.Text}.bmp";
+
+                   
                     if (File.Exists(imagePath)) // Check if the image file exists
                     {
                         // --- CHANGE START ---
@@ -156,10 +194,13 @@ namespace Inventory_Database_FrontEnd
                         // and then assign it to org.Image.
                         try
                         {
-                            pbPO.Image = Image.FromFile(imagePath); // Synchronously loads the image
+                            Image originalImage = Image.FromFile(imagePath);
+                            Image resizedImage = ResizeImageToFit(originalImage, pbPO.Width, pbPO.Height);
 
-                            // IMPORTANT: Set PictureBoxSizeMode to Normal
+                            pbPO.Image = resizedImage;
+                            org.Image = (Image)resizedImage.Clone(); // Still clone if you use it elsewhere
                             pbPO.SizeMode = PictureBoxSizeMode.Normal;
+
 
                             // Update PictureBox size to match original image size initially
                             pbPO.Width = pbPO.Image.Width;
@@ -197,6 +238,25 @@ namespace Inventory_Database_FrontEnd
             {
                 MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public static Image ResizeImageToFit(Image image, int maxWidth, int maxHeight)
+        {
+            var ratioX = (double)maxWidth / image.Width;
+            var ratioY = (double)maxHeight / image.Height;
+            var ratio = Math.Min(ratioX, ratioY);
+
+            var newWidth = (int)(image.Width * ratio);
+            var newHeight = (int)(image.Height * ratio);
+
+            var newImage = new Bitmap(newWidth, newHeight);
+            using (var g = Graphics.FromImage(newImage))
+            {
+                g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                g.DrawImage(image, 0, 0, newWidth, newHeight);
+            }
+
+            return newImage;
         }
 
         private void ProductID()
@@ -243,6 +303,11 @@ namespace Inventory_Database_FrontEnd
 
             // Ensure pbPO is blank initially
             pbPO.Image = null;
+
+        }
+
+        private void FindPO()
+        {
 
         }
 
