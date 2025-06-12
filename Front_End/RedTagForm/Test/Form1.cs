@@ -1,7 +1,15 @@
+using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using LiveChartsCore;
+using LiveChartsCore.Measure;
+using LiveChartsCore.SkiaSharpView;
+using LiveChartsCore.SkiaSharpView.Painting;
+using SkiaSharp;
+using System.Drawing.Drawing2D;
+using LiveChartsCore.SkiaSharpView.Painting.Effects;
 
 namespace Test
 {
@@ -11,7 +19,13 @@ namespace Test
         string connectionString = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = \\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Back_End\Inventory Managment_Data.accdb;";
 
         public bool numExists = false;
-        public bool repaired = false; 
+        public bool repaired = false;
+
+        public List<string> months = new List<string> { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Nov", "Dec" };
+        public ObservableCollection<int> tagCount = new ObservableCollection<int>();
+        public HashSet<int> years = new HashSet<int>();
+
+        public ObservableCollection<ISeries> seriesCollection = new ObservableCollection<ISeries>();
 
         OleDbConnection Con;
 
@@ -21,7 +35,8 @@ namespace Test
 
         {
             InitializeComponent();
-
+            ChartInit();
+            yearInit();
         }
 
 
@@ -32,7 +47,7 @@ namespace Test
         {
             try
             {
-                
+
                 if (pcbPanel.Visible == true) //pcb unit selected
                 {
                     if (pcbNum.Text != "" && reporteeName.Text != "" && pcbFailText.Text != "") //requires minimum of serial number, reportee name and reason for failure to submit - "" is blank
@@ -103,8 +118,10 @@ namespace Test
         {
             pcbPanel.Location = new Point(227, 2);
             sldPanel.Location = new Point(227, 2); //overlaying pcb and sld panels to same coords
-            this.Size = new Size(780, 365); //set form dimensions
+            this.Size = new Size(740, 695);
             unitSelect.SelectedItem = "PCB"; //set combobox default value
+
+
         }
 
         //Table update function - pulls data from selected unit and either inserts new data row for new serial number, or updates existing row for exisiting serial numbers
@@ -128,7 +145,7 @@ namespace Test
 
                 //SQL command generation to SELECT "PCB/SLD Serial Number" FROM "RedTagTracking" table WHERE "PCB/SLD Serial Number" = "Serial Number"
                 //[] brackets not always required for column names but better to include them to prevent clashing with Access definitions 
-                CMD = new OleDbCommand("SELECT [" + unit + "] FROM RedTagTracking WHERE [" + unit + "] = '" + serialNum + "' "); 
+                CMD = new OleDbCommand("SELECT [" + unit + "] FROM RedTagTracking WHERE [" + unit + "] = '" + serialNum + "' ");
 
                 CMD.Connection = Con; //assigning connection path
                 Con.Open(); //opening connection
@@ -204,7 +221,7 @@ namespace Test
 
                     if (pcbNum.Text != "") //requires a serial number to execute function - "" is blank
                     {
-                        
+
                         Con = new OleDbConnection(connectionString); //assign database path to connection variable
 
                         //SQL command generation to SELECT all columns FROM "RedTagTracking" table WHERE "PCB Serial Number" = "Serial Number"
@@ -214,29 +231,29 @@ namespace Test
                         CMD.Connection = Con;
                         Con.Open(); //open connection
 
-                        
+
                         //Reads data from table based on previous SQL command - searching to find serial number in the relevant column 
                         OleDbDataReader reader = CMD.ExecuteReader();
 
-                        
-                            while (reader.Read()) //will skip past if no valid serial number
-                            {
-                                //if serial number exists- extracts values from indexed locations and assigns to relevant area in panel
-                                
-                                //column indexes
-                                //index 0 = ID
-                                //index 1 = pcb serial
-                                //index 2 = sld serial 
-                                //etc
 
-                                    numExists = true;                                       //set flag that the serial number exists
-                                    var date = DateTime.Parse(reader[4].ToString());        //convert date string to DateTime for DateTime picker in form
-                                    reporteeName.Text = reader[3].ToString();               //retrieve name of reportee
-                                    dateSelect.Value = date;                                //set date
-                                    pcbFailText.Text = reader[6].ToString();                //retrieve PCB failure info
-                                    pcbAInfoText.Text = reader[7].ToString();               //retrieve Additional Info
-                                    repairCheck.Checked = bool.Parse(reader[8].ToString()); //retrieve repaired check box state
-                            }
+                        while (reader.Read()) //will skip past if no valid serial number
+                        {
+                            //if serial number exists- extracts values from indexed locations and assigns to relevant area in panel
+
+                            //column indexes
+                            //index 0 = ID
+                            //index 1 = pcb serial
+                            //index 2 = sld serial 
+                            //etc
+
+                            numExists = true;                                       //set flag that the serial number exists
+                            var date = DateTime.Parse(reader[4].ToString());        //convert date string to DateTime for DateTime picker in form
+                            reporteeName.Text = reader[3].ToString();               //retrieve name of reportee
+                            dateSelect.Value = date;                                //set date
+                            pcbFailText.Text = reader[6].ToString();                //retrieve PCB failure info
+                            pcbAInfoText.Text = reader[7].ToString();               //retrieve Additional Info
+                            repairCheck.Checked = bool.Parse(reader[8].ToString()); //retrieve repaired check box state
+                        }
 
                         if (numExists == false) //if the entered serial number is not found, prompt the enter of a valid number and clear all data fields
                         {
@@ -265,7 +282,7 @@ namespace Test
 
             }
 
-            if(sldPanel.Visible == true) //same as previous pcb function just replaced with sld values and data fields
+            if (sldPanel.Visible == true) //same as previous pcb function just replaced with sld values and data fields
             {
                 try
                 {
@@ -280,23 +297,23 @@ namespace Test
 
                         OleDbDataReader reader = CMD.ExecuteReader();
 
-                            while (reader.Read())
-                            {
-                                //index 0 = ID
-                                //index 1 = pcb serial
-                                //index 2 = sld serial 
-                                //etc
+                        while (reader.Read())
+                        {
+                            //index 0 = ID
+                            //index 1 = pcb serial
+                            //index 2 = sld serial 
+                            //etc
 
 
                             numExists = true;
-                                var date = DateTime.Parse(reader[4].ToString());
-                                reporteeName.Text = reader[3].ToString();
-                                dateSelect.Value = date;
-                                sldFailText.Text = reader[5].ToString();
-                                sldAInfoText.Text = reader[7].ToString();
-                                repairCheck.Checked = bool.Parse(reader[8].ToString());
-                            }
-                        
+                            var date = DateTime.Parse(reader[4].ToString());
+                            reporteeName.Text = reader[3].ToString();
+                            dateSelect.Value = date;
+                            sldFailText.Text = reader[5].ToString();
+                            sldAInfoText.Text = reader[7].ToString();
+                            repairCheck.Checked = bool.Parse(reader[8].ToString());
+                        }
+
 
                         if (numExists == false)
                         {
@@ -322,6 +339,139 @@ namespace Test
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void ChartInit()
+        {
+            cartesianChart1.XAxes = new Axis[]
+            {
+                new Axis
+                {
+                    Name = "Months",
+                    NamePaint = new SolidColorPaint(SKColors.Black),
+                    Labels = months,
+                    LabelsPaint = new SolidColorPaint(SKColors.Black),
+                    TextSize = 20,
+                    ForceStepToMin = true,
+                    MinStep = 1,
+                    TicksAtCenter = true,
+                    SeparatorsPaint = new SolidColorPaint(SKColors.LightSlateGray){StrokeThickness = 2}
+                }
+            };
+
+            cartesianChart1.YAxes = new Axis[]
+            {
+                new Axis
+                {
+                    Name = "No. of Tags",
+                    NamePaint = new SolidColorPaint(SKColors.Black),
+
+                    LabelsPaint = new SolidColorPaint(SKColors.Black),
+                    TextSize = 20,
+                    MinLimit = 0,
+                    MinStep = 1,
+                    TicksAtCenter = true,
+                    SeparatorsPaint = new SolidColorPaint(SKColors.LightSlateGray)
+                    {
+                        StrokeThickness = 2,
+                        PathEffect = new DashEffect(new float[]{3,3 })
+                    }
+
+                }
+            };
+        }
+
+        private void UpdateChart()
+        {
+            var existingSeries = cartesianChart1.Series.FirstOrDefault(s => s.Name == yearBox.Text);
+
+            if (existingSeries == null)
+            {
+                seriesCollection.Clear();
+                seriesCollection.Add(new ColumnSeries<int>
+                {
+                    Name = yearBox.Text,
+                    Values = tagCount,
+                    Fill = new SolidColorPaint(SKColors.Red)
+
+                });
+            }
+
+            else if (existingSeries != null)
+            {
+                var series = cartesianChart1.Series.FirstOrDefault(s => s.Name == yearBox.Text);
+                series.Values = tagCount;
+            }
+
+            cartesianChart1.Series = seriesCollection;
+        }
+
+        private void yearInit()
+        {
+            Con = new OleDbConnection(connectionString);
+
+            CMD = new OleDbCommand("SELECT [Date of Report] FROM [RedTagTracking]");
+
+            CMD.Connection = Con;
+            Con.Open();
+
+            OleDbDataReader reader = CMD.ExecuteReader();
+
+            while (reader.Read())
+            {
+                if (reader[0].ToString() != "")
+                {
+                    years.Add(DateTime.Parse(reader[0].ToString()).Year);
+                }
+            }
+
+            reader.Close();
+            Con.Close();
+
+            foreach (var year in years)
+            {
+                yearBox.Items.Add(year);
+            }
+
+        }
+
+        private void yearBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            tagCount.Clear();
+
+            for (int month = 1; month <= 12; month++)
+            {
+                var year = yearBox.Text;
+
+                string monthYear = $"%{month}/{year}";
+
+                Con = new OleDbConnection(connectionString);
+
+                CMD = new OleDbCommand("SELECT COUNT([Date of Report]) FROM [RedTagTracking] WHERE [Date of Report] LIKE '" + monthYear + "'");
+
+                CMD.Connection = Con;
+                Con.Open();
+
+                OleDbDataReader reader = CMD.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    tagCount.Add(int.Parse(reader[0].ToString()));
+                }
+
+                reader.Close();
+                Con.Close();
+            }
+
+            UpdateChart();
+        }
+
+        private void refreshBtn_Click(object sender, EventArgs e)
+        {
+            string lastYear = yearBox.Text;
+            yearBox.Items.Clear();
+            yearInit();
+            yearBox.Text = lastYear;
         }
     }
 }

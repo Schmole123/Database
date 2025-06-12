@@ -52,6 +52,10 @@
             label1 = new Label();
             repairCheck = new CheckBox();
             recieveBtn = new Button();
+            cartesianChart1 = new LiveChartsCore.SkiaSharpView.WinForms.CartesianChart();
+            yearLabel = new Label();
+            yearBox = new ComboBox();
+            refreshBtn = new Button();
             pcbPanel.SuspendLayout();
             sldPanel.SuspendLayout();
             userPanel.SuspendLayout();
@@ -60,7 +64,7 @@
             // updateBtn
             // 
             updateBtn.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            updateBtn.Location = new Point(577, 120);
+            updateBtn.Location = new Point(563, 12);
             updateBtn.Name = "updateBtn";
             updateBtn.Size = new Size(140, 42);
             updateBtn.TabIndex = 0;
@@ -146,7 +150,7 @@
             sldPanel.Controls.Add(sldFailLabel);
             sldPanel.Controls.Add(sldNumLabel);
             sldPanel.Controls.Add(sldNum);
-            sldPanel.Location = new Point(230, 329);
+            sldPanel.Location = new Point(742, 18);
             sldPanel.Name = "sldPanel";
             sldPanel.Size = new Size(330, 320);
             sldPanel.TabIndex = 11;
@@ -265,7 +269,7 @@
             userPanel.Controls.Add(unitSelect);
             userPanel.Location = new Point(5, 2);
             userPanel.Name = "userPanel";
-            userPanel.Size = new Size(216, 493);
+            userPanel.Size = new Size(216, 320);
             userPanel.TabIndex = 10;
             // 
             // label1
@@ -292,7 +296,7 @@
             // recieveBtn
             // 
             recieveBtn.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            recieveBtn.Location = new Point(577, 192);
+            recieveBtn.Location = new Point(563, 84);
             recieveBtn.Name = "recieveBtn";
             recieveBtn.Size = new Size(140, 42);
             recieveBtn.TabIndex = 12;
@@ -300,11 +304,53 @@
             recieveBtn.UseVisualStyleBackColor = true;
             recieveBtn.Click += recieveBtn_Click;
             // 
+            // cartesianChart1
+            // 
+            cartesianChart1.Location = new Point(5, 328);
+            cartesianChart1.MatchAxesScreenDataRatio = false;
+            cartesianChart1.Name = "cartesianChart1";
+            cartesianChart1.Size = new Size(722, 314);
+            cartesianChart1.TabIndex = 13;
+            // 
+            // yearLabel
+            // 
+            yearLabel.AutoSize = true;
+            yearLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            yearLabel.Location = new Point(605, 230);
+            yearLabel.Name = "yearLabel";
+            yearLabel.Size = new Size(40, 21);
+            yearLabel.TabIndex = 14;
+            yearLabel.Text = "Year";
+            // 
+            // yearBox
+            // 
+            yearBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            yearBox.FormattingEnabled = true;
+            yearBox.Location = new Point(573, 255);
+            yearBox.Name = "yearBox";
+            yearBox.Size = new Size(121, 23);
+            yearBox.TabIndex = 18;
+            yearBox.SelectedValueChanged += yearBox_SelectedValueChanged;
+            // 
+            // refreshBtn
+            // 
+            refreshBtn.Location = new Point(593, 297);
+            refreshBtn.Name = "refreshBtn";
+            refreshBtn.Size = new Size(75, 23);
+            refreshBtn.TabIndex = 19;
+            refreshBtn.Text = "Refresh";
+            refreshBtn.UseVisualStyleBackColor = true;
+            refreshBtn.Click += refreshBtn_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(776, 654);
+            ClientSize = new Size(1120, 656);
+            Controls.Add(refreshBtn);
+            Controls.Add(yearBox);
+            Controls.Add(yearLabel);
+            Controls.Add(cartesianChart1);
             Controls.Add(recieveBtn);
             Controls.Add(sldPanel);
             Controls.Add(updateBtn);
@@ -322,6 +368,7 @@
             userPanel.ResumeLayout(false);
             userPanel.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -350,5 +397,10 @@
         private Label label1;
         private CheckBox repairCheck;
         private Button recieveBtn;
+        private LiveChartsCore.SkiaSharpView.WinForms.CartesianChart cartesianChart1;
+        private Label yearLabel;
+        private DateTimePicker yearPick;
+        private ComboBox yearBox;
+        private Button refreshBtn;
     }
 }
