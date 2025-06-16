@@ -1,15 +1,18 @@
-using System.Collections.ObjectModel;
-using System.Data;
-using System.Data.OleDb;
-using System.Drawing;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+
 using LiveChartsCore;
 using LiveChartsCore.Measure;
 using LiveChartsCore.SkiaSharpView;
 using LiveChartsCore.SkiaSharpView.Painting;
-using SkiaSharp;
-using System.Drawing.Drawing2D;
 using LiveChartsCore.SkiaSharpView.Painting.Effects;
+using SkiaSharp;
+using System.Collections.ObjectModel;
+using System.Data;
+using System.Data.OleDb;
+using System.Diagnostics;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Reflection;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Test
 {
@@ -21,7 +24,7 @@ namespace Test
         public bool numExists = false;
         public bool repaired = false;
 
-        public List<string> months = new List<string> { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Nov", "Dec" };
+        public List<string> months = new List<string> { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
         public ObservableCollection<int> tagCount = new ObservableCollection<int>();
         public HashSet<int> years = new HashSet<int>();
 
@@ -343,6 +346,8 @@ namespace Test
 
         private void ChartInit()
         {
+
+
             cartesianChart1.XAxes = new Axis[]
             {
                 new Axis
@@ -472,6 +477,13 @@ namespace Test
             yearBox.Items.Clear();
             yearInit();
             yearBox.Text = lastYear;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           string path = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+
+            Process.Start($@"{path}\snake\snake.exe");
         }
     }
 }

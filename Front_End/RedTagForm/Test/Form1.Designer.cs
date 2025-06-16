@@ -56,6 +56,7 @@
             yearLabel = new Label();
             yearBox = new ComboBox();
             refreshBtn = new Button();
+            button1 = new Button();
             pcbPanel.SuspendLayout();
             sldPanel.SuspendLayout();
             userPanel.SuspendLayout();
@@ -342,11 +343,22 @@
             refreshBtn.UseVisualStyleBackColor = true;
             refreshBtn.Click += refreshBtn_Click;
             // 
+            // button1
+            // 
+            button1.Location = new Point(593, 163);
+            button1.Name = "button1";
+            button1.Size = new Size(24, 23);
+            button1.TabIndex = 20;
+            button1.Text = "S";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1120, 656);
+            Controls.Add(button1);
             Controls.Add(refreshBtn);
             Controls.Add(yearBox);
             Controls.Add(yearLabel);
@@ -402,5 +414,6 @@
         private DateTimePicker yearPick;
         private ComboBox yearBox;
         private Button refreshBtn;
+        private Button button1;
     }
 }
