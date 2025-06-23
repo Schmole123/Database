@@ -345,12 +345,18 @@
             // 
             // button1
             // 
-            button1.Location = new Point(593, 163);
+            button1.BackColor = SystemColors.Control;
+            button1.FlatAppearance.BorderColor = SystemColors.Control;
+            button1.FlatAppearance.MouseDownBackColor = SystemColors.Control;
+            button1.FlatAppearance.MouseOverBackColor = SystemColors.Control;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = SystemColors.ControlText;
+            button1.Location = new Point(609, 220);
             button1.Name = "button1";
-            button1.Size = new Size(24, 23);
+            button1.Size = new Size(10, 11);
             button1.TabIndex = 20;
             button1.Text = "S";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // Form1

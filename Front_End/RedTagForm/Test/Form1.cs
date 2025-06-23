@@ -56,7 +56,6 @@ namespace Test
                     if (pcbNum.Text != "" && reporteeName.Text != "" && pcbFailText.Text != "") //requires minimum of serial number, reportee name and reason for failure to submit - "" is blank
                     {
                         UpdateTable(pcbNum.Text, pcbFailText.Text, pcbAInfoText.Text, "PCB Serial Number", "Reason for PCB Fail"); //table update function call for pcb, passing data from form
-                        MessageBox.Show("Data submission successful");
                     }
 
                     else
@@ -70,7 +69,6 @@ namespace Test
                     if (sldNum.Text != "" && reporteeName.Text != "" && sldFailText.Text != "") //requires minimum of serial number, reportee name and reason for failure to submit - "" is blank
                     {
                         UpdateTable(sldNum.Text, sldFailText.Text, sldAInfoText.Text, "SLD Serial Number", "Reason for SLD Fail"); //table update function call for sld, passing data from form
-                        MessageBox.Show("Data submission successful");
                     }
 
                     else
@@ -184,20 +182,29 @@ namespace Test
 
                 else if (numExists == true) //updates existing row of data if the serial number already exists
                 {
-                    //SQL command generation to UPDATE RedTagTracking table(All columns of the table relevant to PCB/SLD units) with VALUES(All data for each column relevant to PCB/SLD units)
-                    //[] brackets important for columns - values entered must be structured in the same order as columns are entered 
-                    CMD = new OleDbCommand("UPDATE RedTagTracking " +
-                        "SET [Name of Reportee] = '" + reporteeName.Text + "', [Date of Report] = '" + dateSelect.Value.ToShortDateString() + "', [" + failCol + "] = '" + failText + "', [Additional Information] = '" + addInfo + "', [Repaired] = " + repaired + " " +
-                        "WHERE [" + unit + "] = '" + serialNum + "' ");
+                   DialogResult overwrite = MessageBox.Show("Do you wish to overwrite existing data?", "Serial Number already exists", MessageBoxButtons.YesNo); //prompt user to confirm overwriting data
+                    if (overwrite == DialogResult.No) //if user selects no, exit function
+                    {
+                        MessageBox.Show("Submission cancelled");
+                        return;
+                    }
+                    else if (overwrite == DialogResult.Yes) //if user selects yes, continue with function
+                    {
+                        //SQL command generation to UPDATE RedTagTracking table(All columns of the table relevant to PCB/SLD units) with VALUES(All data for each column relevant to PCB/SLD units)
+                        //[] brackets important for columns - values entered must be structured in the same order as columns are entered 
+                        CMD = new OleDbCommand("UPDATE RedTagTracking " +
+                                "SET [Name of Reportee] = '" + reporteeName.Text + "', [Date of Report] = '" + dateSelect.Value.ToShortDateString() + "', [" + failCol + "] = '" + failText + "', [Additional Information] = '" + addInfo + "', [Repaired] = " + repaired + " " +
+                                "WHERE [" + unit + "] = '" + serialNum + "' ");
 
-                    CMD.Connection = Con;
-                    Con.Open();
+                        CMD.Connection = Con;
+                        Con.Open();
 
-                    CMD.ExecuteNonQuery();
+                        CMD.ExecuteNonQuery();
 
-                    Con.Close();
+                        Con.Close();
+                        MessageBox.Show("Data submission successful");
+                    }
                 }
-
                 else
                 {
                     MessageBox.Show("Error writing data"); //misc error if somehow the above fails without an exception

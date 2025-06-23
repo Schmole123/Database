@@ -43,3 +43,4 @@ C:\Users\TEST\source\repos\RedTagForm\Test\obj\x64\Debug\net8.0-windows\refint\R
 C:\Users\TEST\source\repos\RedTagForm\Test\obj\x64\Debug\net8.0-windows\RedTagProto.pdb
 C:\Users\TEST\source\repos\RedTagForm\Test\obj\x64\Debug\net8.0-windows\RedTagProto.genruntimeconfig.cache
 C:\Users\TEST\source\repos\RedTagForm\Test\obj\x64\Debug\net8.0-windows\ref\RedTagProto.dll
+C:\Users\TEST\source\repos\RedTagForm\Test\obj\x64\Debug\net8.0-windows\RedTagProto.Properties.Resources.resources
