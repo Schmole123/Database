@@ -81,6 +81,11 @@
             pnlSupplier = new Panel();
             pnlStock = new Panel();
             pnlStats = new Panel();
+            pnlWelcomeMenu = new Panel();
+            pictureBox4 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            label2 = new Label();
             richTextBox1 = new RichTextBox();
             pnlRedTag = new Panel();
             timerSecond = new System.Windows.Forms.Timer(components);
@@ -92,6 +97,11 @@
             pnlProductionOrder.SuspendLayout();
             pnlSupplier.SuspendLayout();
             pnlStock.SuspendLayout();
+            pnlStats.SuspendLayout();
+            pnlWelcomeMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             pnlRedTag.SuspendLayout();
             ParentContainer.SuspendLayout();
             SuspendLayout();
@@ -551,11 +561,60 @@
             // 
             // pnlStats
             // 
+            pnlStats.Controls.Add(pnlWelcomeMenu);
             pnlStats.Dock = DockStyle.Fill;
             pnlStats.Location = new Point(0, 0);
             pnlStats.Name = "pnlStats";
             pnlStats.Size = new Size(1025, 758);
             pnlStats.TabIndex = 0;
+            // 
+            // pnlWelcomeMenu
+            // 
+            pnlWelcomeMenu.Controls.Add(pictureBox4);
+            pnlWelcomeMenu.Controls.Add(pictureBox3);
+            pnlWelcomeMenu.Controls.Add(pictureBox2);
+            pnlWelcomeMenu.Controls.Add(label2);
+            pnlWelcomeMenu.Location = new Point(0, 0);
+            pnlWelcomeMenu.Name = "pnlWelcomeMenu";
+            pnlWelcomeMenu.Size = new Size(1025, 758);
+            pnlWelcomeMenu.TabIndex = 0;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = Properties.Resources.SLD_removebg_preview__1__removebg_preview;
+            pictureBox4.Location = new Point(636, 327);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(362, 229);
+            pictureBox4.TabIndex = 3;
+            pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.SLD_mCS_Transparent_removebg_preview__1__removebg_preview;
+            pictureBox3.Location = new Point(372, 102);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(247, 175);
+            pictureBox3.TabIndex = 2;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.cBLMD_removebg_preview__1__removebg_preview;
+            pictureBox2.Location = new Point(40, 179);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(294, 181);
+            pictureBox2.TabIndex = 1;
+            pictureBox2.TabStop = false;
+            // 
+            // label2
+            // 
+            label2.Font = new Font("PT Root UI Light", 27.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Teal;
+            label2.Location = new Point(5, 8);
+            label2.Name = "label2";
+            label2.Size = new Size(548, 136);
+            label2.TabIndex = 0;
+            label2.Text = "Welcome to the Superlum Database Portal";
             // 
             // richTextBox1
             // 
@@ -613,6 +672,11 @@
             pnlProductionOrder.ResumeLayout(false);
             pnlSupplier.ResumeLayout(false);
             pnlStock.ResumeLayout(false);
+            pnlStats.ResumeLayout(false);
+            pnlWelcomeMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             pnlRedTag.ResumeLayout(false);
             ParentContainer.ResumeLayout(false);
             ResumeLayout(false);
@@ -675,5 +739,10 @@
         private Panel pnlSupplier;
         private Panel ParentContainer;
         private Panel pnlStats;
+        private Panel pnlWelcomeMenu;
+        private Label label2;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox2;
     }
 }

@@ -4,14 +4,15 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 using Inventory_Database_FrontEnd;
 using System.Drawing.Printing;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 
 namespace Inventory_Database_FrontEnd
 {
     public partial class Inventory_Database : Form
     {
 
-        string connectionString = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = \\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Back_End\Inventory Managment_Data.accdb;";
+         string connectionString = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = \\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Back_End\Inventory Managment_Data.accdb;";
+        //string connectionString = @"Server=desktop-nnart1b\productiondb;Database=tempdb;Trusted_Connection=True;";
 
         public bool numExists = false;
         public bool repaired = false;
@@ -21,8 +22,9 @@ namespace Inventory_Database_FrontEnd
         public Inventory_Database()
         {
             InitializeComponent();
-            MainPanel = pnlStats;
+            MainPanel = pnlWelcomeMenu;
             MainPanel.Visible = true;
+            
             pnlRedTag.Visible = false;
             pnlStock.Visible = false;
             ListPrinters();
@@ -134,14 +136,10 @@ namespace Inventory_Database_FrontEnd
         {
             try
             {
-                ShowPanel(pnlStats);
+                ShowPanel(pnlWelcomeMenu);
                 ParentContainer.Controls.Clear();
-                frmStats frm = new frmStats();
-                frm.Dock = DockStyle.Fill;
-                frm.TopLevel = false;
-                frm.FormBorderStyle = FormBorderStyle.None;
-                ParentContainer.Controls.Add(frm);
-                frm.Show();
+                
+               
             }
             catch (Exception ex)
             {
@@ -154,6 +152,7 @@ namespace Inventory_Database_FrontEnd
             mm.Text = DateTime.Now.Minute.ToString("00");
             ss.Text = DateTime.Now.Second.ToString("00");
             timerSecond.Start();
+            MainPanel.Show();
         }
 
         private void timerSecond_Tick(object sender, EventArgs e)

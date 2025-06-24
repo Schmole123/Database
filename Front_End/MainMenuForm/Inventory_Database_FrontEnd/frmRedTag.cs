@@ -14,6 +14,7 @@ using System.Drawing.Printing;
 using System.Reflection;
 using static System.Resources.ResXFileRef;
 using System.Reflection.Emit;
+using System.Reflection.Metadata.Ecma335;
 
 namespace Inventory_Database_FrontEnd
 {
@@ -46,9 +47,8 @@ namespace Inventory_Database_FrontEnd
 
 
 
-        private void UpdateTable(string serialNum, string failText, string addInfo, string unit, string failCol)
+        private bool UpdateTable(string serialNum, string failText, string addInfo, string unit, string failCol)
         {
-
             try
             {
                 if (repairCheck.Checked == true) //set repaired tag state
@@ -99,38 +99,61 @@ namespace Inventory_Database_FrontEnd
                     CMD.ExecuteNonQuery(); //Executes SQL command to insert new data
 
                     Con.Close();
+                    return true;
                 }
 
-                else if (numExists == true) //updates existing row of data if the serial number already exists
+                else if (numExists == true)
                 {
-                    //SQL command generation to UPDATE RedTagTracking table(All columns of the table relevant to PCB/SLD units) with VALUES(All data for each column relevant to PCB/SLD units)
-                    //[] brackets important for columns - values entered must be structured in the same order as columns are entered 
-                    CMD = new OleDbCommand("UPDATE RedTagTracking " +
-                        "SET [Name of Reportee] = '" + reporteeName.Text + "', [Date of Report] = '" + dateSelect.Value.ToShortDateString() + "', [" + failCol + "] = '" + failText + "', [Additional Information] = '" + addInfo + "', [Repaired] = " + repaired + " " +
-                        "WHERE [" + unit + "] = '" + serialNum + "' ");
+                    DialogResult result = MessageBox.Show(
+                        "This serial number already exists in the database.\n\nDo you want to overwrite the existing data?",
+                        "Duplicate Serial Number",
+                        MessageBoxButtons.YesNoCancel,
+                        MessageBoxIcon.Question
 
-                    CMD.Connection = Con;
-                    Con.Open();
+                    );
 
-                    CMD.ExecuteNonQuery();
+                    if (result == DialogResult.Yes)
+                    {
+                        // User chose to update the existing row
+                        string updateQuery = "UPDATE RedTagTracking " +
+                            "SET [Name of Reportee] = ?, [Date of Report] = ?, [" + failCol + "] = ?, [Additional Information] = ?, [Repaired] = ? " +
+                            "WHERE [" + unit + "] = ?";
 
-                    Con.Close();
+                        CMD = new OleDbCommand(updateQuery, Con);
+
+                        // Use parameters for safety
+                        CMD.Parameters.AddWithValue("@reporteeName", reporteeName.Text);
+                        CMD.Parameters.AddWithValue("@date", dateSelect.Value.ToShortDateString());
+                        CMD.Parameters.AddWithValue("@failText", failText);
+                        CMD.Parameters.AddWithValue("@addInfo", addInfo);
+                        CMD.Parameters.AddWithValue("@repaired", repaired);
+                        CMD.Parameters.AddWithValue("@serialNum", serialNum);
+
+                        Con.Open();
+                        CMD.ExecuteNonQuery();
+                        Con.Close();
+
+
+                        return true;
+                    }
+                    else // No or Cancel
+                    {
+                        MessageBox.Show("Operation cancelled. No changes were made.");
+                        return false;
+                    }
                 }
-
-                else
-                {
-                    MessageBox.Show("Error writing data"); //misc error if somehow the above fails without an exception
-                }
-
-                Con.Close(); //ensure connection is closed
-                numExists = false; //reset serial number check flag to default
             }
+
 
             catch (Exception ex)
             {
+
                 MessageBox.Show(ex.Message);
+                return false;
             }
+            return false;
         }
+
 
         private void frmRedTag_Load(object sender, EventArgs e)
         {
@@ -167,13 +190,15 @@ namespace Inventory_Database_FrontEnd
             try
             {
                 string serialToPrint = null;
-                if (pcbPanel.Visible == true) //pcb unit selected
-                {
 
-                    if (PCBnum.Text != "" && reporteeName.Text != "" && pcbfail.Text != "") //requires minimum of serial number, reportee name and reason for failure to submit - "" is blank
+                if (pcbPanel.Visible == true) // pcb unit selected
+                {
+                    if (PCBnum.Text != "" && reporteeName.Text != "" && pcbfail.Text != "")
                     {
-                        UpdateTable(PCBnum.Text, pcbfail.Text, pcbAInfo.Text, "PCB Serial Number", "Reason for PCB Fail"); //table update function call for pcb, passing data from form
+                        bool updated = UpdateTable(PCBnum.Text, pcbfail.Text, pcbAInfo.Text, "PCB Serial Number", "Reason for PCB Fail");
+                        if (!updated) return;  // stop here if update was cancelled
                         serialToPrint = PCBnum.Text;
+
                         ImageToZplConverter converter = new ImageToZplConverter();
                         Bitmap qrCodeImage = converter.GenerateQrCodeBitmap(serialToPrint);
                         string zpl = await converter.ConvertImageToZplAsync(qrCodeImage);
@@ -188,45 +213,42 @@ namespace Inventory_Database_FrontEnd
                             MessageBox.Show("Data submission successful");
                             qrCodeImage.Dispose();
                         }
-
                         else
                         {
-                            MessageBox.Show("Please fill in all data fields");
+                            MessageBox.Show("Failed to generate ZPL");
                         }
                     }
-
-                    else if (sldPanel.Visible == true) //sld unit selected
-                    {
-
-                        if (sldNum.Text != "" && reporteeName.Text != "" && sldFailText.Text != "") //requires minimum of serial number, reportee name and reason for failure to submit - "" is blank
-                        {
-
-                            UpdateTable(sldNum.Text, sldFailText.Text, sldAInfoText.Text, "SLD Serial Number", "Reason for SLD Fail"); //table update function call for sld, passing data from form
-                            serialToPrint = sldNum.Text;
-                            MessageBox.Show("Data submission successful");
-                        }
-
-                        else
-                        {
-                            MessageBox.Show("Please fill in all data fields");
-                        }
-                    }
-
                     else
                     {
-                        MessageBox.Show("Please select unit type"); // no unit selected from combobox
+                        MessageBox.Show("Please fill in all data fields");
                     }
-
+                }
+                else if (sldPanel.Visible == true) // sld unit selected
+                {
+                    if (sldNum.Text != "" && reporteeName.Text != "" && sldFailText.Text != "")
+                    {
+                        bool updated = UpdateTable(sldNum.Text, sldFailText.Text, sldAInfoText.Text, "SLD Serial Number", "Reason for SLD Fail");
+                        if (!updated) return;  // stop here if update was cancelled
+                        serialToPrint = sldNum.Text;
+                        MessageBox.Show("Data submission successful");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please fill in all data fields");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Please select unit type");
                 }
             }
-
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
-      
+
 
 
 

@@ -73,6 +73,26 @@ namespace Inventory_Database_FrontEnd.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cBLMD_removebg_preview__1_ {
+            get {
+                object obj = ResourceManager.GetObject("cBLMD-removebg-preview (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cBLMD_removebg_preview__1__removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("cBLMD-removebg-preview__1_-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home_button__1___1_ {
             get {
                 object obj = ResourceManager.GetObject("home-button (1) (1)", resourceCulture);
@@ -106,6 +126,36 @@ namespace Inventory_Database_FrontEnd.Properties {
         internal static System.Drawing.Bitmap logo_white_e1505726434402__2_ {
             get {
                 object obj = ResourceManager.GetObject("logo_white-e1505726434402 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SLD_mCS_Transparent_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("SLD-mCS_Transparent-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SLD_mCS_Transparent_removebg_preview__1__removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("SLD-mCS_Transparent-removebg-preview__1_-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SLD_removebg_preview__1__removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("SLD-removebg-preview__1_-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
