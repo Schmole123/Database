@@ -68,10 +68,10 @@
             // supplierLabel
             // 
             supplierLabel.AutoSize = true;
-            supplierLabel.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            supplierLabel.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             supplierLabel.Location = new Point(36, 38);
             supplierLabel.Name = "supplierLabel";
-            supplierLabel.Size = new Size(97, 27);
+            supplierLabel.Size = new Size(97, 25);
             supplierLabel.TabIndex = 0;
             supplierLabel.Text = "Supplier:";
             // 
@@ -92,20 +92,20 @@
             // orderDateLabel
             // 
             orderDateLabel.AutoSize = true;
-            orderDateLabel.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            orderDateLabel.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             orderDateLabel.Location = new Point(23, 260);
             orderDateLabel.Name = "orderDateLabel";
-            orderDateLabel.Size = new Size(121, 27);
+            orderDateLabel.Size = new Size(123, 25);
             orderDateLabel.TabIndex = 3;
             orderDateLabel.Text = "Order Date:";
             // 
             // estDateLabel
             // 
             estDateLabel.AutoSize = true;
-            estDateLabel.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            estDateLabel.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             estDateLabel.Location = new Point(6, 315);
             estDateLabel.Name = "estDateLabel";
-            estDateLabel.Size = new Size(137, 27);
+            estDateLabel.Size = new Size(139, 25);
             estDateLabel.TabIndex = 4;
             estDateLabel.Text = "Est. Delivery:";
             // 
@@ -119,10 +119,10 @@
             // componentLabel
             // 
             componentLabel.AutoSize = true;
-            componentLabel.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            componentLabel.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             componentLabel.Location = new Point(6, 149);
             componentLabel.Name = "componentLabel";
-            componentLabel.Size = new Size(129, 27);
+            componentLabel.Size = new Size(128, 25);
             componentLabel.TabIndex = 6;
             componentLabel.Text = "Component:";
             // 
@@ -164,7 +164,7 @@
             // 
             submitBtn.BackColor = Color.PaleGreen;
             submitBtn.FlatStyle = FlatStyle.Flat;
-            submitBtn.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            submitBtn.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             submitBtn.Location = new Point(32, 574);
             submitBtn.Name = "submitBtn";
             submitBtn.Size = new Size(100, 40);
@@ -177,10 +177,10 @@
             // 
             retrieveBtn.BackColor = Color.LightSalmon;
             retrieveBtn.FlatStyle = FlatStyle.Flat;
-            retrieveBtn.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            retrieveBtn.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             retrieveBtn.Location = new Point(233, 574);
             retrieveBtn.Name = "retrieveBtn";
-            retrieveBtn.Size = new Size(100, 40);
+            retrieveBtn.Size = new Size(102, 40);
             retrieveBtn.TabIndex = 13;
             retrieveBtn.Text = "Retrieve";
             retrieveBtn.UseVisualStyleBackColor = false;
@@ -189,10 +189,10 @@
             // orderCodeLabel
             // 
             orderCodeLabel.AutoSize = true;
-            orderCodeLabel.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            orderCodeLabel.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             orderCodeLabel.Location = new Point(6, 90);
             orderCodeLabel.Name = "orderCodeLabel";
-            orderCodeLabel.Size = new Size(126, 27);
+            orderCodeLabel.Size = new Size(129, 25);
             orderCodeLabel.TabIndex = 14;
             orderCodeLabel.Text = "Order Code:";
             // 
@@ -206,10 +206,10 @@
             // quantityLabel
             // 
             quantityLabel.AutoSize = true;
-            quantityLabel.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            quantityLabel.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             quantityLabel.Location = new Point(52, 367);
             quantityLabel.Name = "quantityLabel";
-            quantityLabel.Size = new Size(92, 27);
+            quantityLabel.Size = new Size(92, 25);
             quantityLabel.TabIndex = 16;
             quantityLabel.Text = "Quanity:";
             // 
@@ -233,10 +233,10 @@
             // actualDateLabel
             // 
             actualDateLabel.AutoSize = true;
-            actualDateLabel.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            actualDateLabel.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             actualDateLabel.Location = new Point(8, 342);
             actualDateLabel.Name = "actualDateLabel";
-            actualDateLabel.Size = new Size(136, 27);
+            actualDateLabel.Size = new Size(139, 25);
             actualDateLabel.TabIndex = 9;
             actualDateLabel.Text = "Delivered on:";
             actualDateLabel.Visible = false;
@@ -257,10 +257,10 @@
             // compDelivNum
             // 
             compDelivNum.AutoSize = true;
-            compDelivNum.Font = new Font("PT Root UI Light", 11.9999981F);
+            compDelivNum.Font = new Font("Microsoft Sans Serif", 11.9999981F);
             compDelivNum.Location = new Point(898, 115);
             compDelivNum.Name = "compDelivNum";
-            compDelivNum.Size = new Size(43, 20);
+            compDelivNum.Size = new Size(42, 20);
             compDelivNum.TabIndex = 13;
             compDelivNum.Text = "Num";
             compDelivNum.Visible = false;
@@ -268,10 +268,10 @@
             // compLeadNum
             // 
             compLeadNum.AutoSize = true;
-            compLeadNum.Font = new Font("PT Root UI Light", 11.9999981F);
+            compLeadNum.Font = new Font("Microsoft Sans Serif", 11.9999981F);
             compLeadNum.Location = new Point(898, 155);
             compLeadNum.Name = "compLeadNum";
-            compLeadNum.Size = new Size(43, 20);
+            compLeadNum.Size = new Size(42, 20);
             compLeadNum.TabIndex = 12;
             compLeadNum.Text = "Num";
             compLeadNum.Visible = false;
@@ -279,20 +279,20 @@
             // compLeadLabel
             // 
             compLeadLabel.AutoSize = true;
-            compLeadLabel.Font = new Font("PT Root UI Light", 11.9999981F);
+            compLeadLabel.Font = new Font("Microsoft Sans Serif", 11.9999981F);
             compLeadLabel.Location = new Point(723, 151);
             compLeadLabel.Name = "compLeadLabel";
-            compLeadLabel.Size = new Size(119, 20);
+            compLeadLabel.Size = new Size(118, 20);
             compLeadLabel.TabIndex = 11;
             compLeadLabel.Text = "Avg Lead Time:";
             // 
             // compDelivLabel
             // 
             compDelivLabel.AutoSize = true;
-            compDelivLabel.Font = new Font("PT Root UI Light", 11.9999981F);
+            compDelivLabel.Font = new Font("Microsoft Sans Serif", 11.9999981F);
             compDelivLabel.Location = new Point(755, 115);
             compDelivLabel.Name = "compDelivLabel";
-            compDelivLabel.Size = new Size(87, 20);
+            compDelivLabel.Size = new Size(81, 20);
             compDelivLabel.TabIndex = 10;
             compDelivLabel.Text = "Deliveries:";
             // 
@@ -308,20 +308,20 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.Location = new Point(852, 38);
             label3.Name = "label3";
-            label3.Size = new Size(129, 27);
+            label3.Size = new Size(128, 25);
             label3.TabIndex = 8;
             label3.Text = "Component:";
             // 
             // suppLeadNum
             // 
             suppLeadNum.AutoSize = true;
-            suppLeadNum.Font = new Font("PT Root UI Light", 11.9999981F);
+            suppLeadNum.Font = new Font("Microsoft Sans Serif", 11.9999981F);
             suppLeadNum.Location = new Point(608, 151);
             suppLeadNum.Name = "suppLeadNum";
-            suppLeadNum.Size = new Size(43, 20);
+            suppLeadNum.Size = new Size(42, 20);
             suppLeadNum.TabIndex = 7;
             suppLeadNum.Text = "Num";
             suppLeadNum.Visible = false;
@@ -329,20 +329,20 @@
             // suppLeadLabel
             // 
             suppLeadLabel.AutoSize = true;
-            suppLeadLabel.Font = new Font("PT Root UI Light", 11.9999981F);
+            suppLeadLabel.Font = new Font("Microsoft Sans Serif", 11.9999981F);
             suppLeadLabel.Location = new Point(460, 151);
             suppLeadLabel.Name = "suppLeadLabel";
-            suppLeadLabel.Size = new Size(119, 20);
+            suppLeadLabel.Size = new Size(118, 20);
             suppLeadLabel.TabIndex = 6;
             suppLeadLabel.Text = "Avg Lead Time:";
             // 
             // suppDelivNum
             // 
             suppDelivNum.AutoSize = true;
-            suppDelivNum.Font = new Font("PT Root UI Light", 11.9999981F);
+            suppDelivNum.Font = new Font("Microsoft Sans Serif", 11.9999981F);
             suppDelivNum.Location = new Point(608, 115);
             suppDelivNum.Name = "suppDelivNum";
-            suppDelivNum.Size = new Size(43, 20);
+            suppDelivNum.Size = new Size(42, 20);
             suppDelivNum.TabIndex = 5;
             suppDelivNum.Text = "Num";
             suppDelivNum.Visible = false;
@@ -350,10 +350,10 @@
             // suppDeliveryLabel
             // 
             suppDeliveryLabel.AutoSize = true;
-            suppDeliveryLabel.Font = new Font("PT Root UI Light", 11.9999981F);
+            suppDeliveryLabel.Font = new Font("Microsoft Sans Serif", 11.9999981F);
             suppDeliveryLabel.Location = new Point(460, 115);
             suppDeliveryLabel.Name = "suppDeliveryLabel";
-            suppDeliveryLabel.Size = new Size(87, 20);
+            suppDeliveryLabel.Size = new Size(81, 20);
             suppDeliveryLabel.TabIndex = 4;
             suppDeliveryLabel.Text = "Deliveries:";
             // 
@@ -378,10 +378,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(481, 42);
             label2.Name = "label2";
-            label2.Size = new Size(97, 27);
+            label2.Size = new Size(97, 25);
             label2.TabIndex = 1;
             label2.Text = "Supplier:";
             // 

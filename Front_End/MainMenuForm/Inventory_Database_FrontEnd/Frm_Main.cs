@@ -22,7 +22,7 @@ namespace Inventory_Database_FrontEnd
         public Inventory_Database()
         {
             InitializeComponent();
-            MainPanel = pnlWelcomeMenu;
+            MainPanel = pnlStats;
             MainPanel.Visible = true;
             
             pnlRedTag.Visible = false;
@@ -39,7 +39,7 @@ namespace Inventory_Database_FrontEnd
             {
                 ShowPanel(pnlRedTag);
                 ParentContainer.Controls.Clear();
-                frmRedTag frm = new frmRedTag(connectionString, "TE200_test");
+                frmRedTag frm = new frmRedTag(connectionString, cmbPrinterSel.SelectedItem.ToString());
                 frm.Dock = DockStyle.Fill;
                 frm.TopLevel = false;
                 frm.FormBorderStyle = FormBorderStyle.None;
@@ -136,14 +136,18 @@ namespace Inventory_Database_FrontEnd
         {
             try
             {
-                ShowPanel(pnlWelcomeMenu);
+                ShowPanel(pnlStats);
                 ParentContainer.Controls.Clear();
-                
-               
+                frmStats frm = new frmStats();
+                frm.Dock = DockStyle.Fill;
+                frm.TopLevel = false;
+                frm.FormBorderStyle = FormBorderStyle.None;
+                ParentContainer.Controls.Add(frm);
+                frm.Show();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading Production Order menu: " + ex.Message);
+                MessageBox.Show("Error loading Stats menu: " + ex.Message);
             }
         }
         private void Inventory_Database_Load(object sender, EventArgs e)

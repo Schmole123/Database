@@ -49,47 +49,47 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("PT Root UI Light", 14.25F);
+            label1.Font = new Font("Microsoft Sans Serif", 14.25F);
             label1.Location = new Point(13, 29);
             label1.Name = "label1";
-            label1.Size = new Size(116, 24);
+            label1.Size = new Size(114, 24);
             label1.TabIndex = 0;
             label1.Text = "Component:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("PT Root UI Light", 14.25F);
+            label2.Font = new Font("Microsoft Sans Serif", 14.25F);
             label2.Location = new Point(10, 345);
             label2.Name = "label2";
-            label2.Size = new Size(160, 24);
+            label2.Size = new Size(152, 24);
             label2.TabIndex = 1;
             label2.Text = "Amount in Stock:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("PT Root UI Light", 14.25F);
+            label4.Font = new Font("Microsoft Sans Serif", 14.25F);
             label4.Location = new Point(12, 118);
             label4.Name = "label4";
-            label4.Size = new Size(89, 24);
+            label4.Size = new Size(86, 24);
             label4.TabIndex = 3;
             label4.Text = "Location:";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("PT Root UI Light", 14.25F);
+            label5.Font = new Font("Microsoft Sans Serif", 14.25F);
             label5.Location = new Point(10, 272);
             label5.Name = "label5";
-            label5.Size = new Size(89, 24);
+            label5.Size = new Size(85, 24);
             label5.TabIndex = 4;
             label5.Text = "Supplier:";
             // 
             // btnAddtoStock
             // 
             btnAddtoStock.BackColor = Color.MediumSeaGreen;
-            btnAddtoStock.Font = new Font("PT Root UI Light", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAddtoStock.Font = new Font("Microsoft Sans Serif", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAddtoStock.Location = new Point(9, 429);
             btnAddtoStock.Name = "btnAddtoStock";
             btnAddtoStock.Size = new Size(162, 62);
@@ -149,10 +149,10 @@
             // lblProductCode
             // 
             lblProductCode.AutoSize = true;
-            lblProductCode.Font = new Font("PT Root UI Light", 14.25F);
+            lblProductCode.Font = new Font("Microsoft Sans Serif", 14.25F);
             lblProductCode.Location = new Point(12, 197);
             lblProductCode.Name = "lblProductCode";
-            lblProductCode.Size = new Size(132, 24);
+            lblProductCode.Size = new Size(131, 24);
             lblProductCode.TabIndex = 13;
             lblProductCode.Text = "Product Code:";
             // 
@@ -186,7 +186,7 @@
             // cmbRackSelector
             // 
             cmbRackSelector.FormattingEnabled = true;
-            cmbRackSelector.Items.AddRange(new object[] { "SLD-mCS", "cBLMD", "BLL", "Other" });
+            cmbRackSelector.Items.AddRange(new object[] { "Other" });
             cmbRackSelector.Location = new Point(575, 534);
             cmbRackSelector.Name = "cmbRackSelector";
             cmbRackSelector.Size = new Size(121, 23);

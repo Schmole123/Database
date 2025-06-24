@@ -1,32 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using LiveChartsCore;
+﻿using LiveChartsCore;
 using LiveChartsCore.Defaults;
+using LiveChartsCore.Measure;
 using LiveChartsCore.SkiaSharpView;
 using LiveChartsCore.SkiaSharpView.Painting;
 using LiveChartsCore.SkiaSharpView.Painting.Effects;
 using SkiaSharp;
 using System;
+using System;
 using System.Collections.Generic;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Data.OleDb;
 using System.Drawing;
+using System.Drawing;
+using System.Linq;
 using System.Linq;
 using System.Net.Mail;
+using System.Text;
 using System.Threading.Tasks;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using System.Windows.Forms;
 
 namespace Inventory_Database_FrontEnd
 {
     public partial class frmStats : Form
     {
-        public HashSet<string> suppliers = new HashSet<string>();
+        public HashSet<string> suppliers = new HashSet<string> { "All" };
+        public List<string> status = new List<string> { "New", "In Production", "QC", "Ready to Ship", "Completed" };
+        public HashSet<string> customers = new HashSet<string>();
         public HashSet<string> _components = new HashSet<string>();
         string connectionString = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = \\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Back_End\Inventory Managment_Data.accdb;";
 
@@ -34,6 +37,8 @@ namespace Inventory_Database_FrontEnd
         public List<DateTime> actualDates = new List<DateTime>();
         public List<TimeSpan> timeDiffs = new List<TimeSpan>();
         public List<double> leadTimes = new List<double>();
+
+        public List<ISeries> seriesCollection = new List<ISeries>();
 
         public bool dataValid = false;
         public string lastItem;
@@ -46,7 +51,9 @@ namespace Inventory_Database_FrontEnd
         {
             InitializeComponent();
             Init();
+            ProdInit();
             ChartInit();
+            Count();
         }
 
 
@@ -88,16 +95,25 @@ namespace Inventory_Database_FrontEnd
                 }
             }
 
-       
+            foreach (var v in _components)
+            {
+                if (compBox.Items.Contains(v) != true)
+                {
+                    compBox.Items.Add(v);
+                }
+            }
 
             if (selectedData == "Supplier")
             {
                 supplierBox.SelectedItem = lastItem;
             }
 
-         
-        }
+            else if (selectedData == "Component")
+            {
+                compBox.SelectedItem = lastItem;
+            }
 
+        }
 
         private void ChartInit()
         {
@@ -125,6 +141,9 @@ namespace Inventory_Database_FrontEnd
                     MinLimit = 0
                 }
             };
+
+            cartesianChart1.LegendPosition = LegendPosition.Top;
+            cartesianChart1.LegendTextSize = 15;
         }
 
         private void UpdateAvg(string dataset, double avg)
@@ -144,7 +163,8 @@ namespace Inventory_Database_FrontEnd
                     con.Close();
                     break;
                 case "Component":
-                 
+                    compLeadNum.Text = $"{avg.ToString()} Days";
+                    compDelivNum.Text = orderDates.Count.ToString();
                     break;
             }
         }
@@ -152,32 +172,54 @@ namespace Inventory_Database_FrontEnd
 
         private void UpdateChart(List<TimeSpan> times, string dataset)
         {
-            leadTimes.Clear();
-            foreach (var v in times)
+            if (supplierBox.Text != "All")
             {
-                leadTimes.Add(v.TotalDays);
-            }
 
-            var existingSeries = cartesianChart1.Series.FirstOrDefault(s => s.Name == dataset);
-
-            if (existingSeries == null)
-            {
-                cartesianChart1.Series = new ISeries[]
+                leadTimes.Clear();
+                foreach (var v in times)
                 {
-                    new LineSeries<double>
+                    leadTimes.Add(v.TotalDays);
+                }
+
+                var existingSeries = cartesianChart1.Series.FirstOrDefault(s => s.Name == dataset);
+
+                if (existingSeries == null)
+                {
+                    cartesianChart1.Series = new ISeries[]
                     {
-                        Name = dataset,
-                        Values = leadTimes,
-                    }
-                };
+                        new LineSeries<double>
+                        {
+                            Name = dataset,
+                            Values = leadTimes,
+                        }
+                    };
+                }
+
+                else if (existingSeries != null)
+                {
+                    var series = cartesianChart1.Series.FirstOrDefault(s => s.Name == dataset);
+
+                    series.Values = leadTimes;
+
+                }
             }
 
-            else if (existingSeries != null)
+            else
             {
-                var series = cartesianChart1.Series.FirstOrDefault(s => s.Name == dataset);
+                List<double> leadTimes = new List<double>();
+                foreach (var v in times)
+                {
+                    leadTimes.Add(v.TotalDays);
+                }
 
-                series.Values = leadTimes;
+                seriesCollection.Add(new LineSeries<double>
+                {
+                    Name = dataset,
+                    Values = leadTimes,
+                    Fill = null
+                });
 
+                cartesianChart1.Series = seriesCollection;
             }
 
         }
@@ -250,23 +292,322 @@ namespace Inventory_Database_FrontEnd
         private void supplierBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedData = "Supplier";
+            compBox.Text = "";
 
-            try
+            if (supplierBox.Text == "All")
             {
-                AvgCalc(supplierBox.Text);
-                suppLeadNum.Visible = true;
-                suppDelivNum.Visible = true;
+                seriesCollection.Clear();
+
+                foreach (var v in suppliers)
+                {
+                    if (v != "All")
+                    {
+                        AvgCalc(v);
+                    }
+                }
+
+                suppDelivNum.Visible = false;
+                suppLeadNum.Visible = false;
+                compDelivNum.Visible = false;
+                compLeadNum.Visible = false;
             }
-            catch (Exception ex)
+
+            else
             {
-                MessageBox.Show(ex.Message);
+                seriesCollection.Clear();
+                try
+                {
+                    AvgCalc(supplierBox.Text);
+                    suppLeadNum.Visible = true;
+                    suppDelivNum.Visible = true;
+                    compDelivNum.Visible = false;
+                    compLeadNum.Visible = false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
-  
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (selectedData == "Supplier")
+            {
 
-       
+                try
+                {
+                    Init();
 
+                    if (supplierBox.Text == "All")
+                    {
+                        seriesCollection.Clear();
+
+                        foreach (var v in suppliers)
+                        {
+                            if (v != "All")
+                            {
+                                AvgCalc(v);
+                            }
+                        }
+
+                        suppDelivNum.Visible = false;
+                        suppLeadNum.Visible = false;
+                    }
+
+                    else if (supplierBox.Text != "")
+                    {
+                        seriesCollection.Clear();
+                        try
+                        {
+                            AvgCalc(supplierBox.Text);
+                            suppLeadNum.Visible = true;
+                            suppDelivNum.Visible = true;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            else if (selectedData == "Component")
+            {
+                try
+                {
+                    Init();
+
+                    if (compBox.Text == "All")
+                    {
+                        seriesCollection.Clear();
+
+                        foreach (var v in _components)
+                        {
+                            if (v != "All")
+                            {
+                                AvgCalc(v);
+                            }
+                        }
+
+                        compDelivNum.Visible = false;
+                        compLeadNum.Visible = false;
+                    }
+
+                    else if (compBox.Text != "")
+                    {
+                        seriesCollection.Clear();
+                        try
+                        {
+                            AvgCalc(compBox.Text);
+                            compLeadNum.Visible = true;
+                            compDelivNum.Visible = true;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            else
+            {
+                MessageBox.Show("No supplier/component selected");
+            }
+        }
+
+        private void compBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            selectedData = "Component";
+            supplierBox.Text = "";
+
+            if (compBox.Text == "All")
+            {
+                seriesCollection.Clear();
+
+                foreach (var v in _components)
+                {
+                    if (v != "All")
+                    {
+                        AvgCalc(v);
+                    }
+                }
+
+                compDelivNum.Visible = false;
+                compLeadNum.Visible = false;
+                suppDelivNum.Visible = false;
+                suppLeadNum.Visible = false;
+            }
+
+            else
+            {
+                seriesCollection.Clear();
+                try
+                {
+                    AvgCalc(compBox.Text);
+                    compLeadNum.Visible = true;
+                    compDelivNum.Visible = true;
+                    suppDelivNum.Visible = false;
+                    suppLeadNum.Visible = false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        ////////////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////// Production Statistics ////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////////////
+
+        private void ProdInit()
+        {
+
+            con = new OleDbConnection(connectionString);
+
+            cmd = new OleDbCommand("SELECT [Customer] FROM [ProductionOrders]");
+
+            cmd.Connection = con;
+            con.Open();
+
+            OleDbDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                if (reader[0].ToString() != "")
+                {
+                    customers.Add(reader[0].ToString());
+                }
+            }
+
+            foreach (var v in customers)
+            {
+                customerBox.Items.Add(v);
+            }
+
+            reader.Close();
+            con.Close();
+        }
+
+        private void Count()
+        {
+            foreach (var stat in status)
+            {
+                con = new OleDbConnection(connectionString);
+
+                cmd = new OleDbCommand("SELECT COUNT([Status]) FROM [ProductionOrders] WHERE [Status] = '" + stat + "' ");
+
+                cmd.Connection = con;
+                con.Open();
+
+                OleDbDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    switch (stat)
+                    {
+                        case "New":
+                            newNum.Text = reader[0].ToString();
+                            break;
+                        case "In Production":
+                            prodNum.Text = reader[0].ToString();
+                            break;
+                        case "QC":
+                            qcNum.Text = reader[0].ToString();
+                            break;
+                        case "Ready to Ship":
+                            shipNum.Text = reader[0].ToString();
+                            break;
+                        case "Completed":
+                            compNum.Text = reader[0].ToString();
+                            break;
+                    }
+                }
+
+                reader.Close();
+                con.Close();
+                
+            }
+        }
+
+        private void customerBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (orderBox.Items != null)
+            {
+                orderBox.Items.Clear();
+                orderBox.Text = "";
+            }
+
+            customerDetailTxt.Text = customerBox.Text;
+            customerDetailTxt.Visible = true;
+            customerNum.Visible = true;
+
+            con = new OleDbConnection(connectionString);
+
+            cmd = new OleDbCommand("SELECT [OrderCode] FROM [ProductionOrders] WHERE [Customer] = '" + customerBox.Text + "' ");
+
+            cmd.Connection = con;
+            con.Open();
+
+            OleDbDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                orderBox.Items.Add(reader[0].ToString());
+            }
+
+            reader.Close();
+            con.Close();
+
+            cmd = new OleDbCommand("SELECT COUNT([Customer]) FROM [ProductionOrders] WHERE [Customer] = '" + customerBox.Text + "'");
+            cmd.Connection = con;
+            con.Open();
+
+            reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                customerNum.Text = reader[0].ToString();
+            }
+
+            reader.Close();
+            con.Close();
+        }
+
+        private void orderBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            con = new OleDbConnection(connectionString);
+
+            cmd = new OleDbCommand("SELECT [StartDate],[EstimatedEndDate],[Status],[Product] FROM [ProductionOrders] WHERE [OrderCode] = '" + orderBox.Text + "' ");
+
+            cmd.Connection = con;
+            con.Open();
+
+            OleDbDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                startDate.Value = DateTime.Parse(reader[0].ToString());
+                endDate.Value = DateTime.Parse(reader[1].ToString());
+                statusTxt.Text = reader[2].ToString();
+                productTxt.Text = reader[3].ToString();
+            }
+
+            reader.Close();
+            con.Close();
+            productTxt.Visible = true;
+            statusTxt.Visible = true;
         }
     }
+}
 

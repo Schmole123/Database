@@ -1,25 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Caolan\\Desktop\\SuperlumProductionDatabase\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj": {}
+    "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Caolan\\Desktop\\SuperlumProductionDatabase\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj": {
+    "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Caolan\\Desktop\\SuperlumProductionDatabase\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj",
+        "projectUniqueName": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj",
         "projectName": "Inventory_Database_FrontEnd",
-        "projectPath": "C:\\Users\\Caolan\\Desktop\\SuperlumProductionDatabase\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj",
-        "packagesPath": "C:\\Users\\Caolan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Caolan\\Desktop\\SuperlumProductionDatabase\\Database\\Front_End\\MainMenuForm\\Inventory_Database_FrontEnd\\obj\\",
+        "projectPath": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj",
+        "packagesPath": "C:\\Users\\TEST\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\DevExpress 24.2\\Components\\Offline Packages",
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Caolan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 24.2.config",
+          "C:\\Users\\TEST\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -28,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\DevExpress 24.2\\Components\\System\\Components\\Packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -47,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -93,7 +90,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

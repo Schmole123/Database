@@ -38,9 +38,9 @@ namespace Inventory_Database_FrontEnd
             allRacks = new Dictionary<string, Dictionary<string, (int, int)>>();
 
             allRacks["SLD-mCS"] = new Dictionary<string, (int, int)>
-    {
+            {
  
-    };
+            };
 
             this.cmbComponent.SelectedIndexChanged += new System.EventHandler(this.cmbComponent_SelectedIndexChanged);
             _connectionString = connectionString;

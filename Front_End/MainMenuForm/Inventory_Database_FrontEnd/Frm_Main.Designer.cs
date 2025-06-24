@@ -132,7 +132,7 @@
             btnSupplier.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
             btnSupplier.FlatAppearance.BorderSize = 0;
             btnSupplier.FlatStyle = FlatStyle.Flat;
-            btnSupplier.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSupplier.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSupplier.ForeColor = Color.DarkCyan;
             btnSupplier.Image = (Image)resources.GetObject("btnSupplier.Image");
             btnSupplier.ImageAlign = ContentAlignment.MiddleLeft;
@@ -150,7 +150,7 @@
             btnAssemblyData.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
             btnAssemblyData.FlatAppearance.BorderSize = 0;
             btnAssemblyData.FlatStyle = FlatStyle.Flat;
-            btnAssemblyData.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAssemblyData.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnAssemblyData.ForeColor = Color.DarkCyan;
             btnAssemblyData.Image = (Image)resources.GetObject("btnAssemblyData.Image");
             btnAssemblyData.ImageAlign = ContentAlignment.MiddleLeft;
@@ -165,55 +165,55 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Digital-7", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = SystemColors.Control;
             label3.Location = new Point(149, 59);
             label3.Name = "label3";
-            label3.Size = new Size(12, 20);
+            label3.Size = new Size(15, 24);
             label3.TabIndex = 9;
             label3.Text = ":";
             // 
             // ss
             // 
             ss.AutoSize = true;
-            ss.Font = new Font("Digital-7", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            ss.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ss.ForeColor = SystemColors.Control;
-            ss.Location = new Point(160, 62);
+            ss.Location = new Point(159, 59);
             ss.Name = "ss";
-            ss.Size = new Size(24, 17);
+            ss.Size = new Size(30, 24);
             ss.TabIndex = 8;
             ss.Text = "00";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Digital-7", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.Control;
             label1.Location = new Point(112, 59);
             label1.Name = "label1";
-            label1.Size = new Size(12, 20);
+            label1.Size = new Size(15, 24);
             label1.TabIndex = 7;
             label1.Text = ":";
             // 
             // mm
             // 
             mm.AutoSize = true;
-            mm.Font = new Font("Digital-7", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mm.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             mm.ForeColor = SystemColors.Control;
             mm.Location = new Point(123, 59);
             mm.Name = "mm";
-            mm.Size = new Size(27, 20);
+            mm.Size = new Size(30, 24);
             mm.TabIndex = 6;
             mm.Text = "00";
             // 
             // hh
             // 
             hh.AutoSize = true;
-            hh.Font = new Font("Digital-7", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            hh.Font = new Font("Microsoft Sans Serif", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             hh.ForeColor = SystemColors.Control;
-            hh.Location = new Point(91, 59);
+            hh.Location = new Point(87, 59);
             hh.Name = "hh";
-            hh.Size = new Size(27, 20);
+            hh.Size = new Size(30, 24);
             hh.TabIndex = 5;
             hh.Text = "00";
             // 
@@ -222,7 +222,7 @@
             btnHome.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
             btnHome.FlatAppearance.BorderSize = 0;
             btnHome.FlatStyle = FlatStyle.Flat;
-            btnHome.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnHome.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnHome.ForeColor = Color.DarkCyan;
             btnHome.Image = (Image)resources.GetObject("btnHome.Image");
             btnHome.ImageAlign = ContentAlignment.MiddleLeft;
@@ -247,7 +247,7 @@
             btnRedTag.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
             btnRedTag.FlatAppearance.BorderSize = 0;
             btnRedTag.FlatStyle = FlatStyle.Flat;
-            btnRedTag.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnRedTag.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnRedTag.ForeColor = Color.DarkCyan;
             btnRedTag.Image = (Image)resources.GetObject("btnRedTag.Image");
             btnRedTag.ImageAlign = ContentAlignment.MiddleLeft;
@@ -265,7 +265,7 @@
             btnProductionOrder.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
             btnProductionOrder.FlatAppearance.BorderSize = 0;
             btnProductionOrder.FlatStyle = FlatStyle.Flat;
-            btnProductionOrder.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnProductionOrder.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnProductionOrder.ForeColor = Color.DarkCyan;
             btnProductionOrder.Image = (Image)resources.GetObject("btnProductionOrder.Image");
             btnProductionOrder.ImageAlign = ContentAlignment.MiddleLeft;
@@ -283,7 +283,7 @@
             btnStockMenu.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
             btnStockMenu.FlatAppearance.BorderSize = 0;
             btnStockMenu.FlatStyle = FlatStyle.Flat;
-            btnStockMenu.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnStockMenu.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnStockMenu.ForeColor = Color.DarkCyan;
             btnStockMenu.Image = (Image)resources.GetObject("btnStockMenu.Image");
             btnStockMenu.ImageAlign = ContentAlignment.MiddleLeft;
@@ -608,7 +608,7 @@
             // 
             // label2
             // 
-            label2.Font = new Font("PT Root UI Light", 27.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 27.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Teal;
             label2.Location = new Point(5, 8);
             label2.Name = "label2";
@@ -661,6 +661,7 @@
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "Inventory_Database";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Inventory_Database";
             Load += Inventory_Database_Load;
             panel1.ResumeLayout(false);

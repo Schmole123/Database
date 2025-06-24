@@ -52,6 +52,11 @@
             reporteeName = new TextBox();
             nameLabel = new Label();
             unitSelect = new ComboBox();
+            cartesianChart1 = new LiveChartsCore.SkiaSharpView.WinForms.CartesianChart();
+            yearBox = new ComboBox();
+            label5 = new Label();
+            refreshBtn = new Button();
+            printBtn = new Button();
             pcbPanel.SuspendLayout();
             sldPanel.SuspendLayout();
             userPanel.SuspendLayout();
@@ -60,8 +65,8 @@
             // updateBtn
             // 
             updateBtn.BackColor = Color.PaleGreen;
-            updateBtn.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            updateBtn.Location = new Point(650, 64);
+            updateBtn.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            updateBtn.Location = new Point(650, 13);
             updateBtn.Name = "updateBtn";
             updateBtn.Size = new Size(167, 42);
             updateBtn.TabIndex = 12;
@@ -95,10 +100,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Underline, GraphicsUnit.Point, 0);
             label2.Location = new Point(0, 161);
             label2.Name = "label2";
-            label2.Size = new Size(150, 27);
+            label2.Size = new Size(148, 25);
             label2.TabIndex = 7;
             label2.Text = "Additional info";
             // 
@@ -114,20 +119,20 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Underline, GraphicsUnit.Point, 0);
             label3.Location = new Point(-2, 67);
             label3.Name = "label3";
-            label3.Size = new Size(181, 27);
+            label3.Size = new Size(189, 25);
             label3.TabIndex = 5;
             label3.Text = "Reason for Failure";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.Location = new Point(-1, 0);
             label4.Name = "label4";
-            label4.Size = new Size(198, 27);
+            label4.Size = new Size(203, 25);
             label4.TabIndex = 3;
             label4.Text = "PCB Serial Number:";
             // 
@@ -147,7 +152,7 @@
             sldPanel.Controls.Add(sldFailLabel);
             sldPanel.Controls.Add(sldNumLabel);
             sldPanel.Controls.Add(sldNum);
-            sldPanel.Location = new Point(33, 355);
+            sldPanel.Location = new Point(840, 12);
             sldPanel.Name = "sldPanel";
             sldPanel.Size = new Size(330, 315);
             sldPanel.TabIndex = 27;
@@ -165,10 +170,10 @@
             // sldAInfoLabel
             // 
             sldAInfoLabel.AutoSize = true;
-            sldAInfoLabel.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            sldAInfoLabel.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Underline, GraphicsUnit.Point, 0);
             sldAInfoLabel.Location = new Point(1, 163);
             sldAInfoLabel.Name = "sldAInfoLabel";
-            sldAInfoLabel.Size = new Size(150, 27);
+            sldAInfoLabel.Size = new Size(148, 25);
             sldAInfoLabel.TabIndex = 7;
             sldAInfoLabel.Text = "Additional info";
             // 
@@ -184,20 +189,20 @@
             // sldFailLabel
             // 
             sldFailLabel.AutoSize = true;
-            sldFailLabel.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Underline, GraphicsUnit.Point, 0);
+            sldFailLabel.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Underline, GraphicsUnit.Point, 0);
             sldFailLabel.Location = new Point(-1, 67);
             sldFailLabel.Name = "sldFailLabel";
-            sldFailLabel.Size = new Size(181, 27);
+            sldFailLabel.Size = new Size(189, 25);
             sldFailLabel.TabIndex = 5;
             sldFailLabel.Text = "Reason for Failure";
             // 
             // sldNumLabel
             // 
             sldNumLabel.AutoSize = true;
-            sldNumLabel.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            sldNumLabel.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             sldNumLabel.Location = new Point(-1, 1);
             sldNumLabel.Name = "sldNumLabel";
-            sldNumLabel.Size = new Size(196, 27);
+            sldNumLabel.Size = new Size(201, 25);
             sldNumLabel.TabIndex = 3;
             sldNumLabel.Text = "SLD Serial Number:";
             // 
@@ -212,12 +217,12 @@
             // recieveBtn
             // 
             recieveBtn.BackColor = Color.LightSalmon;
-            recieveBtn.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            recieveBtn.Location = new Point(650, 165);
+            recieveBtn.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            recieveBtn.Location = new Point(650, 88);
             recieveBtn.Name = "recieveBtn";
             recieveBtn.Size = new Size(167, 42);
             recieveBtn.TabIndex = 12;
-            recieveBtn.Text = "Receive Data";
+            recieveBtn.Text = "Retrieve Data";
             recieveBtn.UseVisualStyleBackColor = false;
             recieveBtn.Click += recieveBtn_Click;
             // 
@@ -238,20 +243,20 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(1, 150);
             label1.Name = "label1";
-            label1.Size = new Size(62, 27);
+            label1.Size = new Size(63, 25);
             label1.TabIndex = 11;
             label1.Text = "Date:";
             // 
             // repairCheck
             // 
             repairCheck.AutoSize = true;
-            repairCheck.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            repairCheck.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             repairCheck.Location = new Point(9, 238);
             repairCheck.Name = "repairCheck";
-            repairCheck.Size = new Size(114, 31);
+            repairCheck.Size = new Size(118, 29);
             repairCheck.TabIndex = 10;
             repairCheck.Text = "Repaired";
             repairCheck.UseVisualStyleBackColor = true;
@@ -266,10 +271,10 @@
             // unitLabel
             // 
             unitLabel.AutoSize = true;
-            unitLabel.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            unitLabel.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             unitLabel.Location = new Point(0, 0);
             unitLabel.Name = "unitLabel";
-            unitLabel.Size = new Size(113, 27);
+            unitLabel.Size = new Size(113, 25);
             unitLabel.TabIndex = 9;
             unitLabel.Text = "Unit select";
             // 
@@ -284,10 +289,10 @@
             // nameLabel
             // 
             nameLabel.AutoSize = true;
-            nameLabel.Font = new Font("PT Root UI Light", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            nameLabel.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             nameLabel.Location = new Point(0, 76);
             nameLabel.Name = "nameLabel";
-            nameLabel.Size = new Size(188, 27);
+            nameLabel.Size = new Size(192, 25);
             nameLabel.TabIndex = 7;
             nameLabel.Text = "Name of Reportee:";
             // 
@@ -302,12 +307,67 @@
             unitSelect.TabIndex = 8;
             unitSelect.SelectedValueChanged += unitSelect_SelectedValueChanged;
             // 
+            // cartesianChart1
+            // 
+            cartesianChart1.Location = new Point(21, 332);
+            cartesianChart1.MatchAxesScreenDataRatio = false;
+            cartesianChart1.Name = "cartesianChart1";
+            cartesianChart1.Size = new Size(857, 333);
+            cartesianChart1.TabIndex = 29;
+            // 
+            // yearBox
+            // 
+            yearBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            yearBox.FormattingEnabled = true;
+            yearBox.Location = new Point(659, 279);
+            yearBox.Name = "yearBox";
+            yearBox.Size = new Size(121, 23);
+            yearBox.TabIndex = 30;
+            yearBox.SelectedValueChanged += yearBox_SelectedValueChanged;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(696, 250);
+            label5.Name = "label5";
+            label5.Size = new Size(40, 21);
+            label5.TabIndex = 31;
+            label5.Text = "Year";
+            // 
+            // refreshBtn
+            // 
+            refreshBtn.Location = new Point(678, 308);
+            refreshBtn.Name = "refreshBtn";
+            refreshBtn.Size = new Size(75, 23);
+            refreshBtn.TabIndex = 32;
+            refreshBtn.Text = "Refresh";
+            refreshBtn.UseVisualStyleBackColor = true;
+            refreshBtn.Click += refreshBtn_Click;
+            // 
+            // printBtn
+            // 
+            printBtn.BackColor = Color.SkyBlue;
+            printBtn.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            printBtn.Location = new Point(650, 166);
+            printBtn.Name = "printBtn";
+            printBtn.Size = new Size(167, 42);
+            printBtn.TabIndex = 33;
+            printBtn.Text = "Print";
+            printBtn.UseVisualStyleBackColor = false;
+            printBtn.Click += printBtn_Click;
+            // 
             // frmRedTag
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(885, 682);
+            Controls.Add(printBtn);
+            Controls.Add(refreshBtn);
+            Controls.Add(label5);
+            Controls.Add(yearBox);
+            Controls.Add(cartesianChart1);
             Controls.Add(updateBtn);
             Controls.Add(userPanel);
             Controls.Add(recieveBtn);
@@ -324,6 +384,7 @@
             userPanel.ResumeLayout(false);
             userPanel.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -351,5 +412,10 @@
         private Label nameLabel;
         private ComboBox unitSelect;
         private Button recieveBtn;
+        private LiveChartsCore.SkiaSharpView.WinForms.CartesianChart cartesianChart1;
+        private ComboBox yearBox;
+        private Label label5;
+        private Button refreshBtn;
+        private Button printBtn;
     }
 }
