@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory_Database));
             panel1 = new Panel();
+            panel4 = new Panel();
             btnPCBTest = new Button();
             btnSupplier = new Button();
             btnAssemblyData = new Button();
@@ -84,11 +85,6 @@
             pnlStats = new Panel();
             pnlWelcomeMenu = new Panel();
             pnlPCBTest = new Panel();
-            panel4 = new Panel();
-            pictureBox5 = new PictureBox();
-            pictureBox6 = new PictureBox();
-            pictureBox7 = new PictureBox();
-            label4 = new Label();
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
@@ -106,11 +102,6 @@
             pnlStock.SuspendLayout();
             pnlStats.SuspendLayout();
             pnlWelcomeMenu.SuspendLayout();
-            pnlPCBTest.SuspendLayout();
-            panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -121,6 +112,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(47, 47, 47);
+            panel1.Controls.Add(panel4);
             panel1.Controls.Add(btnPCBTest);
             panel1.Controls.Add(btnSupplier);
             panel1.Controls.Add(btnAssemblyData);
@@ -140,12 +132,19 @@
             panel1.Size = new Size(270, 783);
             panel1.TabIndex = 0;
             // 
+            // panel4
+            // 
+            panel4.Location = new Point(265, 22);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(1028, 758);
+            panel4.TabIndex = 0;
+            // 
             // btnPCBTest
             // 
             btnPCBTest.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
             btnPCBTest.FlatAppearance.BorderSize = 0;
             btnPCBTest.FlatStyle = FlatStyle.Flat;
-            btnPCBTest.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnPCBTest.Font = new Font("PT Root UI Light", 15.7499981F);
             btnPCBTest.ForeColor = Color.DarkCyan;
             btnPCBTest.Image = Properties.Resources.chip__2_;
             btnPCBTest.ImageAlign = ContentAlignment.MiddleLeft;
@@ -163,7 +162,7 @@
             btnSupplier.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
             btnSupplier.FlatAppearance.BorderSize = 0;
             btnSupplier.FlatStyle = FlatStyle.Flat;
-            btnSupplier.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnSupplier.Font = new Font("PT Root UI Light", 15.7499981F);
             btnSupplier.ForeColor = Color.DarkCyan;
             btnSupplier.Image = (Image)resources.GetObject("btnSupplier.Image");
             btnSupplier.ImageAlign = ContentAlignment.MiddleLeft;
@@ -181,7 +180,7 @@
             btnAssemblyData.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
             btnAssemblyData.FlatAppearance.BorderSize = 0;
             btnAssemblyData.FlatStyle = FlatStyle.Flat;
-            btnAssemblyData.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAssemblyData.Font = new Font("PT Root UI Light", 15.7499981F);
             btnAssemblyData.ForeColor = Color.DarkCyan;
             btnAssemblyData.Image = (Image)resources.GetObject("btnAssemblyData.Image");
             btnAssemblyData.ImageAlign = ContentAlignment.MiddleLeft;
@@ -253,7 +252,7 @@
             btnHome.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
             btnHome.FlatAppearance.BorderSize = 0;
             btnHome.FlatStyle = FlatStyle.Flat;
-            btnHome.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnHome.Font = new Font("PT Root UI Light", 15.7499981F);
             btnHome.ForeColor = Color.DarkCyan;
             btnHome.Image = (Image)resources.GetObject("btnHome.Image");
             btnHome.ImageAlign = ContentAlignment.MiddleLeft;
@@ -278,7 +277,7 @@
             btnRedTag.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
             btnRedTag.FlatAppearance.BorderSize = 0;
             btnRedTag.FlatStyle = FlatStyle.Flat;
-            btnRedTag.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnRedTag.Font = new Font("PT Root UI Light", 15.7499981F);
             btnRedTag.ForeColor = Color.DarkCyan;
             btnRedTag.Image = (Image)resources.GetObject("btnRedTag.Image");
             btnRedTag.ImageAlign = ContentAlignment.MiddleLeft;
@@ -296,7 +295,7 @@
             btnProductionOrder.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
             btnProductionOrder.FlatAppearance.BorderSize = 0;
             btnProductionOrder.FlatStyle = FlatStyle.Flat;
-            btnProductionOrder.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnProductionOrder.Font = new Font("PT Root UI Light", 15.7499981F);
             btnProductionOrder.ForeColor = Color.DarkCyan;
             btnProductionOrder.Image = (Image)resources.GetObject("btnProductionOrder.Image");
             btnProductionOrder.ImageAlign = ContentAlignment.MiddleLeft;
@@ -314,7 +313,7 @@
             btnStockMenu.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
             btnStockMenu.FlatAppearance.BorderSize = 0;
             btnStockMenu.FlatStyle = FlatStyle.Flat;
-            btnStockMenu.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnStockMenu.Font = new Font("PT Root UI Light", 15.7499981F);
             btnStockMenu.ForeColor = Color.DarkCyan;
             btnStockMenu.Image = (Image)resources.GetObject("btnStockMenu.Image");
             btnStockMenu.ImageAlign = ContentAlignment.MiddleLeft;
@@ -613,60 +612,11 @@
             // 
             // pnlPCBTest
             // 
-            pnlPCBTest.Controls.Add(panel4);
             pnlPCBTest.Dock = DockStyle.Fill;
             pnlPCBTest.Location = new Point(0, 0);
             pnlPCBTest.Name = "pnlPCBTest";
             pnlPCBTest.Size = new Size(1025, 758);
             pnlPCBTest.TabIndex = 4;
-            // 
-            // panel4
-            // 
-            panel4.Controls.Add(pictureBox5);
-            panel4.Controls.Add(pictureBox6);
-            panel4.Controls.Add(pictureBox7);
-            panel4.Controls.Add(label4);
-            panel4.Location = new Point(0, 0);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(1025, 758);
-            panel4.TabIndex = 0;
-            // 
-            // pictureBox5
-            // 
-            pictureBox5.Image = Properties.Resources.SLD_removebg_preview__1__removebg_preview;
-            pictureBox5.Location = new Point(636, 327);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(362, 229);
-            pictureBox5.TabIndex = 3;
-            pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            pictureBox6.Image = Properties.Resources.SLD_mCS_Transparent_removebg_preview__1__removebg_preview;
-            pictureBox6.Location = new Point(372, 102);
-            pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(247, 175);
-            pictureBox6.TabIndex = 2;
-            pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            pictureBox7.Image = Properties.Resources.cBLMD_removebg_preview__1__removebg_preview;
-            pictureBox7.Location = new Point(40, 179);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(294, 181);
-            pictureBox7.TabIndex = 1;
-            pictureBox7.TabStop = false;
-            // 
-            // label4
-            // 
-            label4.Font = new Font("Microsoft Sans Serif", 27.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Teal;
-            label4.Location = new Point(5, 8);
-            label4.Name = "label4";
-            label4.Size = new Size(548, 136);
-            label4.TabIndex = 0;
-            label4.Text = "Welcome to the Superlum Database Portal";
             // 
             // pictureBox4
             // 
@@ -735,7 +685,7 @@
             // ParentContainer
             // 
             ParentContainer.Controls.Add(pnlRedTag);
-            ParentContainer.Location = new Point(270, 25);
+            ParentContainer.Location = new Point(269, 24);
             ParentContainer.Name = "ParentContainer";
             ParentContainer.Size = new Size(1025, 758);
             ParentContainer.TabIndex = 2;
@@ -764,11 +714,6 @@
             pnlStock.ResumeLayout(false);
             pnlStats.ResumeLayout(false);
             pnlWelcomeMenu.ResumeLayout(false);
-            pnlPCBTest.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -842,9 +787,5 @@
         private Button btnPCBTest;
         private Panel pnlPCBTest;
         private Panel panel4;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox6;
-        private PictureBox pictureBox7;
-        private Label label4;
     }
 }
