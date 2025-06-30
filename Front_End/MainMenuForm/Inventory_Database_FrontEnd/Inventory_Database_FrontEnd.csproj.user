@@ -4,6 +4,9 @@
     <Compile Update="Dialogs\NewComponent.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmPCBTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="frmProductionOrder.cs">
       <SubType>Form</SubType>
     </Compile>

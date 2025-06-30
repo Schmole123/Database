@@ -558,10 +558,10 @@ namespace Inventory_Database_FrontEnd
 
             if (printConfirm == DialogResult.Yes)
             {
-                string zpl = $"^XA^FO290,50 ^A@ 20,20,E:ArialBD.TTL ^FD Red Tag ^FS^BY5,2,20^FO400,0^BQN,2,3,M,7^FDQA,#{serialToPrint}^FS^XZ";
+                string zpl = $"^XA^FO290,50 ^A@N,20,20,E:ARIALBD.TTF ^FD Red Tag ^FS^BY5,2,20^FO400,0^BQN,2,3,M,7^FDQA,#{serialToPrint}^FS^XZ";
                 PrinterHelper.SendStringToPrinter(_defaultPrinter, zpl);
                 DateTime date = dateSelect.Value;
-                zpl = $"^XA^FO290,50 ^A@ 30,30,E:ArialBD.TTL ^FD {date.Day}/{date.Month}/{date.Year} ^FS^XZ";
+                zpl = $"^XA^FO290,50 ^A@N,30,30,E:ARIALBD.TTF ^FD {date.Day}/{date.Month}/{date.Year} ^FS^XZ";
                 await Task.Delay(1000); //wait for the first label to print before sending the second one
                 PrinterHelper.SendStringToPrinter(_defaultPrinter, zpl);
             }

@@ -171,3 +171,4 @@ C:\Users\TEST\Desktop\Database Caolan\Inventory_Database_FrontEnd\obj\x64\Debug\
 C:\Users\TEST\Desktop\Database Caolan\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.pdb
 C:\Users\TEST\Desktop\Database Caolan\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.genruntimeconfig.cache
 C:\Users\TEST\Desktop\Database Caolan\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\ref\Inventory_Database_FrontEnd.dll
+C:\Users\TEST\Desktop\Database Caolan\Inventory_Database_FrontEnd\obj\x64\Debug\net8.0-windows\Inventory_Database_FrontEnd.frmPCBTest.resources

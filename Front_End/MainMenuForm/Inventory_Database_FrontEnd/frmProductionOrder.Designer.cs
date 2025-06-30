@@ -56,16 +56,16 @@
             // customerLabel
             // 
             customerLabel.AutoSize = true;
-            customerLabel.Font = new Font("PT Root UI Light", 15.7499981F);
+            customerLabel.Font = new Font("Microsoft Sans Serif", 15.7499981F);
             customerLabel.Location = new Point(21, 38);
             customerLabel.Name = "customerLabel";
-            customerLabel.Size = new Size(111, 27);
+            customerLabel.Size = new Size(110, 25);
             customerLabel.TabIndex = 0;
             customerLabel.Text = "Customer:";
             // 
             // customerTxt
             // 
-            customerTxt.Location = new Point(235, 38);
+            customerTxt.Location = new Point(237, 38);
             customerTxt.Name = "customerTxt";
             customerTxt.Size = new Size(138, 23);
             customerTxt.TabIndex = 1;
@@ -73,10 +73,10 @@
             // orderCodeLabel
             // 
             orderCodeLabel.AutoSize = true;
-            orderCodeLabel.Font = new Font("PT Root UI Light", 15.7499981F);
+            orderCodeLabel.Font = new Font("Microsoft Sans Serif", 15.7499981F);
             orderCodeLabel.Location = new Point(21, 76);
             orderCodeLabel.Name = "orderCodeLabel";
-            orderCodeLabel.Size = new Size(126, 27);
+            orderCodeLabel.Size = new Size(129, 25);
             orderCodeLabel.TabIndex = 2;
             orderCodeLabel.Text = "Order Code:";
             // 
@@ -84,7 +84,7 @@
             // 
             retrieveBtn.BackColor = Color.LightSalmon;
             retrieveBtn.FlatStyle = FlatStyle.Flat;
-            retrieveBtn.Font = new Font("PT Root UI Light", 15.7499981F);
+            retrieveBtn.Font = new Font("Microsoft Sans Serif", 15.7499981F);
             retrieveBtn.Location = new Point(254, 486);
             retrieveBtn.Name = "retrieveBtn";
             retrieveBtn.Size = new Size(119, 41);
@@ -97,7 +97,7 @@
             // 
             submitBtn.BackColor = Color.PaleGreen;
             submitBtn.FlatStyle = FlatStyle.Flat;
-            submitBtn.Font = new Font("PT Root UI Light", 15.7499981F);
+            submitBtn.Font = new Font("Microsoft Sans Serif", 15.7499981F);
             submitBtn.Location = new Point(28, 486);
             submitBtn.Name = "submitBtn";
             submitBtn.Size = new Size(119, 41);
@@ -111,7 +111,7 @@
             productBox.DropDownStyle = ComboBoxStyle.DropDownList;
             productBox.FormattingEnabled = true;
             productBox.Items.AddRange(new object[] { "SLD-mCS", "SLD-mCS Power Supply Unit", "cBLMD", "BLL", "BLL Evaluation Unit", "DBUT Mount" });
-            productBox.Location = new Point(235, 242);
+            productBox.Location = new Point(237, 242);
             productBox.Name = "productBox";
             productBox.Size = new Size(138, 23);
             productBox.TabIndex = 11;
@@ -121,7 +121,7 @@
             statusBox.DropDownStyle = ComboBoxStyle.DropDownList;
             statusBox.FormattingEnabled = true;
             statusBox.Items.AddRange(new object[] { "New", "In Production", "QC", "Ready to Ship", "Completed" });
-            statusBox.Location = new Point(235, 202);
+            statusBox.Location = new Point(237, 202);
             statusBox.Name = "statusBox";
             statusBox.Size = new Size(138, 23);
             statusBox.TabIndex = 10;
@@ -129,26 +129,26 @@
             // productLabel
             // 
             productLabel.AutoSize = true;
-            productLabel.Font = new Font("PT Root UI Light", 15.7499981F);
+            productLabel.Font = new Font("Microsoft Sans Serif", 15.7499981F);
             productLabel.Location = new Point(22, 238);
             productLabel.Name = "productLabel";
-            productLabel.Size = new Size(94, 27);
+            productLabel.Size = new Size(92, 25);
             productLabel.TabIndex = 9;
             productLabel.Text = "Product:";
             // 
             // statusLabel
             // 
             statusLabel.AutoSize = true;
-            statusLabel.Font = new Font("PT Root UI Light", 15.7499981F);
+            statusLabel.Font = new Font("Microsoft Sans Serif", 15.7499981F);
             statusLabel.Location = new Point(22, 196);
             statusLabel.Name = "statusLabel";
-            statusLabel.Size = new Size(80, 27);
+            statusLabel.Size = new Size(79, 25);
             statusLabel.TabIndex = 8;
             statusLabel.Text = "Status:";
             // 
             // endDate
             // 
-            endDate.Location = new Point(235, 158);
+            endDate.Location = new Point(237, 158);
             endDate.Name = "endDate";
             endDate.Size = new Size(138, 23);
             endDate.TabIndex = 7;
@@ -156,16 +156,16 @@
             // endLabel
             // 
             endLabel.AutoSize = true;
-            endLabel.Font = new Font("PT Root UI Light", 15.7499981F);
+            endLabel.Font = new Font("Microsoft Sans Serif", 15.7499981F);
             endLabel.Location = new Point(22, 154);
             endLabel.Name = "endLabel";
-            endLabel.Size = new Size(203, 27);
+            endLabel.Size = new Size(208, 25);
             endLabel.TabIndex = 6;
             endLabel.Text = "Estimated End Date:";
             // 
             // startDate
             // 
-            startDate.Location = new Point(235, 118);
+            startDate.Location = new Point(237, 118);
             startDate.Name = "startDate";
             startDate.Size = new Size(138, 23);
             startDate.TabIndex = 5;
@@ -173,16 +173,16 @@
             // startLabel
             // 
             startLabel.AutoSize = true;
-            startLabel.Font = new Font("PT Root UI Light", 15.7499981F);
+            startLabel.Font = new Font("Microsoft Sans Serif", 15.7499981F);
             startLabel.Location = new Point(22, 116);
             startLabel.Name = "startLabel";
-            startLabel.Size = new Size(215, 27);
+            startLabel.Size = new Size(215, 25);
             startLabel.TabIndex = 4;
             startLabel.Text = "Estimated Start Date:";
             // 
             // orderTxt
             // 
-            orderTxt.Location = new Point(235, 79);
+            orderTxt.Location = new Point(237, 79);
             orderTxt.Name = "orderTxt";
             orderTxt.Size = new Size(138, 23);
             orderTxt.TabIndex = 3;
@@ -215,10 +215,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("PT Root UI Light", 15.7499981F);
+            label1.Font = new Font("Microsoft Sans Serif", 15.7499981F);
             label1.Location = new Point(21, 291);
             label1.Name = "label1";
-            label1.Size = new Size(157, 27);
+            label1.Size = new Size(154, 25);
             label1.TabIndex = 16;
             label1.Text = "Additional Info:";
             // 

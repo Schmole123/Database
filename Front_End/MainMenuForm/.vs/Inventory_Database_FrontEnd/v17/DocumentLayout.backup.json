@@ -3,64 +3,64 @@
   "WorkspaceRootPath": "C:\\Users\\TEST\\Desktop\\Database Caolan\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|C:\\Users\\TEST\\Desktop\\Database Caolan\\inventory_database_frontend\\frmstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frmstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|c:\\users\\test\\desktop\\database caolan\\inventory_database_frontend\\frmpcbtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frmpcbtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|C:\\Users\\TEST\\Desktop\\Database Caolan\\inventory_database_frontend\\frmstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frmstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|C:\\Users\\TEST\\Desktop\\Database Caolan\\inventory_database_frontend\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|c:\\users\\test\\desktop\\database caolan\\inventory_database_frontend\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|C:\\Users\\TEST\\Desktop\\Database Caolan\\inventory_database_frontend\\frmsupplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frmsupplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|C:\\Users\\TEST\\Desktop\\Database Caolan\\inventory_database_frontend\\frmredtag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frmredtag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|c:\\users\\test\\desktop\\database caolan\\inventory_database_frontend\\frmstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frmstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|C:\\Users\\TEST\\Desktop\\Database Caolan\\inventory_database_frontend\\frmpcbtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frmpcbtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|c:\\users\\test\\desktop\\database caolan\\inventory_database_frontend\\frmredtag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frmredtag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|c:\\users\\test\\desktop\\database caolan\\inventory_database_frontend\\frmredtag.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frmredtag.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|c:\\users\\test\\desktop\\database caolan\\inventory_database_frontend\\frmstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frmstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|c:\\users\\test\\desktop\\database caolan\\inventory_database_frontend\\frmproductionorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frmproductionorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|C:\\Users\\TEST\\Desktop\\Database Caolan\\inventory_database_frontend\\frmstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frmstock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|c:\\users\\test\\desktop\\database caolan\\inventory_database_frontend\\frmstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frmstats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|C:\\Users\\TEST\\Desktop\\Database Caolan\\inventory_database_frontend\\frmsupplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frmsupplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|C:\\Users\\TEST\\Desktop\\Database Caolan\\inventory_database_frontend\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|C:\\Users\\TEST\\Desktop\\Database Caolan\\inventory_database_frontend\\frmredtag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frmredtag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|c:\\users\\test\\desktop\\database caolan\\inventory_database_frontend\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frm_main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|C:\\Users\\TEST\\Desktop\\Database Caolan\\inventory_database_frontend\\frmproductionorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frmproductionorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|c:\\users\\test\\desktop\\database caolan\\inventory_database_frontend\\frmsupplier.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frmsupplier.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|c:\\users\\test\\desktop\\database caolan\\inventory_database_frontend\\frmsupplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frmsupplier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|c:\\users\\test\\desktop\\database caolan\\inventory_database_frontend\\frmpcbtest.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frmpcbtest.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|c:\\users\\test\\desktop\\database caolan\\inventory_database_frontend\\frm_main.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frm_main.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|c:\\users\\test\\desktop\\database caolan\\inventory_database_frontend\\frmredtag.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frmredtag.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|c:\\users\\test\\desktop\\database caolan\\inventory_database_frontend\\frmsupplier.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|solutionrelative:inventory_database_frontend\\frmsupplier.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7E07F1DE-0053-4D33-8ADF-6D13BE87C77C}|Inventory_Database_FrontEnd\\Inventory_Database_FrontEnd.csproj|c:\\users\\test\\desktop\\database caolan\\inventory_database_frontend\\imagetozplconverter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -82,58 +82,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "frmRedTag.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmRedTag.Designer.cs",
-              "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\frmRedTag.Designer.cs",
-              "ToolTip": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmRedTag.Designer.cs",
-              "RelativeToolTip": "Inventory_Database_FrontEnd\\frmRedTag.Designer.cs",
-              "ViewState": "AgIAAGEBAAAAAAAAAADgv4MBAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T10:45:26.565Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Frm_Main.cs",
-              "DocumentMoniker": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\Frm_Main.cs",
-              "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\Frm_Main.cs",
-              "ToolTip": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\Frm_Main.cs",
-              "RelativeToolTip": "Inventory_Database_FrontEnd\\Frm_Main.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAlAAAAAAAAAA==",
+              "Title": "frmStock.cs",
+              "DocumentMoniker": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmStock.cs",
+              "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\frmStock.cs",
+              "ToolTip": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmStock.cs",
+              "RelativeToolTip": "Inventory_Database_FrontEnd\\frmStock.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAwFsBAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T12:43:59.497Z",
+              "WhenOpened": "2025-06-11T12:41:35.926Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmStats.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmStats.cs",
-              "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\frmStats.cs",
-              "ToolTip": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmStats.cs [Design]",
-              "RelativeToolTip": "Inventory_Database_FrontEnd\\frmStats.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "frmRedTag.cs",
+              "DocumentMoniker": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmRedTag.cs",
+              "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\frmRedTag.cs",
+              "ToolTip": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmRedTag.cs",
+              "RelativeToolTip": "Inventory_Database_FrontEnd\\frmRedTag.cs",
+              "ViewState": "AgIAABECAAAAAAAAAAAYwCQCAABhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T10:14:02.011Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "frmProductionOrder.cs",
-              "DocumentMoniker": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmProductionOrder.cs",
-              "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\frmProductionOrder.cs",
-              "ToolTip": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmProductionOrder.cs",
-              "RelativeToolTip": "Inventory_Database_FrontEnd\\frmProductionOrder.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T12:41:48.067Z",
+              "WhenOpened": "2025-06-24T10:46:01.661Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "frmStock.cs [Design]",
               "DocumentMoniker": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmStock.cs",
               "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\frmStock.cs",
@@ -145,107 +120,101 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
+              "Title": "frmPCBTest.cs",
+              "DocumentMoniker": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmPCBTest.cs",
+              "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\frmPCBTest.cs",
+              "ToolTip": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmPCBTest.cs*",
+              "RelativeToolTip": "Inventory_Database_FrontEnd\\frmPCBTest.cs*",
+              "ViewState": "AgIAAB4BAAAAAAAAAAAAAEoBAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T07:20:54.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmPCBTest.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmPCBTest.cs",
+              "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\frmPCBTest.cs",
+              "ToolTip": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmPCBTest.cs [Design]*",
+              "RelativeToolTip": "Inventory_Database_FrontEnd\\frmPCBTest.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T12:57:03.877Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Frm_Main.cs",
+              "DocumentMoniker": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\Frm_Main.cs",
+              "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\Frm_Main.cs",
+              "ToolTip": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\Frm_Main.cs",
+              "RelativeToolTip": "Inventory_Database_FrontEnd\\Frm_Main.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAiwIsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T12:43:59.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "frmRedTag.cs [Design]",
               "DocumentMoniker": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmRedTag.cs",
               "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\frmRedTag.cs",
               "ToolTip": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmRedTag.cs [Design]",
               "RelativeToolTip": "Inventory_Database_FrontEnd\\frmRedTag.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T12:41:44.637Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-11T12:41:44.637Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Frm_Main.cs [Design]",
               "DocumentMoniker": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\Frm_Main.cs",
               "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\Frm_Main.cs",
               "ToolTip": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\Frm_Main.cs [Design]",
               "RelativeToolTip": "Inventory_Database_FrontEnd\\Frm_Main.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T14:11:33.555Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-11T14:11:33.555Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "frmSupplier.cs [Design]",
               "DocumentMoniker": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmSupplier.cs",
               "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\frmSupplier.cs",
               "ToolTip": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmSupplier.cs [Design]",
               "RelativeToolTip": "Inventory_Database_FrontEnd\\frmSupplier.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T12:45:36.634Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-11T12:45:36.634Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 12,
               "Title": "Frm_Main.Designer.cs",
               "DocumentMoniker": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\Frm_Main.Designer.cs",
               "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\Frm_Main.Designer.cs",
               "ToolTip": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\Frm_Main.Designer.cs",
               "RelativeToolTip": "Inventory_Database_FrontEnd\\Frm_Main.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwA8AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T14:11:21.271Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-11T14:11:21.271Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frmStock.cs",
-              "DocumentMoniker": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmStock.cs",
-              "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\frmStock.cs",
-              "ToolTip": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmStock.cs",
-              "RelativeToolTip": "Inventory_Database_FrontEnd\\frmStock.cs",
-              "ViewState": "AgIAAFcBAAAAAAAAAAAgwG4BAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T12:41:35.926Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "frmRedTag.cs",
-              "DocumentMoniker": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmRedTag.cs",
-              "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\frmRedTag.cs",
-              "ToolTip": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmRedTag.cs",
-              "RelativeToolTip": "Inventory_Database_FrontEnd\\frmRedTag.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAQwKkBAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T10:46:01.661Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 9,
               "Title": "frmProductionOrder.cs [Design]",
               "DocumentMoniker": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmProductionOrder.cs",
               "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\frmProductionOrder.cs",
               "ToolTip": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmProductionOrder.cs [Design]",
               "RelativeToolTip": "Inventory_Database_FrontEnd\\frmProductionOrder.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T12:41:46.145Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-11T12:41:46.145Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "frmSupplier.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmSupplier.Designer.cs",
-              "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\frmSupplier.Designer.cs",
-              "ToolTip": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmSupplier.Designer.cs",
-              "RelativeToolTip": "Inventory_Database_FrontEnd\\frmSupplier.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T10:23:20.347Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 10,
               "Title": "frmSupplier.cs",
               "DocumentMoniker": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmSupplier.cs",
               "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\frmSupplier.cs",
@@ -253,8 +222,44 @@
               "RelativeToolTip": "Inventory_Database_FrontEnd\\frmSupplier.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T12:45:47.003Z",
+              "WhenOpened": "2025-06-11T12:45:47.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmPCBTest.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmPCBTest.Designer.cs",
+              "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\frmPCBTest.Designer.cs",
+              "ToolTip": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmPCBTest.Designer.cs",
+              "RelativeToolTip": "Inventory_Database_FrontEnd\\frmPCBTest.Designer.cs",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAiwIIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T12:56:12.476Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "frmRedTag.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmRedTag.Designer.cs",
+              "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\frmRedTag.Designer.cs",
+              "ToolTip": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmRedTag.Designer.cs",
+              "RelativeToolTip": "Inventory_Database_FrontEnd\\frmRedTag.Designer.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAADgvxYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T10:45:26.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "frmSupplier.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmSupplier.Designer.cs",
+              "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\frmSupplier.Designer.cs",
+              "ToolTip": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmSupplier.Designer.cs",
+              "RelativeToolTip": "Inventory_Database_FrontEnd\\frmSupplier.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T10:23:20.347Z"
             },
             {
               "$type": "Document",
@@ -267,40 +272,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-12T12:35:44.228Z"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "82d80e24-7710-4274-a80c-9c1a5c907c9e",
-        "Display": 0,
-        "X": -64,
-        "Y": 345,
-        "Width": 1364,
-        "Height": 851,
-        "WindowState": 0
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "frmStats.cs",
-              "DocumentMoniker": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmStats.cs",
-              "RelativeDocumentMoniker": "Inventory_Database_FrontEnd\\frmStats.cs",
-              "ToolTip": "C:\\Users\\TEST\\Desktop\\Database Caolan\\Inventory_Database_FrontEnd\\frmStats.cs",
-              "RelativeToolTip": "Inventory_Database_FrontEnd\\frmStats.cs",
-              "ViewState": "AgIAANkBAAAAAAAAAAAAABICAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-11T14:05:37.201Z",
-              "EditorCaption": ""
             }
           ]
         }

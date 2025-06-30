@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory_Database));
             panel1 = new Panel();
+            btnPCBTest = new Button();
             btnSupplier = new Button();
             btnAssemblyData = new Button();
             label3 = new Label();
@@ -82,6 +83,12 @@
             pnlStock = new Panel();
             pnlStats = new Panel();
             pnlWelcomeMenu = new Panel();
+            pnlPCBTest = new Panel();
+            panel4 = new Panel();
+            pictureBox5 = new PictureBox();
+            pictureBox6 = new PictureBox();
+            pictureBox7 = new PictureBox();
+            label4 = new Label();
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
@@ -99,6 +106,11 @@
             pnlStock.SuspendLayout();
             pnlStats.SuspendLayout();
             pnlWelcomeMenu.SuspendLayout();
+            pnlPCBTest.SuspendLayout();
+            panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -109,6 +121,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(47, 47, 47);
+            panel1.Controls.Add(btnPCBTest);
             panel1.Controls.Add(btnSupplier);
             panel1.Controls.Add(btnAssemblyData);
             panel1.Controls.Add(label3);
@@ -126,6 +139,24 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(270, 783);
             panel1.TabIndex = 0;
+            // 
+            // btnPCBTest
+            // 
+            btnPCBTest.FlatAppearance.BorderColor = Color.FromArgb(47, 47, 47);
+            btnPCBTest.FlatAppearance.BorderSize = 0;
+            btnPCBTest.FlatStyle = FlatStyle.Flat;
+            btnPCBTest.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnPCBTest.ForeColor = Color.DarkCyan;
+            btnPCBTest.Image = Properties.Resources.chip__2_;
+            btnPCBTest.ImageAlign = ContentAlignment.MiddleLeft;
+            btnPCBTest.Location = new Point(3, 570);
+            btnPCBTest.Name = "btnPCBTest";
+            btnPCBTest.Size = new Size(401, 73);
+            btnPCBTest.TabIndex = 12;
+            btnPCBTest.Text = "               PCB Test Log";
+            btnPCBTest.TextAlign = ContentAlignment.MiddleLeft;
+            btnPCBTest.UseVisualStyleBackColor = true;
+            btnPCBTest.Click += btnPCBTest_Click;
             // 
             // btnSupplier
             // 
@@ -178,7 +209,7 @@
             ss.AutoSize = true;
             ss.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             ss.ForeColor = SystemColors.Control;
-            ss.Location = new Point(159, 59);
+            ss.Location = new Point(160, 59);
             ss.Name = "ss";
             ss.Size = new Size(30, 24);
             ss.TabIndex = 8;
@@ -570,6 +601,7 @@
             // 
             // pnlWelcomeMenu
             // 
+            pnlWelcomeMenu.Controls.Add(pnlPCBTest);
             pnlWelcomeMenu.Controls.Add(pictureBox4);
             pnlWelcomeMenu.Controls.Add(pictureBox3);
             pnlWelcomeMenu.Controls.Add(pictureBox2);
@@ -578,6 +610,63 @@
             pnlWelcomeMenu.Name = "pnlWelcomeMenu";
             pnlWelcomeMenu.Size = new Size(1025, 758);
             pnlWelcomeMenu.TabIndex = 0;
+            // 
+            // pnlPCBTest
+            // 
+            pnlPCBTest.Controls.Add(panel4);
+            pnlPCBTest.Dock = DockStyle.Fill;
+            pnlPCBTest.Location = new Point(0, 0);
+            pnlPCBTest.Name = "pnlPCBTest";
+            pnlPCBTest.Size = new Size(1025, 758);
+            pnlPCBTest.TabIndex = 4;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(pictureBox5);
+            panel4.Controls.Add(pictureBox6);
+            panel4.Controls.Add(pictureBox7);
+            panel4.Controls.Add(label4);
+            panel4.Location = new Point(0, 0);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(1025, 758);
+            panel4.TabIndex = 0;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = Properties.Resources.SLD_removebg_preview__1__removebg_preview;
+            pictureBox5.Location = new Point(636, 327);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(362, 229);
+            pictureBox5.TabIndex = 3;
+            pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = Properties.Resources.SLD_mCS_Transparent_removebg_preview__1__removebg_preview;
+            pictureBox6.Location = new Point(372, 102);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(247, 175);
+            pictureBox6.TabIndex = 2;
+            pictureBox6.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Image = Properties.Resources.cBLMD_removebg_preview__1__removebg_preview;
+            pictureBox7.Location = new Point(40, 179);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(294, 181);
+            pictureBox7.TabIndex = 1;
+            pictureBox7.TabStop = false;
+            // 
+            // label4
+            // 
+            label4.Font = new Font("Microsoft Sans Serif", 27.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.Teal;
+            label4.Location = new Point(5, 8);
+            label4.Name = "label4";
+            label4.Size = new Size(548, 136);
+            label4.TabIndex = 0;
+            label4.Text = "Welcome to the Superlum Database Portal";
             // 
             // pictureBox4
             // 
@@ -675,6 +764,11 @@
             pnlStock.ResumeLayout(false);
             pnlStats.ResumeLayout(false);
             pnlWelcomeMenu.ResumeLayout(false);
+            pnlPCBTest.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -745,5 +839,12 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
+        private Button btnPCBTest;
+        private Panel pnlPCBTest;
+        private Panel panel4;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox6;
+        private PictureBox pictureBox7;
+        private Label label4;
     }
 }

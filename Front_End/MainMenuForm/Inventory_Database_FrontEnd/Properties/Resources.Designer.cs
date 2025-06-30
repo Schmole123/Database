@@ -93,6 +93,26 @@ namespace Inventory_Database_FrontEnd.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap chip__1_ {
+            get {
+                object obj = ResourceManager.GetObject("chip (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chip__2_ {
+            get {
+                object obj = ResourceManager.GetObject("chip (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home_button__1___1_ {
             get {
                 object obj = ResourceManager.GetObject("home-button (1) (1)", resourceCulture);

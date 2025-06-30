@@ -11,7 +11,7 @@ namespace Inventory_Database_FrontEnd
     public partial class Inventory_Database : Form
     {
 
-         string connectionString = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = \\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Back_End\Inventory Managment_Data.accdb;";
+        string connectionString = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = \\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Back_End\Inventory Managment_Data.accdb;";
         //string connectionString = @"Server=desktop-nnart1b\productiondb;Database=tempdb;Trusted_Connection=True;";
 
         public bool numExists = false;
@@ -24,7 +24,7 @@ namespace Inventory_Database_FrontEnd
             InitializeComponent();
             MainPanel = pnlStats;
             MainPanel.Visible = true;
-            
+
             pnlRedTag.Visible = false;
             pnlStock.Visible = false;
             ListPrinters();
@@ -85,6 +85,7 @@ namespace Inventory_Database_FrontEnd
             pnlProductionOrder.Visible = false;
             pnlSupplier.Visible = false;
             pnlWelcome.Visible = false;
+            pnlPCBTest.Visible = false;
 
             panelToShow.Refresh();
 
@@ -175,6 +176,23 @@ namespace Inventory_Database_FrontEnd
             }
         }
 
-      
+        private void btnPCBTest_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ShowPanel(pnlPCBTest);
+                ParentContainer.Controls.Clear();
+                frmPCBTest frm = new frmPCBTest(connectionString);
+                frm.Dock = DockStyle.Fill;
+                frm.TopLevel = false;
+                frm.FormBorderStyle = FormBorderStyle.None;
+                ParentContainer.Controls.Add(frm);
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading PCB Test menu: " + ex.Message);
+            }
+        }
     }
 }
