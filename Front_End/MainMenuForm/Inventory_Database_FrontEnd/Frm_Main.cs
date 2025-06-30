@@ -28,7 +28,7 @@ namespace Inventory_Database_FrontEnd
             pnlRedTag.Visible = false;
             pnlStock.Visible = false;
             ListPrinters();
-            string defaultPrinter = cmbPrinterSel.SelectedItem?.ToString() ?? "TE200_test";
+            string defaultPrinter = /*cmbPrinterSel.SelectedItem?.ToString() ?? */"TSC TE200";
 
         }
 
@@ -193,6 +193,11 @@ namespace Inventory_Database_FrontEnd
             {
                 MessageBox.Show("Error loading PCB Test menu: " + ex.Message);
             }
+        }
+
+        private void cmbPrinterSel_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
