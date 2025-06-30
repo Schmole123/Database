@@ -34,6 +34,7 @@ namespace Inventory_Database_FrontEnd
 
         public bool numExists = false;
         public bool repaired = false;
+        public bool sldFail = false;
 
         public List<string> months = new List<string> { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
         public ObservableCollection<int> tagCount = new ObservableCollection<int>();
@@ -119,10 +120,10 @@ namespace Inventory_Database_FrontEnd
                     var serialToPrint = serialNum;
                     if (serialToPrint != "")
                     {
-                        string zpl = $"^XA^FO290,50 ^A@ 20,20,E:ArialBD.TTL ^FD Red Tag ^FS^BY5,2,20^FO400,0^BQN,2,3,M,7^FDQA,#{serialToPrint}^FS^XZ";
+                        string zpl = $"^XA^FO290,50 ^A@ 25,25,E:ARIALBD.TTF ^FD Red Tag ^FS^BY5,2,20^FO400,0^BQN,2,3,M,7^FDQA,#{serialToPrint}^FS^XZ";
                         PrinterHelper.SendStringToPrinter(_defaultPrinter, zpl);
                         DateTime date = dateSelect.Value;
-                        zpl = $"^XA^FO290,50 ^A@ 30,30,E:ArialBD.TTL ^FD {date.Day}/{date.Month}/{date.Year} ^FS^XZ";
+                        zpl = $"^XA^FO290,50 ^A@ 30,30,E:ARIALBD.TTF ^FD {date.Day}/{date.Month}/{date.Year} ^FS^XZ";
                         await Task.Delay(1000); //wait for the first label to print before sending the second one
                         PrinterHelper.SendStringToPrinter(_defaultPrinter, zpl);
                     }
@@ -173,10 +174,152 @@ namespace Inventory_Database_FrontEnd
             }
         }
 
+        private async void UnitFail()
+        {
+            try
+            {
+                if (sldFailCheck.Checked == true)
+                {
+                    sldFail = true; //set unit fail flag to true
+                }
+                else
+                {
+                    sldFail = false; //set unit fail flag to false
+                }
+
+                if (repairCheck.Checked == true) //set repaired tag state
+                {
+                    repaired = true;
+                }
+                else
+                {
+                    repaired = false;
+                }
+
+                Con = new OleDbConnection(_connectionString);
+
+                if (unitIDBox.Text == "")
+                {
+                    unitIDBox.Text = "0";
+                }
+
+                int ID = int.Parse(unitIDBox.Text);
+                //SQL command generation to SELECT "PCB/SLD Serial Number" FROM "RedTagTracking" table WHERE "PCB/SLD Serial Number" = "Serial Number"
+                //[] brackets not always required for column names but better to include them to prevent clashing with Access definitions 
+                CMD = new OleDbCommand("SELECT [Full Unit ID] FROM RedTagTracking WHERE [Full Unit ID] = " + ID + " ");
+
+                CMD.Connection = Con; //assigning connection path
+                Con.Open(); //opening connection
+
+                //Reads data from table based on previous SQL command - searching to find serial number in the relevant column
+                OleDbDataReader reader = CMD.ExecuteReader();
+
+                while (reader.Read()) //will skip over if no serial number is found
+                {
+                    if (reader[0].ToString() == unitIDBox.Text) //in this instance the serial number is always at index 0
+                    {
+                        numExists = true; //marks the serial number is existing if found
+                    }
+                }
+
+                reader.Close(); //close reader
+                Con.Close();    //close connection
+
+                if (numExists == false)
+                {
+                    int newID = AssignID(); //assigns the next ID to the Full Unit ID textbox if no existing ID is found
+                    CMD = new OleDbCommand("INSERT INTO RedTagTracking([SLD Serial Number],[Full Unit ID],[Full Unit],[Name of Reportee],[Date of Report],[Reason for Unit Fail],[Additional Information], [Repaired],[SLD Fail])" +
+                        "VALUES('" + fUnitSldNum.Text + "','" + newID + "','" + unitFailSelect.SelectedItem.ToString() + "','" + reporteeName.Text + "','" + dateSelect.Value.ToShortDateString() + "','" + fullUnitFailTxt.Text + "','" + fullUnitAInfo.Text + "', " + repaired + ", " + sldFail + " );");
+                    CMD.Connection = Con;
+                    Con.Open();
+
+                    CMD.ExecuteNonQuery(); //Executes SQL command to insert new data
+                    Con.Close();
+
+                    var serialToPrint = unitIDBox.Text;
+                    if (serialToPrint != "")
+                    {
+                        string zpl = $"^XA^FO290,50 ^A@ 25,25,E:ARIALBD.TTF ^FD Red Tag ^FS^BY5,2,20^FO400,0^BQN,2,3,M,7^FDQA,{serialToPrint}^FS^XZ";
+                        PrinterHelper.SendStringToPrinter(_defaultPrinter, zpl);
+                        DateTime date = dateSelect.Value;
+                        zpl = $"^XA^FO290,50 ^A@ 30,30,E:ARIALBD.TTF ^FD {date.Day}/{date.Month}/{date.Year} ^FS^XZ";
+                        await Task.Delay(1000); //wait for the first label to print before sending the second one
+                        PrinterHelper.SendStringToPrinter(_defaultPrinter, zpl);
+                    }
+
+                    MessageBox.Show("Data submission successful");
+                }
+
+                else if (numExists == true)
+                {
+                    DialogResult overwrite = MessageBox.Show("Do you wish to overwrite existing data?", "Unit ID already exists", MessageBoxButtons.YesNo); //prompt user to confirm overwriting data
+                    if (overwrite == DialogResult.No) //if user selects no, exit function
+                    {
+                        MessageBox.Show("Submission cancelled");
+                        return;
+                    }
+                    else if (overwrite == DialogResult.Yes) //if user selects yes, continue with function
+                    {
+                        CMD = new OleDbCommand("UPDATE RedTagTracking " +
+                                "SET [SLD Serial Number] = '" + fUnitSldNum.Text + "' , [Full Unit] = '" + unitFailSelect.SelectedItem.ToString() + "', [Name of Reportee] = '" + reporteeName.Text + "', [Date of Report] = '" + dateSelect.Value.ToShortDateString() + "', [Reason for Unit Fail] = '" + fullUnitFailTxt.Text + "', [Additional Information] = '" + fullUnitAInfo.Text + "', [Repaired] = " + repaired + ", [SLD Fail] = " + sldFail +" " +
+                                "WHERE [Full Unit ID] = " + ID + "");
+                        CMD.Connection = Con;
+                        Con.Open();
+                        CMD.ExecuteNonQuery();
+                        Con.Close();
+                        MessageBox.Show("Data submission successful");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Error writing data"); //misc error if somehow the above fails without an exception
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private int AssignID()
+        {
+            try
+            {
+                Con = new OleDbConnection(_connectionString);
+                CMD = new OleDbCommand("SELECT MAX([Full Unit ID]) FROM RedTagTracking", Con);
+                Con.Open();
+                int maxID = 0;
+                object result = CMD.ExecuteScalar(); //get the maximum ID from the table
+                if (result != DBNull.Value) //check if the result is not null
+                {
+                    maxID = Convert.ToInt32(result); //convert the result to an integer
+                }
+                Con.Close();
+                if (maxID == 0) //if no IDs exist in the table, set maxID to 0
+                {
+                    maxID = 1;
+                    unitIDBox.Text = maxID.ToString(); //assign the next ID to the Full Unit ID textbox
+                    return maxID;
+                }
+                else
+                {
+                    unitIDBox.Text = (maxID + 1).ToString(); //assign the next ID to the Full Unit ID textbox
+                    return maxID + 1; //return the next ID
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return 0; //return 0 if there is an error
+            }
+        }
+
         private void frmRedTag_Load(object sender, EventArgs e)
         {
             pcbPanel.Location = new Point(235, 12);
             sldPanel.Location = new Point(235, 12);
+            fullUnitPanel.Location = new Point(235, 12);
             this.Size = new Size(780, 365);
             unitSelect.SelectedItem = "PCB";
         }
@@ -187,18 +330,28 @@ namespace Inventory_Database_FrontEnd
             {
                 pcbPanel.Visible = true;
                 sldPanel.Visible = false;
+                fullUnitPanel.Visible = false;
             }
 
             if (unitSelect.Text == "SLD")
             {
                 pcbPanel.Visible = false;
                 sldPanel.Visible = true;
+                fullUnitPanel.Visible = false;
             }
 
-            else if (unitSelect.Text != "PCB" && unitSelect.Text != "SLD")
+            if (unitSelect.Text == "Full Unit")
             {
                 pcbPanel.Visible = false;
                 sldPanel.Visible = false;
+                fullUnitPanel.Visible = true;
+            }
+
+            else if (unitSelect.Text != "PCB" && unitSelect.Text != "SLD" && unitSelect.Text != "Full Unit")
+            {
+                pcbPanel.Visible = false;
+                sldPanel.Visible = false;
+                fullUnitPanel.Visible = false;
                 MessageBox.Show("Please select a unit type");
             }
         }
@@ -232,6 +385,18 @@ namespace Inventory_Database_FrontEnd
                         UpdateTable(sldNum.Text, sldFailText.Text, sldAInfoText.Text, "SLD Serial Number", "Reason for SLD Fail"); //table update function call for sld, passing data from form
                     }
 
+                    else
+                    {
+                        MessageBox.Show("Please fill in all data fields");
+                    }
+                }
+
+                else if (fullUnitPanel.Visible == true) //full unit selected
+                {
+                    if (unitFailSelect.SelectedItem != null && reporteeName.Text != "" && fullUnitFailTxt.Text != "") //requires minimum of serial number, reportee name and reason for failure to submit - "" is blank
+                    {
+                        UnitFail();
+                    }
                     else
                     {
                         MessageBox.Show("Please fill in all data fields");
@@ -379,6 +544,60 @@ namespace Inventory_Database_FrontEnd
                         MessageBox.Show("Please enter a valid Serial Number");
                     }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            if(fullUnitPanel.Visible == true)
+            {
+                try
+                {
+                    if(unitIDBox.Text != "")
+                                            {
+                        Con = new OleDbConnection(_connectionString);
+                        CMD = new OleDbCommand("SELECT * FROM [RedTagTracking] WHERE [Full Unit ID] = " + unitIDBox.Text + " ");
+                        CMD.Connection = Con;
+                        Con.Open();
+                        OleDbDataReader reader = CMD.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            //index 0 = ID
+                            //index 1 = pcb serial
+                            //index 2 = sld serial 
+                            //etc
+                            numExists = true;
+                            fUnitSldNum.Text = reader["SLD Serial Number"].ToString();
+                            unitFailSelect.SelectedItem = reader["Full Unit"].ToString();
+                            reporteeName.Text = reader["Name of Reportee"].ToString();
+                            var date = DateTime.Parse(reader["Date of Report"].ToString());
+                            dateSelect.Value = date;
+                            fullUnitFailTxt.Text = reader["Reason for Unit Fail"].ToString();
+                            fullUnitAInfo.Text = reader["Additional Information"].ToString();
+                            repairCheck.Checked = bool.Parse(reader["Repaired"].ToString());
+                            sldFailCheck.Checked = bool.Parse(reader["SLD Fail"].ToString());
+                        }
+                        if (numExists == false)
+                        {
+                            MessageBox.Show($"No data for Unit ID: {unitIDBox.Text}");
+                            fUnitSldNum.Clear();
+                            unitFailSelect.SelectedItem = null;
+                            fullUnitFailTxt.Clear();
+                            fullUnitAInfo.Clear();
+                            reporteeName.Clear();
+                            repairCheck.Checked = false;
+                        }
+                        reader.Close();
+                        Con.Close();
+                        numExists = false;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please enter a valid Unit ID");
+                    }
+                }
+
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
@@ -536,7 +755,7 @@ namespace Inventory_Database_FrontEnd
 
         private async void printBtn_Click(object sender, EventArgs e)
         {
-            if(PCBnum.Text == "" && sldNum.Text == "") //check if both serial number textboxes are empty
+            if (PCBnum.Text == "" && sldNum.Text == "" && unitIDBox.Text == "") //check if both serial number textboxes are empty
             {
                 MessageBox.Show("Please enter a Serial Number to print labels for");
                 return;
@@ -550,15 +769,21 @@ namespace Inventory_Database_FrontEnd
                 printConfirm = MessageBox.Show($"Do you wish to print new labels for #{serialToPrint}?", "Print Confirmation", MessageBoxButtons.YesNo);
             }
 
-            else
+            else if(sldPanel.Visible == true)
             {
                 serialToPrint = sldNum.Text; //set serial number to print from SLD number textbox
                 printConfirm = MessageBox.Show($"Do you wish to print new labels for #{serialToPrint}?", "Print Confirmation", MessageBoxButtons.YesNo);
             }
 
+            else if (fullUnitPanel.Visible == true)
+            {
+                serialToPrint = unitIDBox.Text; //set serial number to print from Full Unit ID textbox
+                printConfirm = MessageBox.Show($"Do you wish to print new labels for #{serialToPrint}?", "Print Confirmation", MessageBoxButtons.YesNo);
+            }
+
             if (printConfirm == DialogResult.Yes)
             {
-                string zpl = $"^XA^FO290,50 ^A@N,20,20,E:ARIALBD.TTF ^FD Red Tag ^FS^BY5,2,20^FO400,0^BQN,2,3,M,7^FDQA,#{serialToPrint}^FS^XZ";
+                string zpl = $"^XA^FO290,50 ^A@N,25,25,E:ARIALBD.TTF ^FD Red Tag ^FS^BY5,2,20^FO400,0^BQN,2,3,M,7^FDQA,{serialToPrint}^FS^XZ";
                 PrinterHelper.SendStringToPrinter(_defaultPrinter, zpl);
                 DateTime date = dateSelect.Value;
                 zpl = $"^XA^FO290,50 ^A@N,30,30,E:ARIALBD.TTF ^FD {date.Day}/{date.Month}/{date.Year} ^FS^XZ";
@@ -573,6 +798,22 @@ namespace Inventory_Database_FrontEnd
             else
             {
                 MessageBox.Show("Error printing label");
+            }
+        }
+
+        private void sldFailCheck_CheckStateChanged(object sender, EventArgs e)
+        {
+            if (sldFailCheck.Checked == true)
+            {
+                fUnitSldNum.Visible = true; //show the Full Unit SLD Number textbox
+                unitSLDNum.Visible = true; //show the Full Unit SLD Number label
+
+            }
+            else if (sldFailCheck.Checked == false)
+            {
+                fUnitSldNum.Visible = false; //hide the Full Unit SLD Number textbox
+                fUnitSldNum.Clear(); //clear the Full Unit SLD Number textbox
+                unitSLDNum.Visible = false;
             }
         }
     }

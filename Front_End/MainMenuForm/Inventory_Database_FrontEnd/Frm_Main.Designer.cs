@@ -369,7 +369,7 @@
             newToolStripMenuItem1.Image = (Image)resources.GetObject("newToolStripMenuItem1.Image");
             newToolStripMenuItem1.ImageTransparentColor = Color.Magenta;
             newToolStripMenuItem1.Name = "newToolStripMenuItem1";
-            newToolStripMenuItem1.Size = new Size(172, 22);
+            newToolStripMenuItem1.Size = new Size(180, 22);
             newToolStripMenuItem1.Text = "&New";
             // 
             // openToolStripMenuItem1
@@ -377,32 +377,32 @@
             openToolStripMenuItem1.Image = (Image)resources.GetObject("openToolStripMenuItem1.Image");
             openToolStripMenuItem1.ImageTransparentColor = Color.Magenta;
             openToolStripMenuItem1.Name = "openToolStripMenuItem1";
-            openToolStripMenuItem1.Size = new Size(172, 22);
+            openToolStripMenuItem1.Size = new Size(180, 22);
             openToolStripMenuItem1.Text = "&Open";
             // 
             // toolStripSeparator6
             // 
             toolStripSeparator6.Name = "toolStripSeparator6";
-            toolStripSeparator6.Size = new Size(169, 6);
+            toolStripSeparator6.Size = new Size(177, 6);
             // 
             // saveToolStripMenuItem1
             // 
             saveToolStripMenuItem1.Image = (Image)resources.GetObject("saveToolStripMenuItem1.Image");
             saveToolStripMenuItem1.ImageTransparentColor = Color.Magenta;
             saveToolStripMenuItem1.Name = "saveToolStripMenuItem1";
-            saveToolStripMenuItem1.Size = new Size(172, 22);
+            saveToolStripMenuItem1.Size = new Size(180, 22);
             saveToolStripMenuItem1.Text = "&Save";
             // 
             // saveAsToolStripMenuItem1
             // 
             saveAsToolStripMenuItem1.Name = "saveAsToolStripMenuItem1";
-            saveAsToolStripMenuItem1.Size = new Size(172, 22);
+            saveAsToolStripMenuItem1.Size = new Size(180, 22);
             saveAsToolStripMenuItem1.Text = "Save &As";
             // 
             // toolStripSeparator7
             // 
             toolStripSeparator7.Name = "toolStripSeparator7";
-            toolStripSeparator7.Size = new Size(169, 6);
+            toolStripSeparator7.Size = new Size(177, 6);
             // 
             // printToolStripMenuItem1
             // 
@@ -410,31 +410,32 @@
             printToolStripMenuItem1.Image = (Image)resources.GetObject("printToolStripMenuItem1.Image");
             printToolStripMenuItem1.ImageTransparentColor = Color.Magenta;
             printToolStripMenuItem1.Name = "printToolStripMenuItem1";
-            printToolStripMenuItem1.Size = new Size(172, 22);
+            printToolStripMenuItem1.Size = new Size(180, 22);
             printToolStripMenuItem1.Text = "&Connect To Printer";
             // 
             // cmbPrinterSel
             // 
             cmbPrinterSel.Name = "cmbPrinterSel";
             cmbPrinterSel.Size = new Size(121, 23);
+            cmbPrinterSel.SelectedIndexChanged += cmbPrinterSel_SelectedIndexChanged;
             // 
             // printPreviewToolStripMenuItem1
             // 
             printPreviewToolStripMenuItem1.Image = (Image)resources.GetObject("printPreviewToolStripMenuItem1.Image");
             printPreviewToolStripMenuItem1.ImageTransparentColor = Color.Magenta;
             printPreviewToolStripMenuItem1.Name = "printPreviewToolStripMenuItem1";
-            printPreviewToolStripMenuItem1.Size = new Size(172, 22);
+            printPreviewToolStripMenuItem1.Size = new Size(180, 22);
             printPreviewToolStripMenuItem1.Text = "Print Pre&view";
             // 
             // toolStripSeparator8
             // 
             toolStripSeparator8.Name = "toolStripSeparator8";
-            toolStripSeparator8.Size = new Size(169, 6);
+            toolStripSeparator8.Size = new Size(177, 6);
             // 
             // exitToolStripMenuItem1
             // 
             exitToolStripMenuItem1.Name = "exitToolStripMenuItem1";
-            exitToolStripMenuItem1.Size = new Size(172, 22);
+            exitToolStripMenuItem1.Size = new Size(180, 22);
             exitToolStripMenuItem1.Text = "E&xit";
             // 
             // editToolStripMenuItem1

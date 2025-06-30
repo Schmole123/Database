@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StatsForm")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4da616d0f8519d13e7365864dbc0517ce7677ddf")]
 [assembly: System.Reflection.AssemblyProductAttribute("StatsForm")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StatsForm")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
