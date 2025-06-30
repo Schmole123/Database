@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\TEST\\source\\repos\\StatsForm\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DF04B6A3-ACDB-4FAE-9E94-29AF86081662}|StatsForm\\StatsForm.csproj|c:\\users\\test\\source\\repos\\statsform\\statsform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DF04B6A3-ACDB-4FAE-9E94-29AF86081662}|StatsForm\\StatsForm.csproj|solutionrelative:statsform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF04B6A3-ACDB-4FAE-9E94-29AF86081662}|StatsForm\\StatsForm.csproj|c:\\users\\test\\source\\repos\\statsform\\statsform\\supplierdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF04B6A3-ACDB-4FAE-9E94-29AF86081662}|StatsForm\\StatsForm.csproj|solutionrelative:statsform\\supplierdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF04B6A3-ACDB-4FAE-9E94-29AF86081662}|StatsForm\\StatsForm.csproj|c:\\users\\test\\source\\repos\\statsform\\statsform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF04B6A3-ACDB-4FAE-9E94-29AF86081662}|StatsForm\\StatsForm.csproj|solutionrelative:statsform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF04B6A3-ACDB-4FAE-9E94-29AF86081662}|StatsForm\\StatsForm.csproj|c:\\users\\test\\source\\repos\\statsform\\statsform\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF04B6A3-ACDB-4FAE-9E94-29AF86081662}|StatsForm\\StatsForm.csproj|solutionrelative:statsform\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF04B6A3-ACDB-4FAE-9E94-29AF86081662}|StatsForm\\StatsForm.csproj|c:\\users\\test\\source\\repos\\statsform\\statsform\\productionstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DF04B6A3-ACDB-4FAE-9E94-29AF86081662}|StatsForm\\StatsForm.csproj|solutionrelative:statsform\\productionstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF04B6A3-ACDB-4FAE-9E94-29AF86081662}|StatsForm\\StatsForm.csproj|C:\\Users\\TEST\\source\\repos\\StatsForm\\statsform\\supplierdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DF04B6A3-ACDB-4FAE-9E94-29AF86081662}|StatsForm\\StatsForm.csproj|solutionrelative:statsform\\supplierdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DF04B6A3-ACDB-4FAE-9E94-29AF86081662}|StatsForm\\StatsForm.csproj|C:\\Users\\TEST\\source\\repos\\StatsForm\\statsform\\productionstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DF04B6A3-ACDB-4FAE-9E94-29AF86081662}|StatsForm\\StatsForm.csproj|solutionrelative:statsform\\productionstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SupplierData.cs",
+              "DocumentMoniker": "C:\\Users\\TEST\\source\\repos\\StatsForm\\StatsForm\\SupplierData.cs",
+              "RelativeDocumentMoniker": "StatsForm\\SupplierData.cs",
+              "ToolTip": "C:\\Users\\TEST\\source\\repos\\StatsForm\\StatsForm\\SupplierData.cs",
+              "RelativeToolTip": "StatsForm\\SupplierData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T07:30:33.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProductionStatus.cs",
+              "DocumentMoniker": "C:\\Users\\TEST\\source\\repos\\StatsForm\\StatsForm\\ProductionStatus.cs",
+              "RelativeDocumentMoniker": "StatsForm\\ProductionStatus.cs",
+              "ToolTip": "C:\\Users\\TEST\\source\\repos\\StatsForm\\StatsForm\\ProductionStatus.cs",
+              "RelativeToolTip": "StatsForm\\ProductionStatus.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T14:04:48.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\TEST\\source\\repos\\StatsForm\\StatsForm\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "StatsForm\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\TEST\\source\\repos\\StatsForm\\StatsForm\\Form1.Designer.cs",
+              "RelativeToolTip": "StatsForm\\Form1.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T11:45:36.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SupplierData.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\TEST\\source\\repos\\StatsForm\\StatsForm\\SupplierData.cs",
+              "RelativeDocumentMoniker": "StatsForm\\SupplierData.cs",
+              "ToolTip": "C:\\Users\\TEST\\source\\repos\\StatsForm\\StatsForm\\SupplierData.cs [Design]",
+              "RelativeToolTip": "StatsForm\\SupplierData.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-11T12:35:46.675Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\TEST\\source\\repos\\StatsForm\\StatsForm\\Form1.cs",
+              "RelativeDocumentMoniker": "StatsForm\\Form1.cs",
+              "ToolTip": "C:\\Users\\TEST\\source\\repos\\StatsForm\\StatsForm\\Form1.cs",
+              "RelativeToolTip": "StatsForm\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T10:03:46.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\TEST\\source\\repos\\StatsForm\\StatsForm\\Form1.cs",
+              "RelativeDocumentMoniker": "StatsForm\\Form1.cs",
+              "ToolTip": "C:\\Users\\TEST\\source\\repos\\StatsForm\\StatsForm\\Form1.cs [Design]",
+              "RelativeToolTip": "StatsForm\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T11:46:08.718Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductionStatus.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\TEST\\source\\repos\\StatsForm\\StatsForm\\ProductionStatus.cs",
+              "RelativeDocumentMoniker": "StatsForm\\ProductionStatus.cs",
+              "ToolTip": "C:\\Users\\TEST\\source\\repos\\StatsForm\\StatsForm\\ProductionStatus.cs [Design]",
+              "RelativeToolTip": "StatsForm\\ProductionStatus.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T14:09:33.874Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

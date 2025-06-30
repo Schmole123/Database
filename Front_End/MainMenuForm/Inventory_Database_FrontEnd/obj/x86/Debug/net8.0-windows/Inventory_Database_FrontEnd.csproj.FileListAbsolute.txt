@@ -1,0 +1,58 @@
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.exe
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.deps.json
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.runtimeconfig.json
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.dll
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.pdb
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\System.Data.OleDb.dll
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.OleDb.dll
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.csproj.AssemblyReference.cache
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.Inventory_Database.resources
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.Properties.Resources.resources
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.csproj.GenerateResource.cache
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.AssemblyInfoInputs.cache
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.AssemblyInfo.cs
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.csproj.CoreCompileInputs.cache
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventor.43BB623F.Up2Date
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.dll
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\refint\Inventory_Database_FrontEnd.dll
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.pdb
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.genruntimeconfig.cache
+C:\Users\Caolan\source\repos\Inventory_Database_FrontEnd\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\ref\Inventory_Database_FrontEnd.dll
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.exe
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.deps.json
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.runtimeconfig.json
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.dll
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.pdb
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\System.Configuration.ConfigurationManager.dll
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\System.Data.OleDb.dll
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\System.Diagnostics.PerformanceCounter.dll
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\System.Security.Cryptography.ProtectedData.dll
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.OleDb.dll
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\bin\x86\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.PerformanceCounter.dll
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.csproj.AssemblyReference.cache
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.frmRedTag.resources
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.Inventory_Database.resources
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.Properties.Resources.resources
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.csproj.GenerateResource.cache
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.GeneratedMSBuildEditorConfig.editorconfig
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.AssemblyInfoInputs.cache
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.AssemblyInfo.cs
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.csproj.CoreCompileInputs.cache
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.sourcelink.json
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventor.43BB623F.Up2Date
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.dll
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\refint\Inventory_Database_FrontEnd.dll
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.pdb
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\Inventory_Database_FrontEnd.genruntimeconfig.cache
+\\SERVER-CORK\Shared\Staff Personal folders\Caolan\Database\Front_End\MainMenuForm\Inventory_Database_FrontEnd\obj\x86\Debug\net8.0-windows\ref\Inventory_Database_FrontEnd.dll
