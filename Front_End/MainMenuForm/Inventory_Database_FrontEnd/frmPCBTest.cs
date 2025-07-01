@@ -171,7 +171,8 @@ namespace Inventory_Database_FrontEnd
 
                     genBox.SelectedItem = genSplit[0]; //set generation dropdown to the gen of the PCB
                     genNumBox.Text = genSplit[1]; //set generation number text box to the gen number of the PCB
-                    genDateSelect.Value = DateTime.ParseExact(genSplit[2], "MM/yyyy", null); //set gen date to the date of the generation
+                    weekBox.Text = genSplit[2].Split('/')[0]; //set week box to the week of the PCB
+                    yearBox.Text = genSplit[2].Split('/')[1]; //set year box to the year of the PCB
                     reporteeName.Text = reader[6].ToString(); //set reportee name text box to the name of the person who reported the PCB
 
                 }
@@ -185,7 +186,8 @@ namespace Inventory_Database_FrontEnd
                     passCheck.Checked = false;
                     genBox.SelectedItem = null;
                     genNumBox.Clear();
-                    genDateSelect.Value = DateTime.Now; //reset generation date to current date
+                    weekBox.Text = string.Empty;
+                    yearBox.Text = string.Empty;
                 }
 
 
@@ -219,7 +221,7 @@ namespace Inventory_Database_FrontEnd
                     string testDate = testDateSelect.Value.ToString("dd/MM/yyyy");
                     string gen = genBox.SelectedItem.ToString();
                     string genNum = genNumBox.Text.Trim();
-                    string genDate = genDateSelect.Value.ToString("MM/yyyy");
+                    string genDate = $"{weekBox.Text}/{yearBox.Text}";
                     string genConcat = gen + " " + genNum + " " + genDate;
 
                     UpdateTable(PCB, reportee, testDate, serialNum, genConcat);

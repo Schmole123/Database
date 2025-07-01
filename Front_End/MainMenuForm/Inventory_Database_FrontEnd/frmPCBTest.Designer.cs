@@ -29,9 +29,12 @@
         private void InitializeComponent()
         {
             userPanel = new Panel();
+            yearLabel = new Label();
+            weekLabel = new Label();
+            yearBox = new TextBox();
+            weekBox = new TextBox();
             recieveBtn = new Button();
             updateBtn = new Button();
-            genDateSelect = new DateTimePicker();
             genDateLabel = new Label();
             genInfoLabel = new Label();
             genNumBox = new TextBox();
@@ -95,9 +98,12 @@
             // 
             // userPanel
             // 
+            userPanel.Controls.Add(yearLabel);
+            userPanel.Controls.Add(weekLabel);
+            userPanel.Controls.Add(yearBox);
+            userPanel.Controls.Add(weekBox);
             userPanel.Controls.Add(recieveBtn);
             userPanel.Controls.Add(updateBtn);
-            userPanel.Controls.Add(genDateSelect);
             userPanel.Controls.Add(genDateLabel);
             userPanel.Controls.Add(genInfoLabel);
             userPanel.Controls.Add(genNumBox);
@@ -117,6 +123,40 @@
             userPanel.Name = "userPanel";
             userPanel.Size = new Size(479, 365);
             userPanel.TabIndex = 29;
+            // 
+            // yearLabel
+            // 
+            yearLabel.AutoSize = true;
+            yearLabel.Location = new Point(438, 182);
+            yearLabel.Name = "yearLabel";
+            yearLabel.Size = new Size(29, 15);
+            yearLabel.TabIndex = 26;
+            yearLabel.Text = "Year";
+            // 
+            // weekLabel
+            // 
+            weekLabel.AutoSize = true;
+            weekLabel.Location = new Point(383, 182);
+            weekLabel.Name = "weekLabel";
+            weekLabel.Size = new Size(36, 15);
+            weekLabel.TabIndex = 25;
+            weekLabel.Text = "Week";
+            // 
+            // yearBox
+            // 
+            yearBox.Location = new Point(431, 156);
+            yearBox.Name = "yearBox";
+            yearBox.Size = new Size(45, 23);
+            yearBox.TabIndex = 24;
+            yearBox.TextAlign = HorizontalAlignment.Center;
+            // 
+            // weekBox
+            // 
+            weekBox.Location = new Point(380, 156);
+            weekBox.Name = "weekBox";
+            weekBox.Size = new Size(45, 23);
+            weekBox.TabIndex = 23;
+            weekBox.TextAlign = HorizontalAlignment.Center;
             // 
             // recieveBtn
             // 
@@ -142,20 +182,11 @@
             updateBtn.UseVisualStyleBackColor = false;
             updateBtn.Click += updateBtn_Click;
             // 
-            // genDateSelect
-            // 
-            genDateSelect.CustomFormat = "MM/yyyy";
-            genDateSelect.Format = DateTimePickerFormat.Custom;
-            genDateSelect.Location = new Point(394, 156);
-            genDateSelect.Name = "genDateSelect";
-            genDateSelect.Size = new Size(81, 23);
-            genDateSelect.TabIndex = 20;
-            // 
             // genDateLabel
             // 
             genDateLabel.AutoSize = true;
             genDateLabel.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            genDateLabel.Location = new Point(394, 120);
+            genDateLabel.Location = new Point(380, 120);
             genDateLabel.Name = "genDateLabel";
             genDateLabel.Size = new Size(63, 25);
             genDateLabel.TabIndex = 19;
@@ -174,16 +205,17 @@
             // genNumBox
             // 
             genNumBox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            genNumBox.Location = new Point(312, 156);
+            genNumBox.Location = new Point(298, 156);
             genNumBox.Name = "genNumBox";
             genNumBox.Size = new Size(62, 23);
             genNumBox.TabIndex = 17;
+            genNumBox.TextAlign = HorizontalAlignment.Center;
             // 
             // genNumLabel
             // 
             genNumLabel.AutoSize = true;
             genNumLabel.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            genNumLabel.Location = new Point(312, 120);
+            genNumLabel.Location = new Point(298, 120);
             genNumLabel.Name = "genNumLabel";
             genNumLabel.Size = new Size(62, 25);
             genNumLabel.TabIndex = 16;
@@ -193,7 +225,7 @@
             // 
             genBox.FormattingEnabled = true;
             genBox.Items.AddRange(new object[] { "GEN1", "GEN2" });
-            genBox.Location = new Point(233, 156);
+            genBox.Location = new Point(219, 156);
             genBox.Name = "genBox";
             genBox.Size = new Size(58, 23);
             genBox.TabIndex = 15;
@@ -202,7 +234,7 @@
             // 
             genLabel.AutoSize = true;
             genLabel.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            genLabel.Location = new Point(233, 120);
+            genLabel.Location = new Point(219, 120);
             genLabel.Name = "genLabel";
             genLabel.Size = new Size(58, 25);
             genLabel.TabIndex = 14;
@@ -812,7 +844,6 @@
         private Label genLabel;
         private TextBox serialTxt;
         private Label serialLabel;
-        private DateTimePicker genDateSelect;
         private Label genDateLabel;
         private Button updateBtn;
         private Button recieveBtn;
@@ -858,5 +889,9 @@
         private Label mainTotalNum;
         private Label driverTestedNum;
         private Button refreshBtn;
+        private Label yearLabel;
+        private Label weekLabel;
+        private TextBox yearBox;
+        private TextBox weekBox;
     }
 }
