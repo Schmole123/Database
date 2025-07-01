@@ -432,11 +432,11 @@
             // 
             unitSLDNum.AutoSize = true;
             unitSLDNum.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            unitSLDNum.Location = new Point(135, 0);
+            unitSLDNum.Location = new Point(128, 0);
             unitSLDNum.Name = "unitSLDNum";
-            unitSLDNum.Size = new Size(154, 25);
+            unitSLDNum.Size = new Size(201, 25);
             unitSLDNum.TabIndex = 13;
-            unitSLDNum.Text = "Serial Number:";
+            unitSLDNum.Text = "SLD Serial Number:";
             unitSLDNum.Visible = false;
             // 
             // unitFailSelect
